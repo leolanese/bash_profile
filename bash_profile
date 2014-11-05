@@ -239,6 +239,9 @@ alias vb='curl -O -L "http://download.virtualbox.org/virtualbox/4.3.18/VirtualBo
 ## This will deploy an .dmg, double click and rock and roll!
 
 
+## finder
+alias f='open -a Finder ./'
+
 ## where is my stuff
 alias where='
         which express;
