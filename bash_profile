@@ -223,6 +223,15 @@ alias testme='
 		protractor --version		
 		'
 
+##
+alias modernio='curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE11-Win10&parts=5&filename=VMBuild_20141027/VirtualBox/IE11/Mac/IE11.Win10.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar,5.rar}"'
+## TODO:
+## get the VB (virtual box)
+alias vb='curl -O -L "http://download.virtualbox.org/virtualbox/4.3.18/VirtualBox-4.3.18-96516-OSX.dmg"'
+## chmod +x IE*.sfx
+## ./IE11.Win10.For.MacVirtualBox.part1.sfx
+## This will deploy an .dmg, double click and rock and roll!
+
 ## where is my stuff
 alias where='which express; 
 		which yo; 
