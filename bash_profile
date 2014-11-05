@@ -1,5 +1,9 @@
 clear
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+
 export LC_CTYPE=en_UK.UTF-8
 export LC_ALL=en_UK.UTF-8
 echo -n -e "\033]0;LeoLaneseltd\007"
@@ -225,23 +229,26 @@ alias testme='
 
 ##
 alias modernio='curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE11-Win10&parts=5&filename=VMBuild_20141027/VirtualBox/IE11/Mac/IE11.Win10.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar,5.rar}"'
+
 ## TODO:
 ## get the VB (virtual box)
 alias vb='curl -O -L "http://download.virtualbox.org/virtualbox/4.3.18/VirtualBox-4.3.18-96516-OSX.dmg"'
+
 ## chmod +x IE*.sfx
 ## ./IE11.Win10.For.MacVirtualBox.part1.sfx
 ## This will deploy an .dmg, double click and rock and roll!
 
+
 ## where is my stuff
-alias where='which express; 
+alias where='
+        which express;
 		which yo; 
 		which grunt; 
 		which mongo;
 		which git;
 		which php;
 		which npm;
+		which node;
 		which bower'
 
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/bin:$PATH
-export PATH=/usr/local/bin:$PATH
+

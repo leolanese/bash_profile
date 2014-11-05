@@ -2,7 +2,8 @@
 The idea is to share best practices, suggestions, tricks and keep the same profile across multiple development platforms easily cloning from the Repository.
 
 # Are you a MAC user?
-## A typical install of OS X won't create a .bash_profile for you. When you want to run functions from your command line, this is a must-have.
+A typical install of OSX won't create a .bash_profile for you.
+When you want to run functions from your command line, this is a must-have.
 
 ```
 Start up Terminal
