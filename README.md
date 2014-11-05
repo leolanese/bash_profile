@@ -17,7 +17,13 @@ Type ". .bash_profile" to reload .bash_profile and update any functions you add.
 ```
 open -e ~/.bash_profile
 ```
-then paste the bash_profile.txt
+
+# if you don't have this file, create it!
+```
+touch ~/.bash_profile
+```
+
+# paste the bash_profile
 
 ## reload profile
 ```
