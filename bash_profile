@@ -7,8 +7,7 @@ echo -e "Kernel Information: " ;uname -smr
 echo -e "${COLOR_BROWN}"; bash --version
 echo -ne "${COLOR_GRAY}Uptime: "; uptime
 echo -ne "${COLOR_GRAY}Server time is: "; date	
-cd ~/Documents/root/
-
+cd /Users/
 
 ## dev LESS (lessc: npm install -g less) preprocessors
 alias allwms="find ~/Sites/wi.mobile/Source/WI.Web/less/ -name '*.less' -exec lessc {} \; > ~/Sites/wi.mobile/Source/WI.Web/Css/combined.css;"
@@ -98,6 +97,7 @@ alias git_tasks='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'
 #alias git_ignore='find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \;'
 alias git_undelete='git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"'
 alias git_idea='git rm -r --cached .idea'
+alias n='NODE_ENV=development grunt server'
 
 
 ## ports
@@ -118,6 +118,10 @@ alias git_idea='git rm -r --cached .idea'
 alias qp="ps auxwww"
 
 
+# mongo
+alias m="mongod --dbpath /Users/leolanese/met/data/db --rest"
+
+
 ## grunt alias to run dev
 alias gdev="grunt dev && grunt"
 
@@ -126,11 +130,13 @@ alias gdev="grunt dev && grunt"
 alias show_all="defaults write com.apple.finder AppleShowAllFiles true && killall Dock"
 alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
 
+
 ## projects
 alias  jira="open -a /Applications/Google Chrome.app http://jira.nnx.com/"
 alias  localhost="open -a '/Applications/Google Chrome.app' http://localhost:9898/"
 alias  leolanese="open -a '/Applications/Google Chrome.app' https://leolanese.com" 
 alias  grunt_local="open -a '/Applications/Google Chrome.app' http://localhost:8888/"
+
 
 ## personal projects
 alias  blog="open -a '/Applications/Google Chrome.app' http://leolanese.com/portfolio_old3/root/js_2.php"
@@ -177,7 +183,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 ## FIX logging (don not stop running processes)
 alias logout="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-## FIX sleep problem on MAC laptops
+
+## FIX sleep problem on MAC laptops (handle with care)
 alias when_sleep='sudo pmset -a'
 alias hibernate='sudo pmset -a hibernatemode 25'
 alias sleep='sudo pmset -a hibernatemode 0'
@@ -197,14 +204,35 @@ echo .DS_Store >> ~/.gitignore
 
 
 ## testing libs available status
-alias testme='  apachectl -v;
+alias testme='
+        apachectl -v;
 		git --version;
-		node --version;
+		node --version && npm --version;
 		bower -v;
 		karma --version;
-                phantomjs --version;
+        phantomjs --version;
 		casperjs --version;
 		grunt -version;
-	        php -v;
-                sass -v		
+	    php -v;
+		mongo --version; mongod --version;
+		mongos --version;
+		yo --version;
+		grunt --version;
+		bower --version;
+        sass -v;
+		protractor --version		
 		'
+
+## where is my stuff
+alias where='which express; 
+		which yo; 
+		which grunt; 
+		which mongo;
+		which git;
+		which php;
+		which npm;
+		which bower'
+
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/bin:$PATH
+export PATH=/usr/local/bin:$PATH
