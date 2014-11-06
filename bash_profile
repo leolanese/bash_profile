@@ -122,6 +122,10 @@ alias n='NODE_ENV=development grunt server'
 alias qp="ps auxwww"
 
 
+## Python Server
+alias s='python -m SimpleHTTPServer 8888'
+
+
 # mongo
 alias m="mongod --dbpath /Users/leolanese/met/data/db --rest"
 
@@ -244,14 +248,16 @@ alias f='open -a Finder ./'
 
 ## where is my stuff
 alias where='
+		which git;
         which express;
 		which yo; 
-		which grunt; 
+		which gulp;
 		which mongo;
-		which git;
 		which php;
 		which npm;
 		which node;
-		which bower'
+		which bower;
+		which pouchdb;
+		which couchdb'
 
 
