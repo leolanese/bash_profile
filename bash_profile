@@ -3,9 +3,9 @@ export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-
 export LC_CTYPE=en_UK.UTF-8
 export LC_ALL=en_UK.UTF-8
+
 echo -n -e "\033]0;LeoLaneseltd\007"
 echo -e "Kernel Information: " ;uname -smr
 echo -e "${COLOR_BROWN}"; bash --version
@@ -212,23 +212,24 @@ echo .DS_Store >> ~/.gitignore
 
 
 ## testing libs available status
-alias testme='
-        apachectl -v;
+alias testme='	java -version;
+        	apachectl -v;
 		git --version;
 		node --version && npm --version;
 		bower -v;
 		karma --version;
-        phantomjs --version;
+        	phantomjs --version;
 		casperjs --version;
 		grunt -version;
-	    php -v;
+	    	php -v;
 		mongo --version; mongod --version;
 		mongos --version;
 		yo --version;
 		grunt --version;
 		bower --version;
-        sass -v;
-		protractor --version		
+        	sass -v;
+		protractor --version;
+		cordova -v
 		'
 
 ##
@@ -249,15 +250,17 @@ alias f='open -a Finder ./'
 ## where is my stuff
 alias where='
 		which git;
-        which express;
+        	which express;
 		which yo; 
 		which gulp;
 		which mongo;
+		which cordova;
 		which php;
 		which npm;
 		which node;
 		which bower;
 		which pouchdb;
-		which couchdb'
+		which couchdb
+		'
 
 
