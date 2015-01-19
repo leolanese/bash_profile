@@ -7,6 +7,7 @@ export LC_CTYPE=en_UK.UTF-8
 export LC_ALL=en_UK.UTF-8
 # JAVA_HOME set
 export JAVA_HOME=$(/usr/libexec/java_home)
+export JRE_HOME=/Library/Java/Home
 export PATH=${JAVA_HOME}/bin:$PATH
 
 echo -n -e "\033]0;LeoLaneseltd\007"
