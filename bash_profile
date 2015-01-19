@@ -105,17 +105,17 @@ alias n='NODE_ENV=development grunt server'
 
 
 ## ports
-#alias check_open_ports='lsof -Pi | grep LISTEN"
-#alias check_port="lsof -i :8888"
-#alias check_establish="lsof -i | grep -i estab"
+alias check_open_ports="lsof -Pi | grep LISTEN"
+alias check_port="lsof -i :8888"
+alias check_establish="lsof -i | grep -i estab"
 
 
 ## curls
-#alias get_ip='curl ip.telize.com'
-#alias ip='curl -s http://wtfismyip.com/text'
-#alias ip2='curl l2.io/ip'
-#alias header='curl -I g.cn'
-#alias validate_json='curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R'
+alias get_ip='curl ip.telize.com'
+alias ip='curl -s http://wtfismyip.com/text'
+alias ip2='curl l2.io/ip'
+alias header='curl -I g.cn'
+alias validate_json='curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R'
 
 
 ## the "qp" alias ("que pasa")
