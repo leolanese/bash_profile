@@ -314,6 +314,7 @@ alias where='
 		which bower;
 		which pouchdb;
 		which couchdb
+	'
 
 ## Improving the terminal for fast typers
 #   ------------------------------------------------------------		
