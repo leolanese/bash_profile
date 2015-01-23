@@ -214,10 +214,14 @@ alias edit_php="open -e /etc/php.ini"
 alias edit_vhosts="open -e /etc/apache2/extra/httpd-vhosts.conf"
 
 
-# Git branch in prompt.
+# Git branch in prompt, also covering the root scenario
 #   ------------------------------------------------------------
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+ while read -r branch; do
+     [[ $branch = \** ]] && current_branch=${branch#* }
+ done < <(git branch 2>/dev/null)
+
+ [[ $current_branch ]] && printf ' [%s]' "$current_branch"
 }
 
 ## Modify Bash Prompt, Enable colors, improve ls
