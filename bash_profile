@@ -6,6 +6,10 @@ export PATH=/usr/local/bin:$PATH
 export LC_CTYPE=en_UK.UTF-8
 export LC_ALL=en_UK.UTF-8
 
+# root?
+# sudo su
+# exit
+
 # JAVA_HOME set
 #   ------------------------------------------------------------
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -284,15 +288,15 @@ alias testme='	java -version;
 		cordova -v
 		'
 
-alias modernio='curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE11-Win10&parts=5&filename=VMBuild_20141027/VirtualBox/IE11/Mac/IE11.Win10.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar,5.rar}"'
-
 ## get the VB (virtual box)
 #   ------------------------------------------------------------
+alias modernio='curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE11-Win10&parts=5&filename=VMBuild_20141027/VirtualBox/IE11/Mac/IE11.Win10.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar,5.rar}"'
 alias vb='curl -O -L "http://download.virtualbox.org/virtualbox/4.3.18/VirtualBox-4.3.18-96516-OSX.dmg"'
 
 ## chmod +x IE*.sfx
 ## ./IE11.Win10.For.MacVirtualBox.part1.sfx
 ## This will deploy an .dmg, double click and rock and roll!
+
 
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
