@@ -80,6 +80,7 @@ alias go="less sync"
 
 ## shortcuts & directions
 #   ------------------------------------------------------------
+alias  rm='rm -rfv'
 alias  root="cd ~/Documents/root"
 alias  goto_myP="goto_web; cd myProject"
 alias  l="ls -la"
@@ -369,12 +370,12 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
 #   memHogsTop, memHogsPs:  Find memory hogs
 #   -----------------------------------------------------
-    alias memHogsTop='top -l 1 -o rsize | head -20'
-    alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
+alias memHogsTop='top -l 1 -o rsize | head -20'
+alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
     
 #   cpuHogs:  Find CPU hogs
 #   -----------------------------------------------------
-    alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 
 # screensaverDesktop: Run a screensaver on the Desktop
 #   -----------------------------------------------------------------------------------
