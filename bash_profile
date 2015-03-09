@@ -12,9 +12,8 @@ export LC_ALL=en_UK.UTF-8
 
 # JAVA_HOME set
 #   ------------------------------------------------------------
-export JAVA_HOME=$(/usr/libexec/java_home)
-export JRE_HOME=/Library/Java/Home
-export PATH=${JAVA_HOME}/bin:$PATH
+export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
+alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
 
 #   Change Prompt
 #   ------------------------------------------------------------
