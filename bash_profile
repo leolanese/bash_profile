@@ -10,7 +10,7 @@ export LC_ALL=en_UK.UTF-8
 # sudo su
 # exit
 
-# JAVA_HOME set
+# JAVA_HOME set: jdk1.7.0_75.jdk
 #   ------------------------------------------------------------
 export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
 alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
