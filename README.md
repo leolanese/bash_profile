@@ -55,4 +55,4 @@ touch ~/.bash_profile
 <a href="http://twitter.com/LeoLaneseltd" target="_blank">http://twitter.com/LeoLaneseltd</a><br>
 
 # Questions / Suggestion / Recommendation ?<br>
-<a href="mail:to">javascript@leolanese.com</a><br>
+<a href="mail:to">angularjs@leolanese.com</a><br>
