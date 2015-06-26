@@ -341,7 +341,7 @@ alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10
 
 
 #   extract:  Extract most know archives with one command
-#   -----------------------------------------------------------
+#   ------------------------------------------------------------
     extract () {
         if [ -f $1 ] ; then
           case $1 in
@@ -364,26 +364,27 @@ alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10
     }
 
 #   spotlight: Search for a file using MacOS Spotlight's metadata
-#   -----------------------------------------------------------
+#   ------------------------------------------------------------
 spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
 #   memHogsTop, memHogsPs:  Find memory hogs
-#   -----------------------------------------------------
+#   ------------------------------------------------------------
 alias memHogsTop='top -l 1 -o rsize | head -20'
 alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
     
 #   cpuHogs:  Find CPU hogs
-#   -----------------------------------------------------
+#   ------------------------------------------------------------
 alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 
 #   MAC ADDRESS
-#   -----------------------------------------------------
+#   ------------------------------------------------------------
     alias get_macaddress='networksetup -getmacaddress Wi-Fi'
 
 # screensaverDesktop: Run a screensaver on the Desktop
-#   -----------------------------------------------------------------------------------
+#   ------------------------------------------------------------
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 
 
 # Python server
+#   ------------------------------------------------------------
 alias server='python -m SimpleHTTPServer 8000'
