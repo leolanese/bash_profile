@@ -77,6 +77,15 @@ alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_
 alias go="less sync"
 
 
+# IT dev esential shortcuts
+#   ------------------------------------------------------------
+alias bs="http://getbootstrap.com/components/"
+alias icons="http://fortawesome.github.io/Font-Awesome/cheatsheet/"
+alias papajuan="https://github.com/johnpapa/angular-styleguide"
+alias password="open chrome://settings/cookies"
+
+
+
 ## shortcuts & directions
 #   ------------------------------------------------------------
 alias  rm='rm -rfv'
