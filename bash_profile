@@ -384,3 +384,6 @@ alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 #   -----------------------------------------------------------------------------------
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 
+
+# Python server
+alias server='python -m SimpleHTTPServer 8000'
