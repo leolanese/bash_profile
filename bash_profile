@@ -178,10 +178,10 @@ alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.
 
 ## projects
 #   ------------------------------------------------------------
-alias  jira="open -a /Applications/Google Chrome.app http://jira.nnx.com/"
-alias  localhost="open -a '/Applications/Google Chrome.app' http://localhost:9898/"
-alias  leolanese="open -a '/Applications/Google Chrome.app' https://leolanese.com" 
-alias  grunt_local="open -a '/Applications/Google Chrome.app' http://localhost:8888/"
+alias  jira="open -a http://jira.nnx.com/"
+alias  localhost="open -a  http://localhost:9898/"
+alias  leolanese="open -a  https://leolanese.com" 
+alias  grunt_local="open -a http://localhost:8888/"
 
 
 ## personal projects
