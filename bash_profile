@@ -178,18 +178,18 @@ alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.
 
 ## projects
 #   ------------------------------------------------------------
-alias  jira="open -a http://jira.nnx.com/"
-alias  localhost="open -a  http://localhost:9898/"
-alias  leolanese="open -a  https://leolanese.com" 
-alias  grunt_local="open -a http://localhost:8888/"
+alias  jira="open http://jira.nnx.com/"
+alias  localhost="open http://localhost:9898/"
+alias  leolanese="open https://leolanese.com" 
+alias  grunt_local="open http://localhost:8888/"
 
 
 ## personal projects
 #   ------------------------------------------------------------
-alias  blog="open -a '/Applications/Google Chrome.app' http://leolanese.com/portfolio_old3/root/js_2.php"
-alias  blog="open -a '/Applications/Google Chrome.app' http://leolanese.com"
-alias  blog="open -a '/Applications/Google Chrome.app' http://www.rwdlab.com"
-alias  blog="open -a '/Applications/Google Chrome.app' http://beresponsive.com"
+alias  blog="open  http://leolanese.com/portfolio_old3/root/js_2.php"
+alias  blog="open  http://leolanese.com"
+alias  blog="open  http://www.rwdlab.com"
+alias  blog="open  http://beresponsive.com"
 
 
 ## testing
