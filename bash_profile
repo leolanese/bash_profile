@@ -77,12 +77,12 @@ alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_
 alias go="less sync"
 
 
-# IT dev esential shortcuts
+# IT dev essential shortcuts
 #   ------------------------------------------------------------
-alias bs="http://getbootstrap.com/components/"
-alias icons="http://fortawesome.github.io/Font-Awesome/cheatsheet/"
-alias papajuan="https://github.com/johnpapa/angular-styleguide"
-alias password="open chrome://settings/cookies"
+alias bs	=" open http://getbootstrap.com/components/ "
+alias icons	=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
+alias papajuan  =" open https://github.com/johnpapa/angular-styleguide "
+alias password	=" open chrome://settings/cookies "
 
 
 
@@ -141,21 +141,22 @@ alias check_port="lsof -i :8888"
 alias check_establish="lsof -i | grep -i estab"
 
 
-## curls
+## aliases
 #   ------------------------------------------------------------
-alias get_ip='curl ip.telize.com'
-alias ip='curl -s http://wtfismyip.com/text'
-alias ip2='curl l2.io/ip'
-alias header='curl -I g.cn'
-alias validate_json='curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R'
-alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
-alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
-alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
-alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
-alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
-alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
-alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
-alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
+alias get_ip		='curl ip.telize.com'
+alias get_macaddress	='networksetup -getmacaddress Wi-Fi'
+alias ip		='curl -s http://wtfismyip.com/text'
+alias ip2		='curl l2.io/ip'
+alias header		='curl -I g.cn'
+alias validate_json	='curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R'
+alias flushDNS		='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
+alias lsock		='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
+alias lsockU		='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
+alias lsockT		='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
+alias ipInfo0		='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
+alias ipInfo1		='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
+alias openPorts		='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
+alias showBlocked	='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
 
 ## the "qp" alias ("que pasa")
@@ -179,8 +180,8 @@ alias gdev="grunt dev && grunt"
 
 
 ## MAC alias
-alias show_all="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock"
-alias hide_all='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
+alias show_all		="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock"
+alias hide_all		='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
 alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
 
 
@@ -195,23 +196,24 @@ alias  grunt_local="open http://localhost:8888/"
 
 ## personal projects
 #   ------------------------------------------------------------
-alias  blog="open  http://leolanese.com/portfolio_old3/root/js_2.php"
-alias  blog="open  http://leolanese.com"
-alias  blog="open  http://www.rwdlab.com"
-alias  blog="open  http://beresponsive.com"
+alias oldll	=" open http://leolanese.com/portfolio_old3/root/js_2.php "
+alias ll	=" open http://leolanese.com "
+alias lab	=" open http://www.rwdlab.com "
+alias rwd	=" open http://beresponsive.com "
+
 
 
 ## testing
 #   ------------------------------------------------------------
-alias  ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
-alias  safari="open -a safari http://localhost:9000/"
-alias  chrome="open -a '/Applications/Google Chrome.app'"
-alias  lynx="lynx 'http://www.bbc.co.uk'"
+alias  ios	=" open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app "
+alias  safari	=" open -a safari http://localhost:9000/ "
+alias  chrome	=" open -a '/Applications/Google Chrome.app' "
+alias  lynx	=" lynx 'http://www.bbc.co.uk' "
 
 
 ## test-driven test
-alias  run_casper="casperjs /Users/llanese/Sites/tests/go.js http://www.bostonglobe.com/" 
-alias  run_jasmine="open -a safari http://m.devu.jackpotparty.com/tests/jasmine/wmsRunner.html" 
+alias  run_casper	="casperjs /Users/llanese/Sites/tests/go.js http://www.bostonglobe.com/" 
+alias  run_jasmine	="open -a safari http://m.devu.jackpotparty.com/tests/jasmine/wmsRunner.html" 
 
 
 ## profile
@@ -384,10 +386,6 @@ alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
 #   cpuHogs:  Find CPU hogs
 #   ------------------------------------------------------------
 alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
-
-#   MAC ADDRESS
-#   ------------------------------------------------------------
-    alias get_macaddress='networksetup -getmacaddress Wi-Fi'
 
 # screensaverDesktop: Run a screensaver on the Desktop
 #   ------------------------------------------------------------
