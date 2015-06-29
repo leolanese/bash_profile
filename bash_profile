@@ -10,10 +10,11 @@ export LC_ALL=en_UK.UTF-8
 # sudo su
 # exit
 
-# JAVA_HOME set: jdk1.7.0_75.jdk
+# JAVA_HOME set
 #   ------------------------------------------------------------
 export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
 alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
+
 
 #   Change Prompt
 #   ------------------------------------------------------------
@@ -22,7 +23,7 @@ echo -e "Kernel Information: " ;uname -smr
 echo -e "${COLOR_BROWN}"; bash --version
 echo -ne "${COLOR_GRAY}Uptime: "; uptime
 echo -ne "${COLOR_GRAY}Server time is: "; date	
-cd /Users/
+cd /Users/leolanese/ivma_device/
 
 ## dev LESS (lessc: npm install -g less) preprocessors
 #   ------------------------------------------------------------
@@ -75,15 +76,7 @@ alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_
 ## all together
 #   ------------------------------------------------------------
 alias go="less sync"
-
-
-# IT dev essential shortcuts
-#   ------------------------------------------------------------
-alias bs	=" open http://getbootstrap.com/components/ "
-alias icons	=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
-alias papajuan  =" open https://github.com/johnpapa/angular-styleguide "
-alias password	=" open chrome://settings/cookies "
-
+alias texttofile="say -o urgentAssistance.aiff -v 'Kate' 'Your status has been updated to Urgent Assistance'"
 
 
 ## shortcuts & directions
@@ -102,7 +95,7 @@ alias  h="history"
 alias  dh="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
 alias  ddh="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias  used="defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'; killall Dock"
-alias  reveal="defaults write com.apple.finder AppleShowAll Files TRUE; killall Finder"
+
 
 
 ## automatic tasks manages shortcuts
@@ -127,8 +120,10 @@ alias git_clean="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmat
 		echo .DS_Store >> ~/.gitignore"
 alias git_all_users='git log --format='%aN' | sort -u'
 alias git_tasks='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'
-#alias git_last='for k in 'git branch|sed s/^..//';do echo -e 'git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" "$k"`\\t"$k";done|sort'
-#alias git_ignore='find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \;'
+
+#alias git_last='for k in 'git branch|sed s/^..//';do echo -e 'git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" "$k"'\\t"$k";done|sort'
+
+alias git_ignore='find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \;'
 alias git_undelete='git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"'
 alias git_idea='git rm -r --cached .idea'
 alias n='NODE_ENV=development grunt server'
@@ -143,20 +138,20 @@ alias check_establish="lsof -i | grep -i estab"
 
 ## aliases
 #   ------------------------------------------------------------
-alias get_ip		='curl ip.telize.com'
-alias get_macaddress	='networksetup -getmacaddress Wi-Fi'
-alias ip		='curl -s http://wtfismyip.com/text'
-alias ip2		='curl l2.io/ip'
-alias header		='curl -I g.cn'
-alias validate_json	='curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R'
-alias flushDNS		='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
-alias lsock		='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
-alias lsockU		='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
-alias lsockT		='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
-alias ipInfo0		='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
-alias ipInfo1		='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
-alias openPorts		='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
-alias showBlocked	='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
+alias get_ip='curl ip.telize.com'
+alias get_macaddress='networksetup -getmacaddress Wi-Fi'
+alias ip='curl -s http://wtfismyip.com/text'
+alias ip2='curl l2.io/ip'
+alias header='curl -I g.cn'
+alias validate_json='curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R'
+alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
+alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
+alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
+alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
+alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
+alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
+alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
+alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
 
 ## the "qp" alias ("que pasa")
@@ -180,40 +175,39 @@ alias gdev="grunt dev && grunt"
 
 
 ## MAC alias
-alias show_all		="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock"
-alias hide_all		='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
+alias show_all="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock"
+alias hide_all='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
 alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
 
 
 
-## projects
+# IT dev essential shortcuts
 #   ------------------------------------------------------------
-alias  jira="open http://jira.nnx.com/"
-alias  localhost="open http://localhost:9898/"
-alias  leolanese="open https://leolanese.com" 
-alias  grunt_local="open http://localhost:8888/"
+alias bs=" open http://getbootstrap.com/components/ "
+alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
+alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
+alias password=" open chrome://settings/cookies "
 
 
 ## personal projects
 #   ------------------------------------------------------------
-alias oldll	=" open http://leolanese.com/portfolio_old3/root/js_2.php "
-alias ll	=" open http://leolanese.com "
-alias lab	=" open http://www.rwdlab.com "
-alias rwd	=" open http://beresponsive.com "
-
+alias oldll=" open http://leolanese.com/portfolio_old3/root/js_2.php "
+alias ll=" open http://leolanese.com "
+alias lab=" open http://www.rwdlab.com "
+alias rwd=" open http://beresponsive.com "
 
 
 ## testing
 #   ------------------------------------------------------------
-alias  ios	=" open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app "
-alias  safari	=" open -a safari http://localhost:9000/ "
-alias  chrome	=" open -a '/Applications/Google Chrome.app' "
-alias  lynx	=" lynx 'http://www.bbc.co.uk' "
+alias  ios=" open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app "
+alias  safari=" open -a safari http://localhost:9000/ "
+alias  chrome=" open -a '/Applications/Google Chrome.app' "
+alias  lynx=" lynx 'http://www.bbc.co.uk' "
 
 
 ## test-driven test
-alias  run_casper	="casperjs /Users/llanese/Sites/tests/go.js http://www.bostonglobe.com/" 
-alias  run_jasmine	="open -a safari http://m.devu.jackpotparty.com/tests/jasmine/wmsRunner.html" 
+alias  run_casper="casperjs /Users/llanese/Sites/tests/go.js http://www.bostonglobe.com/" 
+alias  run_jasmine="open -a safari http://m.devu.jackpotparty.com/tests/jasmine/wmsRunner.html" 
 
 
 ## profile
@@ -229,7 +223,7 @@ alias edit_php="open -e /etc/php.ini"
 alias edit_vhosts="open -e /etc/apache2/extra/httpd-vhosts.conf"
 
 
-# Git branch in prompt, also covering the root scenario
+# Git branch in prompt.
 #   ------------------------------------------------------------
 parse_git_branch() {
  while read -r branch; do
@@ -248,15 +242,16 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 ## FIX logging (don not stop running processes)
 alias logout="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias logoff="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 
 ## FIX sleep problem on MAC laptops (handle with care)
 #   ------------------------------------------------------------
-alias when_sleep='sudo pmset -a'
-alias hibernate='sudo pmset -a hibernatemode 25'
-alias sleep='sudo pmset -a hibernatemode 0'
-alias safesleep='sudo pmset -a hibernatemode 3'
-alias smartsleep='sudo pmset -a hibernatemode 2'
+alias when_sleep=' sudo pmset -a '
+alias hibernate=' sudo pmset -a hibernatemode 25 '
+alias sleep=' sudo pmset -a hibernatemode 0 '
+alias safesleep=' sudo pmset -a hibernatemode 3 '
+alias smartsleep=' sudo pmset -a hibernatemode 2 '
 
 
 # SYSTEMS OPERATIONS & INFORMATION
@@ -297,7 +292,10 @@ alias testme='	java -version;
         	sass -v;
 		protractor --version;
 		cordova -v
-		'
+	'
+
+
+
 
 ## get the VB (virtual box)
 #   ------------------------------------------------------------
@@ -309,7 +307,6 @@ alias vb='curl -O -L "http://download.virtualbox.org/virtualbox/4.3.18/VirtualBo
 ## This will deploy an .dmg, double click and rock and roll!
 
 
-
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
 export EDITOR=/usr/bin/nano
@@ -317,6 +314,7 @@ export EDITOR=/usr/bin/nano
 ## finder
 #   ------------------------------------------------------------
 alias f='open -a Finder ./'
+
 
 ## where is my stuff
 #   ------------------------------------------------------------
@@ -332,8 +330,15 @@ alias where='
 		which node;
 		which bower;
 		which pouchdb;
-		which couchdb
+		which couchdb;
 	'
+
+
+## REMOVING all the Node dependencies
+#   ------------------------------------------------------------
+# alias npm_dev='npm ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print $1}' | xargs npm rm'
+
+
 
 ## Improving the terminal for fast typers
 #   ------------------------------------------------------------		
@@ -351,8 +356,9 @@ alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5m
 alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10mb size (all zeros)
 
 
+
 #   extract:  Extract most know archives with one command
-#   ------------------------------------------------------------
+#   -----------------------------------------------------------
     extract () {
         if [ -f $1 ] ; then
           case $1 in
@@ -374,24 +380,53 @@ alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10
          fi
     }
 
+
 #   spotlight: Search for a file using MacOS Spotlight's metadata
-#   ------------------------------------------------------------
+#   -----------------------------------------------------------
 spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
+
 #   memHogsTop, memHogsPs:  Find memory hogs
-#   ------------------------------------------------------------
-alias memHogsTop='top -l 1 -o rsize | head -20'
-alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
+#   -----------------------------------------------------
+    alias memHogsTop='top -l 1 -o rsize | head -20'
+    alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
     
+
 #   cpuHogs:  Find CPU hogs
-#   ------------------------------------------------------------
-alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+#   -----------------------------------------------------
+    alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+
+
+#   MAC ADDRESS
+#   -----------------------------------------------------
+    
+
 
 # screensaverDesktop: Run a screensaver on the Desktop
-#   ------------------------------------------------------------
+#   -----------------------------------------------------------------------------------
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 
 
 # Python server
 #   ------------------------------------------------------------
 alias server='python -m SimpleHTTPServer 8000'
+
+
+# Grunt shortcuts
+alias cleanstart='grunt cleanstart -d -v'
+alias cleanend='grunt cleanend'
+alias default='grunt default'
+alias build='grunt build'
+alias buildjs='grunt buildjs'
+alias buildjslib='grunt buildjslib'
+alias buildjshtml='grunt buildjshtml'
+alias buildcss='grunt buildcss'
+alias buildfonts='grunt buildfonts'
+alias buildresources='grunt buildresources'
+alias buildstubs='grunt buildstubs'
+alias ut='grunt test —verbose'
+alias utd='grunt debugtest'
+alias validatejs='grunt validatejs'
+alias release='grunt release'
+alias debugrelease='grunt debugrelease'
+alias analyseapp='grunt analyseapp'
