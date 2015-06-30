@@ -396,12 +396,6 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 #   -----------------------------------------------------
     alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 
-
-#   MAC ADDRESS
-#   -----------------------------------------------------
-    
-
-
 # screensaverDesktop: Run a screensaver on the Desktop
 #   -----------------------------------------------------------------------------------
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
