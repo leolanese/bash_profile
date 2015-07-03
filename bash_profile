@@ -171,6 +171,12 @@ alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
 alias password=" open chrome://settings/cookies "
 
+alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
+alias es6fiddle=" open http://www.es6fiddle.net/ "
+alias caniusees6=" open http://kangax.github.io/compat-table/es6/ " 
+alias es6features=" open https://github.com/lukehoban/es6features "
+
+
 
 ## personal projects
 #   ------------------------------------------------------------
