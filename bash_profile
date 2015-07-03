@@ -33,12 +33,7 @@ alias allwms="find ~/Sites/wi.mobile/Source/WI.Web/less/ -name '*.less' -exec le
 ## instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
 #   ------------------------------------------------------------
 alias wms="lessc ~/Sites/wi.mobile/Source/WI.Web/less/accordion.less > ~/Sites/wi.mobile/Source/WI.Web/Css/accordion.css;
-	    lessc ~/Sites/wi.mobile/Source/WI.Web/less/home.less > ~/Sites/wi.mobile/Source/WI.Web/Css/home.css;
-            lessc ~/Sites/wi.mobile/Source/WI.Web/less/grid/col.less > ~/Sites/wi.mobile/Source/WI.Web/Css/grid/col.css;
-            lessc ~/Sites/wi.mobile/Source/WI.Web/less/grid/sizes.less > ~/Sites/wi.mobile/Source/WI.Web/Css/grid/sizes.css;
-            lessc ~/Sites/wi.mobile/Source/WI.Web/less/lib/fonts.less > ~/Sites/wi.mobile/Source/WI.Web/Css/lib/fonts.css;
-            lessc ~/Sites/wi.mobile/Source/WI.Web/less/lib/mixins.less > ~/Sites/wi.mobile/Source/WI.Web/Css/lib/mixins.css;
-            lessc ~/Sites/wi.mobile/Source/WI.Web/less/emailcapture.less > ~/Sites/wi.mobile/Source/WI.Web/Css/emailcapture.css;
+           lessc ~/Sites/wi.mobile/Source/WI.Web/less/emailcapture.less > ~/Sites/wi.mobile/Source/WI.Web/Css/emailcapture.css;
 "
 
 ## dev port
@@ -50,11 +45,6 @@ alias allport="find ~/Sites/ptf/less/ -name '*.less' -exec lessc {} \; > ~/Sites
 ## instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
 #   ------------------------------------------------------------
 alias port="lessc ~/Sites/ptf/less/grid.less > ~/Sites/ptf/css/grid.css;
-	    lessc ~/Sites/ptf/less/style.less > ~/Sites/ptf/css/style.css;
-	    lessc ~/Sites/ptf/less/article.less > ~/Sites/ptf/css/article.css;
-            lessc ~/Sites/ptf/less/canvas.less > ~/Sites/ptf/css/canvas.css;
-            lessc ~/Sites/ptf/less/lab.less > ~/Sites/ptf/css/lab.css;
-            lessc ~/Sites/ptf/less/type.less > ~/Sites/ptf/css/type.css;
             lessc ~/Sites/ptf/less/mindex.less > ~/Sites/ptf/css/mindex.css;
 "
 
@@ -63,13 +53,6 @@ alias port="lessc ~/Sites/ptf/less/grid.less > ~/Sites/ptf/css/grid.css;
 ## dev rsyncs
 #   ------------------------------------------------------------
 alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/js/ /Volumes/wi.mobile/js;
-	    rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/css/ /Volumes/wi.mobile/css;
-	    rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/less/ /Volumes/wi.mobile/less;
-	    rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/img/ /Volumes/wi.mobile/img;
-	    rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/tests/jasmine/spec/ /Volumes/wi.mobile/tests/jasmine/spec;
-	    rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/tests/jasmine/ /Volumes/wi.mobile/tests/jasmine;
-	    rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/tests/jasmine/lib/helpers/ /Volumes/wi.mobile/tests/jasmine/lib/helpers;
-	    rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/Views/ /Volumes/wi.mobile/Views;
             rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/css/fonts/ /Volumes/wi.mobile/css/fonts;
 "
 
