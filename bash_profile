@@ -137,6 +137,14 @@ alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listenin
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
 
+## aliases POUCHDB and Futon (PouchDB UI)
+#   ------------------------------------------------------------
+alias pouch_alive=' curl http://127.0.0.1:5984/ '
+alias pouch_db=' curl -X GET http://127.0.0.1:5984/_all_dbs '
+alias pouch_put='curl -X PUT http://127.0.0.1:5984/test'
+alias pouch_delete='curl -X DELETE http://127.0.0.1:5984/test'
+
+
 ## the "qp" alias ("que pasa")
 #   ------------------------------------------------------------
 alias qp="ps auxwww"
