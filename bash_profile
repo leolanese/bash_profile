@@ -121,6 +121,11 @@ alias check_port="lsof -i :8888"
 alias check_establish="lsof -i | grep -i estab"
 
 
+# Watch Network Traffic
+#   ------------------------------------------------------------
+alias network=" nettop -m route "
+
+ 
 ## aliases
 #   ------------------------------------------------------------
 alias get_ip='curl ip.telize.com'
