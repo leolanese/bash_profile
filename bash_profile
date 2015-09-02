@@ -415,6 +415,7 @@ alias server='python -m SimpleHTTPServer 8000'
 
 
 # Grunt shortcuts
+#   ------------------------------------------------------------
 alias cleanstart='grunt cleanstart -d -v'
 alias cleanend='grunt cleanend'
 alias default='grunt default'
