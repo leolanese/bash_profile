@@ -1,14 +1,16 @@
 clear
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-export LC_CTYPE=en_UK.UTF-8
-export LC_ALL=en_UK.UTF-8
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export LC_CTYPE="en_UK.UTF-8"
+export LC_ALL="en_UK.UTF-8"
+
 
 # root?
 # sudo su
 # exit
+
 
 # JAVA_HOME set
 #   ------------------------------------------------------------
@@ -139,10 +141,13 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 
 ## aliases POUCHDB and Futon (PouchDB UI)
 #   ------------------------------------------------------------
-alias pouch_alive=' curl http://127.0.0.1:5984/ '
-alias pouch_db=' curl -X GET http://127.0.0.1:5984/_all_dbs '
-alias pouch_put='curl -X PUT http://127.0.0.1:5984/test'
-alias pouch_delete='curl -X DELETE http://127.0.0.1:5984/test'
+
+alias pouch_alive=' curl http://127.0.0.1:5984/ | python -m json.tool'
+alias pouch_db=' curl -X GET http://127.0.0.1:5984/_all_dbs | python -m json.tool'
+alias pouch_put=' curl -X PUT http://127.0.0.1:5984/test | python -m json.tool'
+alias pouch_delete=' curl -X DELETE http://127.0.0.1:5984/test '
+alias del_ivma=' curl -X DELETE http://127.0.0.1:5984/ivma '
+
 
 
 ## the "qp" alias ("que pasa")
@@ -152,12 +157,12 @@ alias qp="ps auxwww"
 
 ## Python Server
 #   ------------------------------------------------------------
-alias s='python -m SimpleHTTPServer 8888'
+alias server='python -m SimpleHTTPServer 8888'
 
 
 # mongo
 #   ------------------------------------------------------------
-alias m="mongod --dbpath /Users/leolanese/met/data/db --rest"
+alias mon="mongod --dbpath /Users/leolanese/met/data/db --rest"
 
 
 ## grunt alias to run dev
@@ -171,7 +176,6 @@ alias hide_all='defaults write com.apple.finder ShowAllFiles FALSE  && killall D
 alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
 
 
-
 # IT dev essential shortcuts
 #   ------------------------------------------------------------
 alias bs=" open http://getbootstrap.com/components/ "
@@ -183,7 +187,7 @@ alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
 alias es6fiddle=" open http://www.es6fiddle.net/ "
 alias caniusees6=" open http://kangax.github.io/compat-table/es6/ " 
 alias es6features=" open https://github.com/lukehoban/es6features "
-
+alias json=" https://jsonformatter.curiousconcept.com/ "
 
 
 ## personal projects
@@ -229,6 +233,7 @@ parse_git_branch() {
 
  [[ $current_branch ]] && printf ' [%s]' "$current_branch"
 }
+
 
 ## Modify Bash Prompt, Enable colors, improve ls
 #   ------------------------------------------------------------
@@ -396,6 +401,12 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 # screensaverDesktop: Run a screensaver on the Desktop
 #   -----------------------------------------------------------------------------------
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
+
+
+#   process on memory track
+#   -----------------------------------------------------
+alias track=' ps aux | grep  grunt ' 
+# and finally kill -9 
 
 
 # Python server
