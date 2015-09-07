@@ -144,14 +144,13 @@ alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS co
 alias matrix='yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash'
 
 
-## aliases POUCHDB and Futon (PouchDB UI)
+## aliases pouchDB and Futon (PouchDB UI)
 #   ------------------------------------------------------------
-
-alias pouch_alive=' curl http://127.0.0.1:5984/ | python -m json.tool'
-alias pouch_db=' curl -X GET http://127.0.0.1:5984/_all_dbs | python -m json.tool'
-alias pouch_put=' curl -X PUT http://127.0.0.1:5984/test | python -m json.tool'
-alias pouch_delete=' curl -X DELETE http://127.0.0.1:5984/test '
-alias del_ivma=' curl -X DELETE http://127.0.0.1:5984/ivma '
+alias db_alive=' curl http://127.0.0.1:5984/ | python -m json.tool '
+alias db=' curl -X GET http://127.0.0.1:5984/_all_dbs | python -m json.tool '
+alias db_put=' curl -X PUT http://127.0.0.1:5984/test | python -m json.tool '
+alias db_delete=' curl -X DELETE http://127.0.0.1:5984/test '
+alias db_insert=' curl -H "Content-Type: application/json" --data @tt.json http://127.0.0.1:5984/test '
 
 
 
@@ -165,7 +164,7 @@ alias qp="ps auxwww"
 alias server='python -m SimpleHTTPServer 8888'
 
 
-# mongo
+# mongoDB
 #   ------------------------------------------------------------
 alias mon="mongod --dbpath /Users/leolanese/met/data/db --rest"
 
