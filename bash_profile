@@ -97,19 +97,20 @@ alias git_users="git log --format='%aN' | sort -u"
 alias git_diff="git log -p" 
 alias git_i="git add -i"
 alias git_me="git log --author=LeoLanese"
-alias git_remote="git remote -v"
-alias git_clean="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch; 
+alias git_remote=" git remote -v "
+alias git_clean=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch; 
 		git config --global core.excludesfile ~/.gitignore;
-		echo .DS_Store >> ~/.gitignore"
-alias git_all_users='git log --format='%aN' | sort -u'
-alias git_tasks='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'
+		echo .DS_Store >> ~/.gitignore "
+alias git_all_users='git log --format='%aN' | sort -u '
+alias git_tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
 
 #alias git_last='for k in 'git branch|sed s/^..//';do echo -e 'git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" "$k"'\\t"$k";done|sort'
 
-alias git_ignore='find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \;'
-alias git_undelete='git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"'
-alias git_idea='git rm -r --cached .idea'
-alias n='NODE_ENV=development grunt server'
+alias git_ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \; '
+alias git_undelete=' git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file" '
+alias git_idea=' git rm -r --cached .idea '
+alias n=' NODE_ENV=development grunt server '
+alias sprint_start=' git branch -D `git branch | grep -E 'IVMA-..*'` '  
 
 
 ## ports
