@@ -84,15 +84,16 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 
 ## git
 #   ------------------------------------------------------------
-alias git_end_sprint="git branch | grep -v 'master' | xargs git branch -D"
-alias git_merge="git difftool"
-alias git_branch="git branch -a"
-alias git_k="gitk --all &"
-alias git_log="git log --graph --oneline --all --decorate --color"
-alias git_users="git log --format='%aN' | sort -u"
-alias git_diff="git log -p" 
-alias git_i="git add -i"
-alias git_me="git log --author=LeoLanese"
+alias git_end_sprint=" git branch | grep -v 'master' | xargs git branch -D "
+alias git_merge=" git difftool "
+alias git_branch=" git branch -a "
+alias git_k=" gitk --all & "
+alias git_log=" git log --graph --oneline --all --decorate --color "
+alias git_log2=" git log --pretty=oneline "
+alias git_users=" git log --format='%aN' | sort -u "
+alias git_diff=" git log -p " 
+alias git_i=" git add -i "
+alias git_me=" git log --author=LeoLanese "
 alias git_remote=" git remote -v "
 alias git_clean=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch; 
 		git config --global core.excludesfile ~/.gitignore;
