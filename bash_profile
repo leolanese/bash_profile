@@ -6,10 +6,6 @@ export PATH="/usr/local/bin:$PATH"
 export LC_CTYPE="en_UK.UTF-8"
 export LC_ALL="en_UK.UTF-8"
 
-# root?
-# sudo su
-# exit
-
 # JAVA_HOME set
 #   ------------------------------------------------------------
 export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
