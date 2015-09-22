@@ -84,6 +84,7 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 
 ## git
 #   ------------------------------------------------------------
+alias git_config=" cat .git/config "
 alias git_end_sprint=" git branch | grep -v 'master' | xargs git branch -D "
 alias git_merge=" git difftool "
 alias git_branch=" git branch -a "
