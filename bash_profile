@@ -87,11 +87,18 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 alias git_end_sprint=" git branch | grep -v 'master' | xargs git branch -D "
 alias git_merge=" git difftool "
 alias git_branch=" git branch -a "
-alias git_k=" gitk --all & "
 alias git_log=" git log --graph --oneline --all --decorate --color "
 alias git_log2=" git log --pretty=oneline "
 alias git_users=" git log --format='%aN' | sort -u "
-alias git_diff=" git log -p " 
+alias git_diff=" git log -p "
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all &'
 alias git_i=" git add -i "
 alias git_me=" git log --author=LeoLanese "
 alias git_remote=" git remote -v "
