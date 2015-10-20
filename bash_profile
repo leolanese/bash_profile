@@ -189,7 +189,9 @@ alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.
 
 # IT dev essential shortcuts
 #   ------------------------------------------------------------
+alias radio=" open http://kissfm.es/player/ "
 alias bs=" open http://getbootstrap.com/components/ "
+alias bs2=" open http://getbootstrap.com/examples/grid/ "
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
 alias password=" open chrome://settings/cookies "
