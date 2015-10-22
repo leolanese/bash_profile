@@ -36,6 +36,13 @@ alias bell=" tput bel "
 alias rootMode=" dsenableroot "
 
 
+## index commands
+#   ------------------------------------------------------------
+alias disable=" Indexingmdutil -i off -d /path/to/volume "
+ 
+ 
+ 
+
 #   Change Prompt
 #   ------------------------------------------------------------
 echo -n -e "\033]0;LeoLaneseltd\007"
