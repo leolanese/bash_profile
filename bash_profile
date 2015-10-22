@@ -71,7 +71,11 @@ alias audio7=" osascript -e 'set volume 7' "
 alias wifyPassword=" security find-generic-password -D 'AirPort network password' -a 'SSID' -gw "
 alias wirelessScan=" airport -s "
 alias said=" /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}' "
+alias clearPrinterQueue=" cancel -a - "
 
+# DELETE
+#   ------------------------------------------------------------
+alias secureDelete=" srm -r /path/to/file " 
 
 
 #   Change Prompt
