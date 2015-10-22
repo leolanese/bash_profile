@@ -48,7 +48,11 @@ alias macInfo=" networksetup -listallhardwareports "
 alias showOSX=" sw_vers "
 alias macCore=" sysctl -n machdep.cpu.brand_string "
 
-
+# Printer
+#   ------------------------------------------------------------
+alias dontSleep=" caffeinate -u -t 3600 "
+alias goSleep=" sudo pmset sleep 5 "
+alias checkSleep=" sudo systemsetup -getcomputersleep "
 
 
 #   Change Prompt
