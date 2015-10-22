@@ -11,6 +11,26 @@ export LC_ALL="en_UK.UTF-8"
 export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
 alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
 
+## MAC commands
+#   ------------------------------------------------------------
+alias showExt=" defaults write NSGlobalDomain AppleShowAllExtensions -bool true "
+alias hideAll=" defaults write com.apple.finder AppleShowAllFiles true "
+alias showPath=" defaults write com.apple.finder _FXShowPosixPathInTitle -bool true "
+alias showLIbrary=" chflags nohidden ~/Library "
+
+alias setBootVolume=" bless --mount "/path/to/mounted/volume" --setBoot "
+alias showAll=" diskutil list "
+alias hideFolder=" chflags hidden /path/to/folder/ "
+alias clearFontCache="
+	atsutil databases -removeUser && \
+	atsutil server -shutdown && \
+	atsutil server -ping
+"
+alias macScreen=" system_profiler SPDisplaysDataType | grep Resolution "
+alias lock=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend " 
+alias bell=" tput bel "
+
+
 
 #   Change Prompt
 #   ------------------------------------------------------------
