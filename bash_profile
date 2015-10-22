@@ -31,6 +31,10 @@ alias lock=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resour
 alias bell=" tput bel "
 
 
+## root commands
+#   ------------------------------------------------------------
+alias rootMode=" dsenableroot "
+
 
 #   Change Prompt
 #   ------------------------------------------------------------
