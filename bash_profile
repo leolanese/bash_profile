@@ -66,6 +66,14 @@ alias audio5=" osascript -e 'set volume 5' "
 alias audio6=" osascript -e 'set volume 6' "
 alias audio7=" osascript -e 'set volume 7' "
 
+# Printer
+#   ------------------------------------------------------------
+alias wifyPassword=" security find-generic-password -D 'AirPort network password' -a 'SSID' -gw "
+alias wirelessScan=" airport -s "
+alias said=" /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}' "
+
+
+
 #   Change Prompt
 #   ------------------------------------------------------------
 echo -n -e "\033]0;LeoLaneseltd\007"
