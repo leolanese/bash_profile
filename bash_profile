@@ -41,7 +41,15 @@ alias rootMode=" dsenableroot "
 alias disable=" Indexingmdutil -i off -d /path/to/volume "
  
  
- 
+## MAC diagnosis commands
+#   ------------------------------------------------------------
+alias macScan=" sudo sysdiagnose -f ~/Desktop/ "
+alias macInfo=" networksetup -listallhardwareports "
+alias showOSX=" sw_vers "
+alias macCore=" sysctl -n machdep.cpu.brand_string "
+
+
+
 
 #   Change Prompt
 #   ------------------------------------------------------------
