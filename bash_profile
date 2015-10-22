@@ -38,7 +38,7 @@ alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.
 ## root commands
 #   ------------------------------------------------------------
 alias rootMode=" dsenableroot "
-
+alias su=" sudo su "
 
 ## index commands
 #   ------------------------------------------------------------
