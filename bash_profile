@@ -5,6 +5,7 @@ export PATH="/usr/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export LC_CTYPE="en_UK.UTF-8"
 export LC_ALL="en_UK.UTF-8"
+tput bel
 
 # JAVA_HOME set
 #   ------------------------------------------------------------
@@ -29,6 +30,9 @@ alias clearFontCache="
 alias macScreen=" system_profiler SPDisplaysDataType | grep Resolution "
 alias lock=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend " 
 alias bell=" tput bel "
+alias show_all="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock"
+alias hide_all='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
+alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
 
 
 ## root commands
@@ -247,15 +251,13 @@ alias mon="mongod --dbpath /Users/leolanese/met/data/db --rest"
 alias gdev="grunt dev && grunt"
 
 
-## MAC alias
-alias show_all="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock"
-alias hide_all='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
-alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
-
+## Fun
+#   ------------------------------------------------------------
+alias radio=" open http://kissfm.es/player/ "
+alias radio2="  open http://drs1.radio.net/ " 
 
 # IT dev essential shortcuts
 #   ------------------------------------------------------------
-alias radio=" open http://kissfm.es/player/ "
 alias bs=" open http://getbootstrap.com/components/ "
 alias bs2=" open http://getbootstrap.com/examples/grid/ "
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
