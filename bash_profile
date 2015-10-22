@@ -54,6 +54,17 @@ alias dontSleep=" caffeinate -u -t 3600 "
 alias goSleep=" sudo pmset sleep 5 "
 alias checkSleep=" sudo systemsetup -getcomputersleep "
 
+# Audio
+#   ------------------------------------------------------------
+alias mute=" osascript -e 'set volume output muted true' "
+alias noMute=" osascript -e 'set volume output muted false' "
+alias audio1=" osascript -e 'set volume 1' "
+alias audio2=" osascript -e 'set volume 2' "
+alias audio3=" osascript -e 'set volume 3' "
+alias audio4=" osascript -e 'set volume 4' "
+alias audio5=" osascript -e 'set volume 5' "
+alias audio6=" osascript -e 'set volume 6' "
+alias audio7=" osascript -e 'set volume 7' "
 
 #   Change Prompt
 #   ------------------------------------------------------------
