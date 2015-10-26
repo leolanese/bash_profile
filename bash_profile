@@ -281,10 +281,13 @@ alias rwd=" open http://beresponsive.com "
 
 ## testing
 #   ------------------------------------------------------------
-alias  ios=" open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app "
-alias  safari=" open -a safari http://localhost:9000/ "
-alias  chrome=" open -a '/Applications/Google Chrome.app' "
-alias  lynx=" lynx 'http://www.bbc.co.uk' "
+alias ios6=" open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app "
+alias ios5=" open /Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app "
+alias ios3=" open /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app "
+
+alias safari=" open -a safari http://localhost:9000/ "
+alias chrome=" open -a '/Applications/Google Chrome.app' "
+alias lynx=" lynx 'http://www.bbc.co.uk' "
 
 
 ## test-driven test
