@@ -186,7 +186,9 @@ alias git_ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) 
 alias git_undelete=' git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file" '
 alias git_idea=' git rm -r --cached .idea '
 alias n=' NODE_ENV=development grunt server '
-alias sprint_start=' git branch -D `git branch | grep -E 'IVMA-..*'` '  
+alias sprint_start=" git branch -D 'git branch | grep -E 'IVMA-..*'' "  
+alias contributors=' git shortlog -sn '
+alias git_name=' git config user.name '
 
 
 ## ports
@@ -228,6 +230,7 @@ alias db=' curl -X GET http://127.0.0.1:5984/_all_dbs | python -m json.tool '
 alias db_put=' curl -X PUT http://127.0.0.1:5984/test | python -m json.tool '
 alias db_delete=' curl -X DELETE http://127.0.0.1:5984/test '
 alias db_insert=' curl -H "Content-Type: application/json" --data @tt.json http://127.0.0.1:5984/test '
+alias db_restart=' curl -X POST http://localhost:5984/_restart -H 111 "Content-Type: application/json" '
 
 
 
@@ -500,22 +503,22 @@ alias server='python -m SimpleHTTPServer 8000'
 
 # Grunt shortcuts
 #   ------------------------------------------------------------
-alias cleanstart='grunt cleanstart -d -v'
-alias cleanend='grunt cleanend'
-alias default='grunt default'
-alias build='grunt build'
-alias buildjs='grunt buildjs'
-alias buildjslib='grunt buildjslib'
-alias buildjshtml='grunt buildjshtml'
-alias buildcss='grunt buildcss'
-alias buildfonts='grunt buildfonts'
-alias buildresources='grunt buildresources'
-alias buildstubs='grunt buildstubs'
-alias ut='grunt test —verbose'
-alias utd='grunt debugtest'
-alias validatejs='grunt validatejs'
-alias release='grunt release'
-alias debugrelease='grunt debugrelease'
-alias analyseapp='grunt analyseapp'
+alias cleanstart='  cleanstart -d -v '
+alias cleanend=' grunt cleanend '
+alias default=' grunt default '
+alias build=' grunt build '
+alias buildjs=' grunt buildjs '
+alias buildjslib=' grunt buildjslib '
+alias buildjshtml=' grunt buildjshtml '
+alias buildcss=' grunt buildcss '
+alias buildfonts=' grunt buildfonts '
+alias buildresources=' grunt buildresources '
+alias buildstubs=' grunt buildstubs '
+alias ut=' grunt test —verbose '
+alias utd=' grunt debugtest '
+alias validatejs=' grunt validatejs '
+alias release=' grunt release '
+alias debugrelease=' grunt debugrelease '
+alias analyseapp=' grunt analyseapp '
 
 
