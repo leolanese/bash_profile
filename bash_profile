@@ -1,4 +1,8 @@
 clear
+
+##
+## BASIC CONFIGURATION
+##
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
@@ -6,8 +10,16 @@ export PATH="/usr/local/bin:$PATH"
 export LC_CTYPE="en_UK.UTF-8"
 export LC_ALL="en_UK.UTF-8"
 tput bel
+
+
 # Allow npm install -g without needing sudo
 npm config set prefix $dir
+
+
+#   Set Default Editor (change 'Nano' to the editor of your choice)
+#   ------------------------------------------------------------
+export EDITOR=/usr/bin/nano
+alias='$EDITOR ~/.bashrc ; source ~/.bashrc'
 
 
 # JAVA_HOME set
@@ -16,6 +28,9 @@ export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/H
 alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
 
 
+##
+## BASIC COMMANDS
+##
 # NPM
 alias npmOld=" npm outdated " 
 alias npmNot=" npm prune " 
@@ -55,7 +70,9 @@ alias su=" sudo su "
 ## index commands
 #   ------------------------------------------------------------
 alias disable=" Indexingmdutil -i off -d /path/to/volume "
- 
+§
+# Show hidden files 
+alias l.='ls -d .* --color=auto'
  
 ## MAC diagnosis commands
 #   ------------------------------------------------------------
@@ -63,6 +80,9 @@ alias macScan=" sudo sysdiagnose -f ~/Desktop/ "
 alias macInfo=" networksetup -listallhardwareports "
 alias showOSX=" sw_vers "
 alias macCore=" sysctl -n machdep.cpu.brand_string "
+# Wakeup sleeping servers (replace mac with your actual server mac address)
+alias wakeupnas01='/usr/bin/wakeonlan 00:11:32:11:15:FC'
+
 
 # Printer
 #   ------------------------------------------------------------
@@ -266,10 +286,14 @@ alias mon="mongod --dbpath /Users/leolanese/met/data/db --rest"
 alias gdev="grunt dev && grunt"
 
 
-## Radio
+## fun
 #   ------------------------------------------------------------
 alias radio=" open http://kissfm.es/player/ "
 alias radio2="  open http://drs1.radio.net/ " 
+# play all music files from the current directory
+alias playwave='for i in *.wav; do mplayer "$i"; done'
+alias playogg='for i in *.ogg; do mplayer "$i"; done'
+alias playmp3='for i in *.mp3; do mplayer "$i"; done'
 
 
 # IT dev essential shortcuts
@@ -407,14 +431,10 @@ alias vb='curl -O -L "http://download.virtualbox.org/virtualbox/4.3.18/VirtualBo
 ## ./IE11.Win10.For.MacVirtualBox.part1.sfx
 ## This will deploy an .dmg, double click and rock and roll!
 
-
-#   Set Default Editor (change 'Nano' to the editor of your choice)
-#   ------------------------------------------------------------
-export EDITOR=/usr/bin/nano
-
 ## finder
 #   ------------------------------------------------------------
 alias f='open -a Finder ./'
+alias .='open -a Finder ./'
 
 
 ## where is my stuff
@@ -438,6 +458,10 @@ alias where='
 ## REMOVING all the Node dependencies
 #   ------------------------------------------------------------
 # alias npm_dev='npm ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print $1}' | xargs npm rm'
+
+
+# Start calculator with math support
+alias bc='bc -l'
 
 
 
@@ -492,6 +516,13 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 alias memHogsTop='top -l 1 -o rsize | head -20'
 alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
     
+## get top process eating memory
+alias psmem='ps aux | sort -nr -k 4'
+alias psmem10='ps aux | sort -nr -k 4 | head -10'
+ 
+## get top process eating cpu ##
+alias pscpu='ps aux | sort -nr -k 3'
+alias pscpu10='ps aux | sort -nr -k 3 | head -10'
 
 #   cpuHogs:  Find CPU hogs
 #   -----------------------------------------------------
@@ -532,4 +563,3 @@ alias validatejs=' grunt validatejs '
 alias release=' grunt release '
 alias debugrelease=' grunt debugrelease '
 alias analyseapp=' grunt analyseapp '
-
