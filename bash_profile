@@ -6,11 +6,22 @@ export PATH="/usr/local/bin:$PATH"
 export LC_CTYPE="en_UK.UTF-8"
 export LC_ALL="en_UK.UTF-8"
 tput bel
+# Allow npm install -g without needing sudo
+npm config set prefix $dir
+
 
 # JAVA_HOME set
 #   ------------------------------------------------------------
 export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
 alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
+
+
+# NPM
+alias npmOld=" npm outdated " 
+alias npmNot=" npm prune " 
+alias npmAllDependencies=" npm shrinkwrap "
+alias npmV3=" npm install -g npm@3 "
+
 
 ## MAC commands
 #   ------------------------------------------------------------
@@ -39,6 +50,7 @@ alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.
 #   ------------------------------------------------------------
 alias rootMode=" dsenableroot "
 alias su=" sudo su "
+
 
 ## index commands
 #   ------------------------------------------------------------
@@ -90,6 +102,7 @@ echo -e "${COLOR_BROWN}"; bash --version
 echo -ne "${COLOR_GRAY}Uptime: "; uptime
 echo -ne "${COLOR_GRAY}Server time is: "; date	
 cd /Users/leolanese/ivma_device/
+
 
 ## dev LESS (lessc: npm install -g less) preprocessors
 #   ------------------------------------------------------------
@@ -144,7 +157,6 @@ alias  h="history"
 alias  dh="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
 alias  ddh="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias  used="defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'; killall Dock"
-
 
 
 ## automatic tasks manages shortcuts
@@ -254,19 +266,20 @@ alias mon="mongod --dbpath /Users/leolanese/met/data/db --rest"
 alias gdev="grunt dev && grunt"
 
 
-## Fun
+## Radio
 #   ------------------------------------------------------------
 alias radio=" open http://kissfm.es/player/ "
 alias radio2="  open http://drs1.radio.net/ " 
+
 
 # IT dev essential shortcuts
 #   ------------------------------------------------------------
 alias bs=" open http://getbootstrap.com/components/ "
 alias bs2=" open http://getbootstrap.com/examples/grid/ "
+alias bs3=" http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
 alias password=" open chrome://settings/cookies "
-
 alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
 alias es6fiddle=" open http://www.es6fiddle.net/ "
 alias caniusees6=" open http://kangax.github.io/compat-table/es6/ " 
@@ -277,9 +290,8 @@ alias json=" https://jsonformatter.curiousconcept.com/ "
 ## personal projects
 #   ------------------------------------------------------------
 alias oldll=" open http://leolanese.com/portfolio_old3/root/js_2.php "
-alias ll=" open http://leolanese.com "
+alias leo=" open http://leolanese.com "
 alias lab=" open http://www.rwdlab.com "
-alias rwd=" open http://beresponsive.com "
 
 
 ## testing
@@ -477,13 +489,13 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
 #   memHogsTop, memHogsPs:  Find memory hogs
 #   -----------------------------------------------------
-    alias memHogsTop='top -l 1 -o rsize | head -20'
-    alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
+alias memHogsTop='top -l 1 -o rsize | head -20'
+alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
     
 
 #   cpuHogs:  Find CPU hogs
 #   -----------------------------------------------------
-    alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 
 # screensaverDesktop: Run a screensaver on the Desktop
 #   -----------------------------------------------------------------------------------
@@ -520,5 +532,4 @@ alias validatejs=' grunt validatejs '
 alias release=' grunt release '
 alias debugrelease=' grunt debugrelease '
 alias analyseapp=' grunt analyseapp '
-
 
