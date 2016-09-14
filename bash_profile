@@ -408,21 +408,25 @@ echo .DS_Store >> ~/.gitignore
 alias testme='	java -version;
         	apachectl -v;
 		git --version;
-		node --version && npm --version;
+		node --version;
+		npm --version;
 		bower -v;
 		karma --version;
         	phantomjs --version;
 		casperjs --version;
 		grunt -version;
 	    	php -v;
-		mongo --version; mongod --version;
+		mongo --version; 
+		mongod --version;
 		mongos --version;
 		yo --version;
 		grunt --version;
 		bower --version;
         	sass -v;
 		protractor --version;
-		cordova -v
+		cordova -v;
+		uname -a;
+		sw_vers;
 	'
 
 
