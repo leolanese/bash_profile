@@ -70,7 +70,7 @@ alias su=" sudo su "
 ## index commands
 #   ------------------------------------------------------------
 alias disable=" Indexingmdutil -i off -d /path/to/volume "
-§
+
 # Show hidden files 
 alias l.='ls -d .* --color=auto'
  
