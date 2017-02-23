@@ -575,3 +575,8 @@ alias validatejs=' grunt validatejs '
 alias release=' grunt release '
 alias debugrelease=' grunt debugrelease '
 alias analyseapp=' grunt analyseapp '
+
+
+# JSON-Server as a Fake REST API in Frontend Development
+#   ------------------------------------------------------------
+alias fakeServer=' json-server --watch db.json '
