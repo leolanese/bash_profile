@@ -578,5 +578,6 @@ alias analyseapp=' grunt analyseapp '
 
 
 # JSON-Server as a Fake REST API in Frontend Development
+# npm install -D json-server
 #   ------------------------------------------------------------
 alias fakeServer=' json-server --watch db.json '
