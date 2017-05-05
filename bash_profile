@@ -1,8 +1,7 @@
 clear
 
-##
-## BASIC CONFIGURATION
-##
+# BASIC CONFIGURATION
+#   ------------------------------------------------------------
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
@@ -29,9 +28,8 @@ alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Hom
 
 
 ##
-## BASIC COMMANDS
-##
-# NPM
+## BASIC npm COMMANDS
+#   ------------------------------------------------------------
 alias npmOld=" npm outdated " 
 alias npmNot=" npm prune " 
 alias npmAllDependencies=" npm shrinkwrap "
@@ -266,7 +264,6 @@ alias db_insert=' curl -H "Content-Type: application/json" --data @tt.json http:
 alias db_restart=' curl -X POST http://localhost:5984/_restart -H 111 "Content-Type: application/json" '
 
 
-
 ## the "qp" alias ("que pasa")
 #   ------------------------------------------------------------
 alias qp="ps auxwww"
@@ -435,8 +432,6 @@ alias testme='	java -version;
 	'
 
 
-
-
 ## get the VB (virtual box)
 #   ------------------------------------------------------------
 alias modernio='curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE11-Win10&parts=5&filename=VMBuild_20141027/VirtualBox/IE11/Mac/IE11.Win10.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar,5.rar}"'
@@ -477,7 +472,6 @@ alias where='
 
 # Start calculator with math support
 alias bc='bc -l'
-
 
 
 ## Improving the terminal for fast typers
@@ -584,3 +578,4 @@ alias analyseapp=' grunt analyseapp '
 # npm install -D json-server
 #   ------------------------------------------------------------
 alias fakeServer=' json-server --watch db.json '
+
