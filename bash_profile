@@ -192,6 +192,7 @@ alias git_log=" git log --graph --oneline --all --decorate --color "
 alias git_log2=" git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short "
 alias git_log3=" git log --pretty=oneline "
 alias git_log4=" git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit "
+alias git_log5=" git whatchanged -3 -p "
 alias git_users=" git log --format='%aN' | sort -u "
 alias git_diff=" git log -p "
 alias gs='git status '
