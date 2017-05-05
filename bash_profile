@@ -274,7 +274,7 @@ alias qp="ps auxwww"
 #   ------------------------------------------------------------
 alias server='python -m SimpleHTTPServer 8888'
 # simple http server to dump request headers
-alias dump=" curl -s -H "X-Something: test" localhost:8888 > /dev/null "
+alias dump=" curl -s -H 'X-Something: test' localhost:8888 > /dev/null "
 
 
 # mongoDB
