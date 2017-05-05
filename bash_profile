@@ -583,8 +583,8 @@ alias fakeServer=' json-server --watch db.json '
 
 # Set git autocompletion and PS1 integration
 #   ------------------------------------------------------------
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-  . /usr/local/git/contrib/completion/git-completion.bash
+if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ]; then
+  . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 fi
-source /usr/local/git/contrib/completion/git-prompt.sh 
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 
