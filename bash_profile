@@ -580,3 +580,11 @@ alias analyseapp=' grunt analyseapp '
 #   ------------------------------------------------------------
 alias fakeServer=' json-server --watch db.json '
 
+
+# Set git autocompletion and PS1 integration
+#   ------------------------------------------------------------
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+  . /usr/local/git/contrib/completion/git-completion.bash
+fi
+source /usr/local/git/contrib/completion/git-prompt.sh 
+
