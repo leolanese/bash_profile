@@ -119,7 +119,7 @@ echo -e "Kernel Information: " ;uname -smr
 echo -e "${COLOR_BROWN}"; bash --version
 echo -ne "${COLOR_GRAY}Uptime: "; uptime
 echo -ne "${COLOR_GRAY}Server time is: "; date	
-cd /Users/leolanese/
+
 
 
 ## dev LESS (lessc: npm install -g less) preprocessors
