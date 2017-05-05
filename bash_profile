@@ -339,13 +339,15 @@ alias lynx=" lynx 'http://www.bbc.co.uk' "
 
 
 ## test-driven test
-alias  run_casper="casperjs /Users/llanese/Sites/tests/go.js http://www.bostonglobe.com/" 
-alias  run_jasmine="open -a safari http://m.devu.jackpotparty.com/tests/jasmine/wmsRunner.html" 
+#   ------------------------------------------------------------
+alias run_casper="casperjs /Users/llanese/Sites/tests/go.js http://www.bostonglobe.com/" 
+alias run_jasmine="open -a safari http://m.devu.jackpotparty.com/tests/jasmine/wmsRunner.html" 
 
 
 ## profile
-alias  edit_profile='open -e ~/.bash_profile'
-alias  reload_profile=". ~/.bash_profile"
+#   ------------------------------------------------------------
+alias edit_profile=" open -e ~/.bash_profile "
+alias reload_profile=" source ~/.bash_profile "
 
 
 ## web development, so I need to edit these non-owned files fairly often
