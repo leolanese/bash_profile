@@ -580,6 +580,13 @@ alias analyseapp=' grunt analyseapp '
 #   ------------------------------------------------------------
 alias fakeServer=' json-server --watch db.json '
 
+#
+# Set mapscii
+#   ------------------------------------------------------------
+# telnet mapscii.me
+# or
+# npm install -g mapscii
+# mapscii
 
 # Set git autocompletion and PS1 integration
 #   ------------------------------------------------------------
