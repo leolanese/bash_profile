@@ -304,12 +304,12 @@ alias bs=" open http://getbootstrap.com/components/ "
 alias bs2=" open http://getbootstrap.com/examples/grid/ "
 alias bs3=" http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
 alias bs4=" http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
+alias bs5=" https://mdbootstrap.com/components/ "
 ## fonts/icons components
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias icons2=" open https://design.google.com/icons/ "
 ## AJS best practices
 alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
-
 alias password=" open chrome://settings/cookies "
 alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
 alias es6fiddle=" open http://www.es6fiddle.net/ "
