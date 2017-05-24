@@ -302,28 +302,28 @@ alias playmp3='for i in *.mp3; do mplayer "$i"; done'
 ## BS components
 alias bs=" open http://getbootstrap.com/components/ "
 alias bs2=" open http://getbootstrap.com/examples/grid/ "
-alias bs3=" http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
-alias bs4=" http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
-alias bs5=" https://mdbootstrap.com/components/ "
-alias bs6=" https://www.w3schools.com/bootstrap/ "
+alias bs3=" open http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
+alias bs4=" open http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
+alias bs5=" open https://mdbootstrap.com/components/ "
+alias bs6=" open https://www.w3schools.com/bootstrap/ "
 ## fonts/icons components
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias icons2=" open https://design.google.com/icons/ "
 ## AJS best practices
 alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
-alias password=" open chrome://settings/cookies "
+alias pass=" open chrome://settings/cookies "
 alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
-alias es6fiddle=" open http://www.es6fiddle.net/ "
-alias caniusees6=" open http://kangax.github.io/compat-table/es6/ " 
+alias caniuse=" open http://kangax.github.io/compat-table/es6/ " 
 alias es6features=" open https://github.com/lukehoban/es6features "
 alias json=" open https://jsonformatter.curiousconcept.com/ "
+alias regexp = " open https://regex101.com/ " 
 
 
 ## personal projects
 #   ------------------------------------------------------------
-alias oldll=" open http://leolanese.com/portfolio_old3/root/js_2.php "
-alias leo=" open http://leolanese.com "
-alias lab=" open http://www.rwdlab.com "
+alias leo1=" open http://leolanese.com/portfolio_old3/root/js_2.php "
+alias leo2=" open http://leolanese.com "
+alias leo3=" open http://www.rwdlab.com "
 
 
 ## testing
