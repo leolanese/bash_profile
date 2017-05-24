@@ -305,6 +305,7 @@ alias bs2=" open http://getbootstrap.com/examples/grid/ "
 alias bs3=" http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
 alias bs4=" http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
 alias bs5=" https://mdbootstrap.com/components/ "
+alias bs6=" https://www.w3schools.com/bootstrap/ "
 ## fonts/icons components
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias icons2=" open https://design.google.com/icons/ "
