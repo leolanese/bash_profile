@@ -433,6 +433,7 @@ alias testme='	java -version;
 		cordova -v;
 		uname -a;
 		sw_vers;
+		webpack -v;
 	'
 
 
