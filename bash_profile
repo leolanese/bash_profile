@@ -311,12 +311,14 @@ alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias icons2=" open https://design.google.com/icons/ "
 ## AJS best practices
 alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
+## handy shotcuts to bookmark
 alias pass=" open chrome://settings/cookies "
 alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
 alias caniuse=" open http://kangax.github.io/compat-table/es6/ " 
 alias es6features=" open https://github.com/lukehoban/es6features "
 alias json=" open https://jsonformatter.curiousconcept.com/ "
-alias regexp = " open https://regex101.com/ " 
+alias regexp =" open https://regex101.com/ " 
+alias images =" http://placehold.it/150x350 "
 
 
 ## personal projects
