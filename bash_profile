@@ -580,10 +580,17 @@ alias debugrelease=' grunt debugrelease '
 alias analyseapp=' grunt analyseapp '
 
 
-# JSON-Server as a Fake REST API in Frontend Development
+# LOCAL JSON-Server as a Fake REST API in Frontend Development
 # npm install -D json-server
 #   ------------------------------------------------------------
 alias fakeServer=' json-server --watch db.json '
+
+
+# ONLINE JSON-Server as a Fake REST API in Frontend Development
+# npm install -D json-server
+#   ------------------------------------------------------------
+alias fakeJson=' open-a https://jsonplaceholder.typicode.com '
+
 
 #
 # Set mapscii
