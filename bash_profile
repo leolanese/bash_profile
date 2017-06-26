@@ -252,7 +252,9 @@ alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on 
 alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
+alias json_rest=" open http://jsontest.com/ "
 #alias matrix='yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash'
+
 
 
 ## aliases pouchDB and Futon (PouchDB UI)
