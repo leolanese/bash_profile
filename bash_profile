@@ -302,13 +302,17 @@ alias playmp3='for i in *.mp3; do mplayer "$i"; done'
 # IT dev essential shortcuts
 #   ------------------------------------------------------------
 ## BS components
-alias bs=" open http://getbootstrap.com/components/ "
-alias bs2=" open http://getbootstrap.com/examples/grid/ "
-alias bs3=" open http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
-alias bs4=" open http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
-alias bs5=" open https://mdbootstrap.com/components/ "
-alias bs6=" open https://www.w3schools.com/bootstrap/ "
-alias bs7=" open https://www.tutorialspoint.com/bootstrap/index.htm " 
+alias bs=" open http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
+
+alias comp1=" open https://mdbootstrap.com/components/ " 
+alias comp2=" open https://www.tutorialspoint.com/bootstrap/index.htm "
+alias comp3=" open https://www.w3schools.com/bootstrap/ "
+
+alias grid1=" open https://mdbootstrap.com/layout/layout-grid/ "
+alias grid2=" open http://getbootstrap.com/examples/grid/ "
+alias grid3=" open https://www.tutorialspoint.com/bootstrap/bootstrap_grid_system.htm "
+alias grid4=" open http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
+
 ## fonts/icons components
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias icons2=" open https://design.google.com/icons/ "
