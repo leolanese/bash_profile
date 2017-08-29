@@ -184,6 +184,10 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 
 ## git
 #   ------------------------------------------------------------
+#  git remove files which have been deleted
+alias git_delete=' git add -u '
+# git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr
+alias git_DS=' 	git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr '
 alias git_config=" cat .git/config "
 alias git_end_sprint=" git branch | grep -v 'master' | xargs git branch -D "
 alias git_merge=" git difftool "
