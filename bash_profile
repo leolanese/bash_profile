@@ -306,7 +306,13 @@ alias playmp3='for i in *.mp3; do mplayer "$i"; done'
 # IT dev essential shortcuts
 #   ------------------------------------------------------------
 ## BS components
-alias bs=" open http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
+alias bs3_1=" open http://getbootstrap.com/components/ "
+alias bs3_2=" open http://getbootstrap.com/examples/grid/ "
+alias bs3_3=" open http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
+alias bs3_4=" open http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
+alias bs3_5=" open https://mdbootstrap.com/components/ "
+alias bs3_6=" open https://www.w3schools.com/bootstrap/ "
+alias bs3_7=" open https://www.tutorialspoint.com/bootstrap/index.htm " 
 
 alias comp1=" open https://mdbootstrap.com/components/ " 
 alias comp2=" open https://www.tutorialspoint.com/bootstrap/index.htm "
