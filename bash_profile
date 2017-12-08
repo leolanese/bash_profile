@@ -184,9 +184,9 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 
 ## git
 #   ------------------------------------------------------------
-#  git remove files which have been deleted
+alias git_change_to_push=" git diff --stat --patch origin master "
 alias git_delete=' git add -u '
-# git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr
+alias git_reverse=" git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr "
 alias git_DS=' 	git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr '
 alias git_config=" cat .git/config "
 alias git_end_sprint=" git branch | grep -v 'master' | xargs git branch -D "
@@ -215,9 +215,6 @@ alias git_clean=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unma
 		echo .DS_Store >> ~/.gitignore "
 alias git_all_users='git log --format='%aN' | sort -u '
 alias git_tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
-
-#alias git_last='for k in 'git branch|sed s/^..//';do echo -e 'git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" "$k"'\\t"$k";done|sort'
-
 alias git_ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \; '
 alias git_undelete=' git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file" '
 alias git_idea=' git rm -r --cached .idea '
