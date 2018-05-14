@@ -184,6 +184,8 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 
 ## git
 #   ------------------------------------------------------------
+# list remote branches
+alias git_remote=" git branch -r "
 alias git_change_to_push=" git diff --stat --patch origin master "
 alias git_delete=' git add -u '
 alias git_reverse=" git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr "
