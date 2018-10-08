@@ -2,7 +2,6 @@ clear
 
 # BASIC CONFIGURATION
 #   ------------------------------------------------------------
-export EDITOR=/usr/bin/nano
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
