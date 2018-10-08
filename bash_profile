@@ -2,6 +2,7 @@ clear
 
 # BASIC CONFIGURATION
 #   ------------------------------------------------------------
+export EDITOR=/usr/bin/nano
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
@@ -203,23 +204,24 @@ alias git_log2=" git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=sh
 alias git_log3=" git log --pretty=oneline "
 alias git_log4=" git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit "
 alias git_log5=" git whatchanged -3 -p "
-alias git_users=" git log --format='%aN' | sort -u "
+alias git_users=' git log --format='%aN' | sort -u '
 alias git_diff=" git log -p "
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all &'
-alias git_i=" git add -i "
-alias git_me=" git log --author=LeoLanese "
+alias gs=' git status '
+alias ga=' git add '
+alias gb=' git branch '
+alias gc=' git commit'
+alias gd=' git diff '
+alias go=' git checkout '
+alias gk=' gitk --all& '
+alias gx=' gitx --all & '
+alias git_i=' git add -i '
+alias git_me=' git log --author=LeoLanese '
+# get remote git addresses
 alias git_remote=" git remote -v "
 alias git_clean=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch; 
 		git config --global core.excludesfile ~/.gitignore;
 		echo .DS_Store >> ~/.gitignore "
-alias git_all_users='git log --format='%aN' | sort -u '
+alias git_all_users=' git log --format='%aN' | sort -u '
 alias git_tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
 alias git_ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \; '
 alias git_undelete=' git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file" '
@@ -244,23 +246,34 @@ alias network=" nettop -m route "
  
 ## aliases
 #   ------------------------------------------------------------
-alias get_ip='curl ip.telize.com'
-alias get_macaddress='networksetup -getmacaddress Wi-Fi'
+# Ethernet Address
+alias get_macaddress=' networksetup -getmacaddress Wi-Fi '
+# public IP
 alias ip='curl -s http://wtfismyip.com/text'
+# public IP
 alias ip2='curl l2.io/ip'
+# header
 alias header='curl -I g.cn'
 alias validate_json='curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R'
-alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
-alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
-alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
-alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
-alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
-alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
-alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
-alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
+# flushDNS:     Flush out the DNS Cache
+alias flushDNS='dscacheutil -flushcache'    
+# lsock:        Display open sockets
+alias lsock='sudo /usr/sbin/lsof -i -P'   
+# lsockU:       Display only open UDP sockets
+alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'  
+# lsockT:       Display only open TCP sockets
+alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   
+# ipInfo0:      Get info on connections for en0
+alias ipInfo0='ipconfig getpacket en0'    
+ # ipInfo1:      Get info on connections for en1
+alias ipInfo1='ipconfig getpacket en1'     
+ # openPorts:    All listening connections
+alias openPorts='sudo lsof -i | grep LISTEN'   
+# showBlocked:  All ipfw rules inc/ blocked IPs
+alias showBlocked='sudo ipfw list'                  
 alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
 alias json_rest=" open http://jsontest.com/ "
-#alias matrix='yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash'
+alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
 alias make_svg=' open http://www.vectorization.org/es.html '
 
 
@@ -281,19 +294,15 @@ alias qp="ps auxwww"
 
 ## Python Server
 #   ------------------------------------------------------------
+# run a python server
 alias server='python -m SimpleHTTPServer 8888'
-# simple http server to dump request headers
+# dump to :simple http server to dump request headers
 alias dump=" curl -s -H 'X-Something: test' localhost:8888 > /dev/null "
 
 
 # mongoDB
 #   ------------------------------------------------------------
 alias mon="mongod --dbpath /Users/leolanese/met/data/db --rest"
-
-
-## grunt alias to run dev
-#   ------------------------------------------------------------
-alias gdev="grunt dev && grunt"
 
 
 ## fun
@@ -325,12 +334,15 @@ alias grid2=" open http://getbootstrap.com/examples/grid/ "
 alias grid3=" open https://www.tutorialspoint.com/bootstrap/bootstrap_grid_system.htm "
 alias grid4=" open http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
 
+
 ## fonts/icons components
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias icons2=" open https://design.google.com/icons/ "
 
+
 ## AJS best practices
 alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
+
 
 ## handy shotcuts to bookmark
 alias pass=" open chrome://settings/cookies "
@@ -551,13 +563,16 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 alias memHogsTop='top -l 1 -o rsize | head -20'
 alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
     
+    
 ## get top process eating memory
 alias psmem='ps aux | sort -nr -k 4'
 alias psmem10='ps aux | sort -nr -k 4 | head -10'
  
+ 
 ## get top process eating cpu ##
 alias pscpu='ps aux | sort -nr -k 3'
 alias pscpu10='ps aux | sort -nr -k 3 | head -10'
+
 
 #   cpuHogs:  Find CPU hogs
 #   -----------------------------------------------------
@@ -574,9 +589,6 @@ alias track=' ps aux | grep  grunt '
 # and finally kill -9 
 
 
-# Python server
-#   ------------------------------------------------------------
-alias server='python -m SimpleHTTPServer 8000'
 
 
 # Grunt shortcuts
