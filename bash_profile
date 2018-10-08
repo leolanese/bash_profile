@@ -186,6 +186,10 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 #   ------------------------------------------------------------
 # list remote branches
 alias git_remote=" git branch -r "
+
+# Git remote branches and last commit
+alias git_remote_branches=" git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' "
+
 alias git_change_to_push=" git diff --stat --patch origin master "
 alias git_delete=' git add -u '
 alias git_reverse=" git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr "
