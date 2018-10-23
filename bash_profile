@@ -36,6 +36,12 @@ alias npmAllDependencies=" npm shrinkwrap "
 alias npmV3=" npm install -g npm@3 "
 
 
+## 
+## Angular Version
+##
+alias ngv='ng v | grep 'Angular:''
+
+
 ## MAC commands
 #   ------------------------------------------------------------
 alias showExt=" defaults write NSGlobalDomain AppleShowAllExtensions -bool true "
