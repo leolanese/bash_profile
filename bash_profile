@@ -591,7 +591,9 @@ alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resou
 #   process on memory track
 #   -----------------------------------------------------
 alias track=' ps aux | grep  grunt ' 
-# and finally kill -9 
+# and finally 
+# sudo kill -9 
+# or killall -9 firefox
 
 
 
