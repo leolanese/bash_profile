@@ -191,50 +191,49 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 ## git
 #   ------------------------------------------------------------
 # list remote branches
-alias git_remote=" git branch -r "
+alias git-remote=" git branch -r "
 
 # Git remote branches and last commit
-alias git_remote_branches=" git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' "
+alias git-remote-branches=" git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' "
 
-alias git_change_to_push=" git diff --stat --patch origin master "
-alias git_delete=' git add -u '
-alias git_reverse=" git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr "
-alias git_DS=' 	git log --reverse --pretty=oneline | cut -c41- | nl | sort -nr '
-alias git_config=" cat .git/config "
-alias git_end_sprint=" git branch | grep -v 'master' | xargs git branch -D "
-alias git_merge=" git difftool "
-alias git_branch=" git branch -a "
-alias git_log=" git log --graph --oneline --all --decorate --color "
-alias git_log2=" git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short "
-alias git_log3=" git log --pretty=oneline "
-alias git_log4=" git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit "
-alias git_log5=" git whatchanged -3 -p "
-alias git_users=' git log --format='%aN' | sort -u '
-alias git_diff=" git log -p "
-alias gs=' git status '
-alias ga=' git add '
-alias gb=' git branch '
-alias gc=' git commit'
-alias gd=' git diff '
-alias go=' git checkout '
-alias gk=' gitk --all& '
-alias gx=' gitx --all & '
-alias git_i=' git add -i '
-alias git_me=' git log --author=LeoLanese '
-# get remote git addresses
-alias git_remote=" git remote -v "
-alias git_clean=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch; 
+alias git-change-to-push=" git diff --stat --patch origin master "
+alias git-config=" cat .git/config "
+alias git-end-sprint=" git branch | grep -v 'master' | xargs git branch -D "
+alias git-merge=" git difftool "
+alias git-branch=" git branch -a "
+alias git-log=" git log --graph --oneline --all --decorate --color "
+alias git-log2=" git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short "
+alias git-log3=" git log --pretty=oneline "
+alias git-log4=" git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit "
+alias git-log5=" git whatchanged -3 -p "
+alias git-users=" git log --format='%aN' | sort -u "
+alias git-diff=" git log -p "
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all &'
+alias git-i=" git add -i "
+alias git-me=" git log --author=LeoLanese "
+alias git-remote=" git remote -v "
+alias git-clean=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch; 
 		git config --global core.excludesfile ~/.gitignore;
 		echo .DS_Store >> ~/.gitignore "
-alias git_all_users=' git log --format='%aN' | sort -u '
-alias git_tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
-alias git_ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \; '
-alias git_undelete=' git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file" '
-alias git_idea=' git rm -r --cached .idea '
+alias git-all-users='git log --format='%aN' | sort -u '
+alias git-tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
+
+#alias git-last='for k in 'git branch|sed s/^..//';do echo -e 'git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" "$k"'\\t"$k";done|sort'
+
+alias git-ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \; '
+alias git-undelete=' git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file" '
+alias git-idea=' git rm -r --cached .idea '
 alias n=' NODE_ENV=development grunt server '
-alias sprint_start=" git branch -D 'git branch | grep -E 'IVMA-..*'' "  
+alias sprint-start=" git branch -D 'git branch | grep -E 'IVMA-..*'' "  
 alias contributors=' git shortlog -sn '
-alias git_name=' git config user.name '
+alias git-name=' git config user.name '
 
 
 ## ports
