@@ -355,8 +355,8 @@ alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
 alias caniuse=" open http://kangax.github.io/compat-table/es6/ " 
 alias es6features=" open https://github.com/lukehoban/es6features "
 alias json=" open https://jsonformatter.curiousconcept.com/ "
-alias regexp =" open https://regex101.com/ " 
-alias images =" http://placehold.it/150x350 "
+alias regexp=" open https://regex101.com/ " 
+alias images=" http://placehold.it/150x350 "
 
 
 ## personal projects
