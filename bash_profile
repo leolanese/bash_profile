@@ -20,6 +20,10 @@ npm config set prefix $dir
 export EDITOR=/usr/bin/nano
 alias='$EDITOR ~/.bashrc ; source ~/.bashrc'
 
+# nvm
+#   ------------------------------------------------------------
+export PATH=./node_modules/.bin:$PATH
+NVM_DIR=~/.nvm
 
 # JAVA_HOME set
 #   ------------------------------------------------------------
