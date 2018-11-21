@@ -20,10 +20,15 @@ npm config set prefix $dir
 export EDITOR=/usr/bin/nano
 alias='$EDITOR ~/.bashrc ; source ~/.bashrc'
 
+
 # nvm
 #   ------------------------------------------------------------
 export PATH=./node_modules/.bin:$PATH
 NVM_DIR=~/.nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 
 # JAVA_HOME set
 #   ------------------------------------------------------------
@@ -280,7 +285,7 @@ alias openPorts='sudo lsof -i | grep LISTEN'
 # showBlocked:  All ipfw rules inc/ blocked IPs
 alias showBlocked='sudo ipfw list'                  
 alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
-alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
+# alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
 alias make_svg=' open http://www.vectorization.org/es.html '
 
 
