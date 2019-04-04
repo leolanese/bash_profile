@@ -244,7 +244,32 @@ alias n=' NODE_ENV=development grunt server '
 alias sprint-start=" git branch -D 'git branch | grep -E 'IVMA-..*'' "  
 alias contributors=' git shortlog -sn '
 alias git-name=' git config user.name '
-
+# Revert All Local Changes
+alias git-reverse=' git checkout . '
+# Show changes
+alias git-show =' git diff --staged '
+# Modify The Most Recent Commit
+alias git-commits =' git commit --amend '
+# Interactively Add Selected Parts of Files
+alias git-parts =' git add -p '
+# Interactively Stash Selected Parts of Files
+alias git-stash =' git stash -p '
+# Stash with untracked
+alias git-tracks =' git stash -u '
+# Interactively Revert Selected Parts of Files
+alias git-revert =' git checkout -p '
+# Switch to Previous Branch
+alias git-switch =' git checkout - '
+# Rename Branches Locally
+alias git-rename=' git branch -m old-name new-name '
+# Open All Files with Conflicts at Once
+alias git-open=' git diff --name-only --diff-filter=U | uniq  | xargs $EDITOR '
+# What changed in the last 2 weeks?
+alias git-whatchanged='  git whatchanged —-since="2 weeks ago" '
+# Optimize the repository locally
+alias git-gc=' git gc --prune=now --aggressive '
+# git manual & help
+alias git-help=' git help workflows '
 
 ## ports
 #   ------------------------------------------------------------
