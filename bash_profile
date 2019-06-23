@@ -247,19 +247,19 @@ alias git-name=' git config user.name '
 # Revert All Local Changes
 alias git-reverse=' git checkout . '
 # Show changes
-alias git-show =' git diff --staged '
+alias git-show=' git diff --staged '
 # Modify The Most Recent Commit
-alias git-commits =' git commit --amend '
+alias git-commits=' git commit --amend '
 # Interactively Add Selected Parts of Files
-alias git-parts =' git add -p '
+alias git-parts=' git add -p '
 # Interactively Stash Selected Parts of Files
-alias git-stash =' git stash -p '
+alias git-stash=' git stash -p '
 # Stash with untracked
-alias git-tracks =' git stash -u '
+alias git-tracks=' git stash -u '
 # Interactively Revert Selected Parts of Files
-alias git-revert =' git checkout -p '
+alias git-revert=' git checkout -p '
 # Switch to Previous Branch
-alias git-switch =' git checkout - '
+alias git-switch=' git checkout - '
 # Rename Branches Locally
 alias git-rename=' git branch -m old-name new-name '
 # Open All Files with Conflicts at Once
