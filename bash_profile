@@ -65,8 +65,7 @@ alias hideFolder=" chflags hidden /path/to/folder/ "
 alias clearFontCache="
 	atsutil databases -removeUser && \
 	atsutil server -shutdown && \
-	atsutil server -ping
-"
+	atsutil server -ping"
 alias macScreen=" system_profiler SPDisplaysDataType | grep Resolution "
 alias lock=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend " 
 alias bell=" tput bel "
@@ -74,12 +73,10 @@ alias show_all="defaults write com.apple.finder AppleShowAllFiles TRUE && killal
 alias hide_all='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
 alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
 
-
 ## root commands
 #   ------------------------------------------------------------
 alias rootMode=" dsenableroot "
 alias su=" sudo su "
-
 
 ## index commands
 #   ------------------------------------------------------------
