@@ -31,6 +31,25 @@ touch ~/.bash_profile
 . ~/.bash_profile
 ```
 
+---
+
+## Windows version:
+Note: Use double quotes intead single one.
+
+```javascript
+git config --global alias.ci "commit -v"
+```
+
+```javascript
+ git config --global alias.log "log --pretty=oneline"
+```
+
+```javascript
+ git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+ ```
+
+
+
 
 --
 
