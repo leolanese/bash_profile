@@ -125,6 +125,10 @@ alias clearPrinterQueue=" cancel -a - "
 alias secureDelete=" srm -r /path/to/file " 
 
 
+# Disk Use
+#   ------------------------------------------------------------
+alias list=" du -h * " 
+
 #   Change Prompt
 #   ------------------------------------------------------------
 echo -n -e "\033]0;LeoLaneseltd\007"
