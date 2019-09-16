@@ -204,6 +204,9 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 # list remote branches
 alias git-remote=" git branch -r "
 
+# delete all local branches but master, develop and staging
+alias git-purge=' git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d '
+
 # Git remote branches and last commit
 alias git-remote-branches=" git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' "
 
