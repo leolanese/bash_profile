@@ -23,11 +23,6 @@ alias='$EDITOR ~/.bashrc ; source ~/.bashrc'
 
 # nvm
 #   ------------------------------------------------------------
-export PATH=./node_modules/.bin:$PATH
-NVM_DIR=~/.nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # node version(s) active on this computer
 alias node_versions=' nvm ls '
 
@@ -545,12 +540,12 @@ alias where='
 		which bower;
 		which pouchdb;
 		which couchdb;
-	'
-
-
+		which java;
+		'
+		
 ## REMOVING all the Node dependencies
 #   ------------------------------------------------------------
-# alias npm_dev='npm ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print $1}' | xargs npm rm'
+alias npm_dev=' npm ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print $1}' | xargs npm rm '
 
 
 # Start calculator with math support
@@ -567,10 +562,10 @@ alias .4='cd ../../../../'                  # Go back 4  levels
 alias .5='cd ../../../../../'               # Go back 5  levels
 alias .6='cd ../../../../../../'            # Go back 6  levels
 alias c='clear'   
-alias show_options='shopt'
-alias make1mb='mkfile 1m ./1MB.dat'         # make1mb:      Creates a file of 1mb size (all zeros)
-alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5mb size (all zeros)
-alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10mb size (all zeros)
+alias show_options=' shopt '
+alias make1mb=' mkfile 1m ./1MB.dat '         # make1mb:      Creates a file of 1mb size (all zeros)
+alias make5mb=' mkfile 5m ./5MB.dat '         # make5mb:      Creates a file of 5mb size (all zeros)
+alias make10mb=' mkfile 10m ./10MB.dat '      # make10mb:     Creates a file of 10mb size (all zeros)
 
 
 
@@ -627,16 +622,12 @@ alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 #   -----------------------------------------------------------------------------------
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 
-
 #   process on memory track
 #   -----------------------------------------------------
 alias track=' ps aux | grep  grunt ' 
 # and finally 
 # sudo kill -9 
 # or killall -9 firefox
-
-
-
 
 # Grunt shortcuts
 #   ------------------------------------------------------------
@@ -661,7 +652,7 @@ alias analyseapp=' grunt analyseapp '
 
 # LOCAL JSON-Server as a Fake REST API in Frontend Development
 # npm install -D json-server
-#   ------------------------------------------------------------
+# ------------------------------------------------------------
 alias fakeServer=' json-server --watch db.json '
 
 
@@ -669,20 +660,4 @@ alias fakeServer=' json-server --watch db.json '
 # npm install -D json-server
 #   ------------------------------------------------------------
 alias fakeJson=' open-a https://jsonplaceholder.typicode.com '
-
-
-#
-# Set mapscii
-#   ------------------------------------------------------------
-# telnet mapscii.me
-# or
-# npm install -g mapscii
-# mapscii
-
-# Set git autocompletion and PS1 integration
-#   ------------------------------------------------------------
-#if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ]; then
-#  . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-#fi
-#source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 
