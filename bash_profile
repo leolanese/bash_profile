@@ -347,7 +347,7 @@ alias dump=" curl -s -H 'X-Something: test' localhost:8888 > /dev/null "
 
 # mongoDB
 #   ------------------------------------------------------------
-alias mon="mongod --dbpath /Users/leolanese/met/data/db --rest"
+alias mon="mongod --dbpath /Users/{user}/met/data/db --rest"
 
 
 ## fun
@@ -401,9 +401,9 @@ alias images=" http://placehold.it/150x350 "
 
 ## personal projects
 #   ------------------------------------------------------------
-alias leo1=" open http://leolanese.com/portfolio_old3/root/js_2.php "
-alias leo2=" open http://leolanese.com "
-alias leo3=" open http://www.rwdlab.com "
+alias follow_me1=" open http://leolanese.com/" 
+alias follow_me2=" open https://twitter.com/leolaneseltd "
+alias follow_me3=" open https://dev.to/leolanese "
 
 
 ## testing
@@ -451,8 +451,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 
 ## FIX logging (don not stop running processes)
-alias logout="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-alias logoff="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias logout=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend "
+alias logoff=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend "
 
 
 ## FIX sleep problem on MAC laptops (handle with care)
@@ -484,31 +484,25 @@ echo .DS_Store >> ~/.gitignore
 
 ## testing libs available status
 #   ------------------------------------------------------------
-alias testme='	java -version;
+alias testme='			
+		uname -a;
+		java -version;
         	apachectl -v;
 		git --version;
 		node --version;
 		npm --version;
-		bower -v;
 		karma --version;
         	phantomjs --version;
 		casperjs --version;
-		grunt -version;
 	    	php -v;
 		mongo --version; 
 		mongod --version;
 		mongos --version;
-		yo --version;
-		grunt --version;
-		bower --version;
         	sass -v;
 		protractor --version;
-		cordova -v;
-		uname -a;
 		sw_vers;
 		webpack -v;
 	'
-
 
 ## get the VB (virtual box)
 #   ------------------------------------------------------------
@@ -600,8 +594,8 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
 #   memHogsTop, memHogsPs:  Find memory hogs
 #   -----------------------------------------------------
-alias memHogsTop='top -l 1 -o rsize | head -20'
-alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
+alias memHogsTop=' top -l 1 -o rsize | head -20 '
+alias memHogsPs=' ps wwaxm -o pid,stat,vsize,rss,time,command | head -10 '
     
     
 ## get top process eating memory
@@ -610,13 +604,13 @@ alias psmem10='ps aux | sort -nr -k 4 | head -10'
  
  
 ## get top process eating cpu ##
-alias pscpu='ps aux | sort -nr -k 3'
-alias pscpu10='ps aux | sort -nr -k 3 | head -10'
+alias pscpu=' ps aux | sort -nr -k 3 '
+alias pscpu10=' ps aux | sort -nr -k 3 | head -10 '
 
 
 #   cpuHogs:  Find CPU hogs
 #   -----------------------------------------------------
-alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+alias cpu_hogs=' ps wwaxr -o pid,stat,%cpu,time,command | head -10 '
 
 # screensaverDesktop: Run a screensaver on the Desktop
 #   -----------------------------------------------------------------------------------
