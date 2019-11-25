@@ -1,7 +1,15 @@
 # bash_profile
-The idea is to share best practices, suggestions, tricks and keep the same profile across multiple development platforms easily cloning from the Repository.
 
-# MAC version:
+## What is the bash_profile
+bash_profile is a configuration file for bash shell. When bash is invoked as an interactive login shell it first reads and executes commands from ~/. bash_profile.
+
+## Why common bash_profile
+The idea is to share best practices, suggestions, tricks and keep the same profile across multiple development platforms easily cloning from the repository.
+
+
+# System Operation verions
+
+## MAC version:
 A typical install of OSX won't create a .bash_profile for you.
 When you want to run functions from your command line, this is a must-have.
 
@@ -14,19 +22,19 @@ Type ". .bash_profile" to reload .bash_profile and update any functions you add.
 ```
 
 
-## edit bash_profile
+### edit bash_profile
 ```
 open -e ~/.bash_profile
 ```
 
-# if you don't have this file, create it!
+### if you don't have this file, create it!
 ```
 touch ~/.bash_profile
 ```
 
-# paste the bash_profile
+### paste the bash_profile
 
-## reload profile
+### reload profile
 ```
 . ~/.bash_profile
 ```
@@ -34,7 +42,7 @@ touch ~/.bash_profile
 ---
 
 ## Windows version:
-Note: Use double quotes intead single one.
+> Note: Use double quotes intead single one.
 
 ```javascript
 git config --global alias.ci "commit -v"
@@ -47,7 +55,6 @@ git config --global alias.ci "commit -v"
 ```javascript
  git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
  ```
-
 
 
 
