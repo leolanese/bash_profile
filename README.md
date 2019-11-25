@@ -15,13 +15,13 @@ When you want to run functions from your command line, this is a must-have.
 
 ```
 Start up Terminal
-Type "cd ~/" to go to your home folder
-Type "touch .bash_profile" to create your new file.
-Edit .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
-Type ". .bash_profile" to reload .bash_profile and update any functions you add.
+Type: "cd ~/" to go to your home folder
+Type: "touch .bash_profile" to create your new file.
+Edit: .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
+Type: ". .bash_profile" to reload .bash_profile and update any functions you add (reload by the system)
 ```
 
-
+### Commands and alliases:
 ### edit bash_profile
 ```
 open -e ~/.bash_profile
@@ -37,6 +37,12 @@ touch ~/.bash_profile
 ### reload profile
 ```
 . ~/.bash_profile
+```
+
+```
+// from now on we will use the bash_profile
+To edit: "edit_profile"
+to reload: "reload_profile" (reload by using bash_profile)
 ```
 
 ---
@@ -55,7 +61,6 @@ git config --global alias.ci "commit -v"
 ```javascript
  git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
  ```
-
 
 
 --
