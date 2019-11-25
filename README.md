@@ -1,3 +1,10 @@
+---
+title: My bash_profile
+published: false
+description: 
+tags: 
+---
+
 # bash_profile
 
 ## What is the bash_profile
@@ -7,14 +14,15 @@ bash_profile is a configuration file for bash shell. When bash is invoked as an 
 The idea is to share best practices, suggestions, tricks and keep the same profile across multiple development platforms easily cloning from the repository.
 
 
-# System Operation verions
+# System Operation versions
 
 ## MAC version:
 A typical install of OSX won't create a .bash_profile for you.
 When you want to run functions from your command line, this is a must-have.
 
+## Setup
 ```
-Start up Terminal
+Startup Terminal
 Type: "cd ~/" to go to your home folder
 Type: "touch .bash_profile" to create your new file.
 Edit: .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
@@ -48,7 +56,7 @@ to reload: "reload_profile" (reload by using bash_profile)
 ---
 
 ## Windows version:
-> Note: Use double quotes intead single one.
+> Note: Use double quotes instead of single one.
 
 ```javascript
 git config --global alias.ci "commit -v"
@@ -66,7 +74,7 @@ git config --global alias.ci "commit -v"
 --
 
 ### { 'Leo Lanese',
-###   'I Build Inspiring Responsive Reactive Solutions',
+###   'Building Inspiring Responsive Reactive Solutions',
 ###   'London, UK' }
 
 ### Portfolio<br>
@@ -80,3 +88,6 @@ Follow me at:<a href="http://twitter.com/LeoLaneseltd" target="_blank">http://tw
 
 ### Questions / Suggestion / Recommendation ?<br>
 <a href="mail:to">developer@leolanese.com</a><br>
+
+## GitHub bash profile:
+https://github.com/leolanese/bash_profile
