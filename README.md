@@ -1,10 +1,3 @@
----
-title: My bash_profile
-published: false
-description: 
-tags: 
----
-
 # bash_profile
 
 ## What is the bash_profile
@@ -73,21 +66,24 @@ git config --global alias.ci "commit -v"
 
 --
 
-### { 'Leo Lanese',
-###   'Building Inspiring Responsive Reactive Solutions',
-###   'London, UK' }
+#### { 'Leo Lanese',
+####   'Building Inspiring Responsive Reactive Solutions',
+####   'London, UK' }
 
-### Portfolio<br>
-<a href="http://www.leolanese.com" target="_blank">http://www.leolanese.com</a><br>
+##### Portfolio<br>
+<a href="http://www.leolanese.com" target="_blank">http://www.leolanese.com</a>
 
-### Blog:<br>
-<a href="http://www.leolanese.com/blog" target="_blank">www.leolanese.com/blog</a><br>
+##### Twitter:<br>
+<a href="http://twitter.com/LeoLaneseltd" target="_blank">twitter.com/LeoLaneseltd</a>
 
-### Twitter:<br>
-Follow me at:<a href="http://twitter.com/LeoLaneseltd" target="_blank">http://twitter.com/LeoLaneseltd</a><br>
+##### Questions / Suggestion / Recommendation ?<br>
+<a href="mail:to">developer@leolanese.com</a>
 
-### Questions / Suggestion / Recommendation ?<br>
-<a href="mail:to">developer@leolanese.com</a><br>
+#### GitHub bash profile:<br>
+<a href="http://github.com/leolanese/bash_profile" target="_blank">github.com/leolanese/bash_profile</a>
 
-## GitHub bash profile:
-https://github.com/leolanese/bash_profile
+##### DEV.to:<br>
+<a href="http://www.dev.to/leolanese" target="_blank">www.dev.to/leolanese</a>
+
+##### Blog:<br/>
+<a href="http://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
