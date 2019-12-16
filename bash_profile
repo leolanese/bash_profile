@@ -314,12 +314,17 @@ alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS co
 alias make_svg=' open http://www.vectorization.org/es.html '
 
 
-## aliases handlling JSON
+## aliases validate JSON
 #   ------------------------------------------------------------
-alias json=" open https://jsonformatter.curiousconcept.com/ "
-alias json2=" open https://jsonplaceholder.com/ " 
-alias json3=" open http://www.jsontest.com/ "
+alias validateJSON=" open https://jsonformatter.curiousconcept.com/ "
 
+
+## aliases Mock RestAPI (local and remote)
+#   ------------------------------------------------------------
+alias mockRestAPI1=" open https://jsonplaceholder.com/ " 
+alias mockRestAPI2=" open http://www.jsontest.com/ "
+alias mockRestAPI3=" open https://www.mocky.io/ "
+alias mockRestAPI4=" open /app.fakejson.com "
 
 
 ## aliases pouchDB and Futon (PouchDB UI)
