@@ -316,16 +316,16 @@ alias make_svg=' open http://www.vectorization.org/es.html '
 
 ## aliases validate JSON
 #   ------------------------------------------------------------
-alias validateJSON=" open https://jsonformatter.curiousconcept.com/ "
-
+alias JSONValidate=" open https://jsonformatter.curiousconcept.com/ "
+alias JSONTools=" open https://jsonformatter.org/ "
 
 ## aliases Mock RestAPI (local and remote)
 #   ------------------------------------------------------------
 alias mockRestAPI1=" open https://jsonplaceholder.com/ " 
 alias mockRestAPI2=" open http://www.jsontest.com/ "
 alias mockRestAPI3=" open https://www.mocky.io/ "
-alias mockRestAPI4=" open /app.fakejson.com "
-
+alias mockRestAPI4=" open https://app.fakejson.com/ "
+alias mockRestAPI4=" open http://www.omdbapi.com/ "
 
 ## aliases pouchDB and Futon (PouchDB UI)
 #   ------------------------------------------------------------
@@ -521,7 +521,6 @@ alias vb='curl -O -L "http://download.virtualbox.org/virtualbox/4.3.18/VirtualBo
 ## finder
 #   ------------------------------------------------------------
 alias f='open -a Finder ./'
-alias .='open -a Finder ./'
 
 
 ## where is my stuff
