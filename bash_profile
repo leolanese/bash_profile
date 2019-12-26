@@ -1,5 +1,3 @@
-clear
-
 # BASIC CONFIGURATION
 #   ------------------------------------------------------------
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
@@ -8,17 +6,11 @@ export PATH="/usr/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export LC_CTYPE="en_UK.UTF-8"
 export LC_ALL="en_UK.UTF-8"
-tput bel
 
 
 # Allow npm install -g without needing sudo
+# This is that a placeholder for us to fill in, like I'd set it to "$HOME/.npm"
 npm config set prefix $dir
-
-
-#   Set Default Editor (change 'Nano' to the editor of your choice)
-#   ------------------------------------------------------------
-export EDITOR=/usr/bin/nano
-alias='$EDITOR ~/.bashrc ; source ~/.bashrc'
 
 
 # nvm
