@@ -107,15 +107,15 @@ alias setBootVolume=" bless --mount "/path/to/mounted/volume" --setBoot "
 alias showAll=" diskutil list "
 alias hideFolder=" chflags hidden /path/to/folder/ "
 alias clearFontCache="
-	atsutil databases -removeUser && \
-	atsutil server -shutdown && \
-	atsutil server -ping"
+																						atsutil databases -removeUser && \
+																						atsutil server -shutdown && \
+																						atsutil server -ping "
 alias macScreen=" system_profiler SPDisplaysDataType | grep Resolution "
 alias lock=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend "
 alias bell=" tput bel "
-alias show_all="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock"
-alias hide_all='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
-alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
+alias show_all=" defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock "
+alias hide_all=" defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock "
+alias notification_center=" launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter "
 
 
 ## root commands
