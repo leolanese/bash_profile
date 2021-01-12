@@ -174,6 +174,7 @@ alias convert-all=" for i in *.jpeg; do sips -s format png $i --out Converted/$i
 # Searching for Files: 'mdfind -name "README.md"'
 alias find=" mdfind -name "
 
+
 # Get Current Transmission Unit (MTU) size
 alias mtu=" networksetup -getMTU en1 "
 
@@ -320,7 +321,7 @@ alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_
 alias texttofile=" say -o urgentAssistance.aiff -v 'Kate' 'Your status has been updated to Urgent Assistance' "
 
 ##
-## Shortcuts & directions
+## Shortcuts & directions. Improving the terminal for fast typers
 #   ------------------------------------------------------------
 alias  rm=" rm -rfv "
 alias  root=" cd ~/Documents/root "
@@ -333,13 +334,29 @@ alias  search=" grep "
 # Compare Contents of Two Directories with diff: diff -rq directory1 directory2
 alias compare-folders=" diff -rq "
 
-alias  ..=" cd .. "
-alias  ...=" cd ../.. "
-alias  ....=" cd ../../.."
 alias  h=" history "
 alias  dh=" sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent' "
 alias  ddh=" sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent' "
 alias  used=" defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'; killall Dock "
+
+alias  ..=" cd .. "
+alias  ...=" cd ../.. "
+alias  ....=" cd ../../.."
+alias cd..='cd ../'                         # Go back 1  level
+alias ..='cd ../'                           # Go back 1  level
+alias ...='cd ../../'                       # Go back 2  levels
+alias .3='cd ../../../'                     # Go back 3  levels
+alias .4='cd ../../../../'                  # Go back 4  levels
+alias .5='cd ../../../../../'               # Go back 5  levels
+alias .6='cd ../../../../../../'            # Go back 6  levels
+alias c='clear'
+alias show_options=' shopt '
+alias make1mb=' mkfile 1m ./1MB.dat '         # make1mb:      Creates a file of 1mb size (all zeros)
+alias make5mb=' mkfile 5m ./5MB.dat '         # make5mb:      Creates a file of 5mb size (all zeros)
+alias make10mb=' mkfile 10m ./10MB.dat '      # make10mb:     Creates a file of 10mb size (all zeros)
+
+
+
 
 ##
 ## automatic tasks manages shortcuts
@@ -497,22 +514,6 @@ alias showBlocked='sudo ipfw list'
 alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
 # alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
 alias make_svg=' open http://www.vectorization.org/es.html '
-
-##
-## aliases validate JSON
-#   ------------------------------------------------------------
-alias JSONValidate=" open https://jsonformatter.curiousconcept.com/ "
-alias JSONTools=" open https://jsonformatter.org/ "
-
-
-##
-## aliases Mock RestAPI (local and remote)
-#   ------------------------------------------------------------
-alias mockRestAPI1=" open https://jsonplaceholder.com/ "
-alias mockRestAPI2=" open http://www.jsontest.com/ "
-alias mockRestAPI3=" open https://www.mocky.io/ "
-alias mockRestAPI4=" open https://app.fakejson.com/ "
-alias mockRestAPI4=" open http://www.omdbapi.com/ "
 
 
 ##
@@ -744,23 +745,6 @@ alias npm_dev=' npm ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print
 alias bc='bc -l'
 
 
-## Improving the terminal for fast typers
-#   ------------------------------------------------------------
-alias cd..='cd ../'                         # Go back 1  level
-alias ..='cd ../'                           # Go back 1  level
-alias ...='cd ../../'                       # Go back 2  levels
-alias .3='cd ../../../'                     # Go back 3  levels
-alias .4='cd ../../../../'                  # Go back 4  levels
-alias .5='cd ../../../../../'               # Go back 5  levels
-alias .6='cd ../../../../../../'            # Go back 6  levels
-alias c='clear'
-alias show_options=' shopt '
-alias make1mb=' mkfile 1m ./1MB.dat '         # make1mb:      Creates a file of 1mb size (all zeros)
-alias make5mb=' mkfile 5m ./5MB.dat '         # make5mb:      Creates a file of 5mb size (all zeros)
-alias make10mb=' mkfile 10m ./10MB.dat '      # make10mb:     Creates a file of 10mb size (all zeros)
-
-
-
 #   extract:  Extract most know archives with one command
 #   -----------------------------------------------------------
     extract () {
@@ -857,3 +841,20 @@ alias fakeServer=' json-server --watch db.json '
 # 'npm install -D json-server'
 #   ------------------------------------------------------------
 alias fakeJson=' open-a https://jsonplaceholder.typicode.com '
+
+
+##
+## Aliases Mock RestAPI (local and remote)
+#   ------------------------------------------------------------
+alias mockRestAPI1=" open https://jsonplaceholder.com/ "
+alias mockRestAPI2=" open http://www.jsontest.com/ "
+alias mockRestAPI3=" open https://www.mocky.io/ "
+alias mockRestAPI4=" open https://app.fakejson.com/ "
+alias mockRestAPI4=" open http://www.omdbapi.com/ "
+
+
+##
+## Aliases validate JSON
+#   ------------------------------------------------------------
+alias JSONValidate=" open https://jsonformatter.curiousconcept.com/ "
+alias JSONTools=" open https://jsonformatter.org/ "
