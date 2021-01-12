@@ -144,24 +144,29 @@ alias macScreen=" system_profiler SPDisplaysDataType | grep Resolution "
 
 alias lock=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend "
 alias bell=" tput bel "
+
+# show hidden files
 alias show_all=" defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock "
+
+# temporally show hidden files
+alias l.=" ls -d .* --color=auto "
+
+# hide hidden files
 alias hide_all=" defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock "
 alias notification_center=" launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter "
-
 
 ## root commands
 #   ------------------------------------------------------------
 alias rootMode=" dsenableroot "
 alias su=" sudo su "
-
+# shutdown
+alias shutdown=" sudo shutdown -h now "
+# restart
+alias restart=" osascript -e 'tell app "System Events" to restart' "
 
 ## index commands
 #   ------------------------------------------------------------
 alias disable=" Indexingmdutil -i off -d /path/to/volume "
-
-
-# Show hidden files
-alias l.=" ls -d .* --color=auto "
 
 
 ## MAC diagnosis commands
@@ -170,6 +175,7 @@ alias macScan=" sudo sysdiagnose -f ~/Desktop/ "
 alias macInfo=" networksetup -listallhardwareports "
 alias showOSX=" sw_vers "
 alias macCore=" sysctl -n machdep.cpu.brand_string "
+
 # Wakeup sleeping servers (replace mac with your actual server mac address)
 alias wakeupnas01='/usr/bin/wakeonlan 00:11:32:11:15:FC'
 
@@ -264,9 +270,7 @@ alias url-post=" curl -H "Content-Type: application/json" -X POST -d '{"user":"b
 ## instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
 #   ------------------------------------------------------------
 alias port="lessc ~/Sites/ptf/less/grid.less > ~/Sites/ptf/css/grid.css;
-            lessc ~/Sites/ptf/less/mindex.less > ~/Sites/ptf/css/mindex.css;
-"
-
+            lessc ~/Sites/ptf/less/mindex.less > ~/Sites/ptf/css/mindex.css;"
 
 ## dev rsyncs
 #   ------------------------------------------------------------
@@ -288,6 +292,10 @@ alias  ls=" ls -aFhlG"
 alias  ll=" ls -l "
 alias  ls=" ls -GFh "
 alias  search=" grep "
+
+# Compare Contents of Two Directories with diff: diff -rq directory1 directory2
+alias compare-folders=" diff -rq "
+
 alias  ..=" cd .. "
 alias  ...=" cd ../.. "
 alias  ....=" cd ../../.."
@@ -366,7 +374,7 @@ alias git-name=' git config user.name '
 alias git-reverse=' git checkout . '
 
 # Show changes
-alias git-show=' git diff --staged '
+alias git-show=" git diff --staged "
 
 # Modify The Most Recent Commit
 alias git-commits=' git commit --amend '
