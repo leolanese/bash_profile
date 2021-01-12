@@ -18,6 +18,7 @@ npm config set prefix $dir
 # node version(s) active on this computer
 alias node_versions=' nvm ls '
 
+
 # JAVA_HOME set
 #   ------------------------------------------------------------
 # export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
@@ -27,7 +28,15 @@ alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Hom
 ##
 ## BASIC npm COMMANDS
 #   ------------------------------------------------------------
-alias npmOld=" npm outdated "
+# Check for outdated packages in local
+alias npm-check=" npm outdated "
+
+# Check for outdated packages in Global
+alias npm-check=" npm outdated -g "
+
+# Check for outdated packages in Production only
+alias npm-check=" npm outdated --prod "
+
 alias npmNot=" npm prune "
 alias npmAllDependencies=" npm shrinkwrap "
 alias npmV3=" npm install -g npm@3 "
@@ -36,7 +45,7 @@ alias npmV3=" npm install -g npm@3 "
 ##
 ## Angular Version
 ##
-alias ngv='ng v | grep 'Angular:''
+alias ngv='ng v | grep "Angular CLI:"'
 
 
 ## MAC commands
@@ -60,17 +69,21 @@ alias show_all="defaults write com.apple.finder AppleShowAllFiles TRUE && killal
 alias hide_all='defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock'
 alias notification_center="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter"
 
+
 ## root commands
 #   ------------------------------------------------------------
 alias rootMode=" dsenableroot "
 alias su=" sudo su "
 
+
 ## index commands
 #   ------------------------------------------------------------
 alias disable=" Indexingmdutil -i off -d /path/to/volume "
 
+
 # Show hidden files
 alias l.='ls -d .* --color=auto'
+
 
 ## MAC diagnosis commands
 #   ------------------------------------------------------------
@@ -87,6 +100,7 @@ alias wakeupnas01='/usr/bin/wakeonlan 00:11:32:11:15:FC'
 alias dontSleep=" caffeinate -u -t 3600 "
 alias goSleep=" sudo pmset sleep 5 "
 alias checkSleep=" sudo systemsetup -getcomputersleep "
+
 
 # Audio
 #   ------------------------------------------------------------
@@ -110,11 +124,12 @@ alias clearPrinterQueue=" cancel -a - "
 # DELETE
 #   ------------------------------------------------------------
 alias secureDelete=" srm -r /path/to/file "
-
+alias del=" rm -R "
 
 # Disk Use
 #   ------------------------------------------------------------
 alias list=" du -h * "
+
 
 #   Change Prompt
 #   ------------------------------------------------------------
@@ -123,7 +138,6 @@ echo -e "Kernel Information: " ;uname -smr
 echo -e "${COLOR_BROWN}"; bash --version
 echo -ne "${COLOR_GRAY}Uptime: "; uptime
 echo -ne "${COLOR_GRAY}Server time is: "; date
-
 
 
 ## dev LESS (lessc: npm install -g less) preprocessors
@@ -148,7 +162,6 @@ alias allport="find ~/Sites/ptf/less/ -name '*.less' -exec lessc {} \; > ~/Sites
 alias port="lessc ~/Sites/ptf/less/grid.less > ~/Sites/ptf/css/grid.css;
             lessc ~/Sites/ptf/less/mindex.less > ~/Sites/ptf/css/mindex.css;
 "
-
 
 
 ## dev rsyncs
@@ -186,7 +199,7 @@ alias  used="defaults write com.apple.dock persistent-others -array-add '{ "tile
 alias bower_dependencies="grunt bower-install-simple; bower update"
 
 
-## git
+## GIT aliases
 #   ------------------------------------------------------------
 # List remote branches
 alias git-remote=" git branch -r "
@@ -225,6 +238,9 @@ alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
+# quick push
+alias git-qp="git add . && git commit -m 'code improvement' && git push"
+
 alias gk='gitk --all&'
 alias gx='gitx --all &'
 alias git-i=" git add -i "
@@ -257,21 +273,30 @@ alias git-parts=' git add -p '
 # Interactively Stash Selected Parts of Files
 alias git-stash=' git stash -p '
 
+# Stash out
+alias git-pop=' git stash pop '
+
 # Stash with untracked
 alias git-tracks=' git stash -u '
 
 # Interactively Revert Selected Parts of Files
 alias git-revert=' git checkout -p '
+
 # Switch to Previous Branch
 alias git-switch=' git checkout - '
+
 # Rename Branches Locally
 alias git-rename=' git branch -m old-name new-name '
+
 # Open All Files with Conflicts at Once
 alias git-open=' git diff --name-only --diff-filter=U | uniq  | xargs $EDITOR '
+
 # What changed in the last 2 weeks?
 alias git-whatchanged='  git whatchanged —-since="2 weeks ago" '
+
 # Optimize the repository locally
 alias git-gc=' git gc --prune=now --aggressive '
+
 # git manual & help
 alias git-help=' git help workflows '
 
