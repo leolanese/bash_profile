@@ -20,6 +20,9 @@ npm config set ignore-scripts
 # This is that a placeholder for us to fill in, like I'd set it to "$HOME/.npm"
 npm config set prefix $dir
 
+# spotlight re-index
+spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
+
 
 # nvm
 #   ------------------------------------------------------------
@@ -734,10 +737,9 @@ alias make10mb=' mkfile 10m ./10MB.dat '      # make10mb:     Creates a file of 
     }
 
 
-#   spotlight: Search for a file using MacOS Spotlight's metadata
+#   Reindexing Spotlight from the Command Line of Mac OS X
 #   -----------------------------------------------------------
-spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
-
+alias reindex=" sudo mdutil -E /Volumes/Macintosh\ HD/"
 
 #   memHogsTop, memHogsPs:  Find memory hogs
 #   -----------------------------------------------------
