@@ -169,6 +169,11 @@ alias convert-all=" for i in *.jpeg; do sips -s format png $i --out Converted/$i
 # Searching for Files: 'mdfind -name "README.md"'
 alias find=" mdfind -name "
 
+# Get Current Transmission Unit (MTU) size
+alias mtu=" networksetup -getMTU en1 "
+
+
+
 
 ## root commands
 #   ------------------------------------------------------------
