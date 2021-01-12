@@ -43,7 +43,7 @@ alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Hom
 alias npm-ls=" npm cache ls "
 
 # Clean npm cache
-alias npm-clean=" npm cache clean -f "
+alias npm-clean=" npm cache clean -f && clean cache verify"
 
 # Check for outdated packages in local
 alias npm-check=" npm outdated "
