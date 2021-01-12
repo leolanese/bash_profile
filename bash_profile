@@ -84,10 +84,8 @@ alias npm-lockdown=" npm shrinkwrap --dev "
 # Run npm in production (will not download devDependencies)
 alias npm-prod=" npm install --only=production "
 
-# Install a package from local cache
-
-
-alias npmV3=" npm install -g npm@3 "
+# install dependency specific version
+alias npm-pick=" npm install -g npm@3.2.1 "
 
 
 ##
@@ -104,7 +102,16 @@ alias showPath=" defaults write com.apple.finder _FXShowPosixPathInTitle -bool t
 alias showLIbrary=" chflags nohidden ~/Library "
 
 alias setBootVolume=" bless --mount "/path/to/mounted/volume" --setBoot "
+
+# MAC utilities via terminal
 alias showAll=" diskutil list "
+
+# MAC verify permissions
+alias mac-verify=" diskutil verifyPermissions / "
+
+# MAC update
+alias mac-update=" softwareupdate -l "
+
 alias hideFolder=" chflags hidden /path/to/folder/ "
 alias clearFontCache="
 																						atsutil databases -removeUser && \
