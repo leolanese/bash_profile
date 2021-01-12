@@ -189,10 +189,10 @@ alias bower_dependencies="grunt bower-install-simple; bower update"
 ## git
 #   ------------------------------------------------------------
 # List remote branches
-alias git-remote="git branch -r"
+alias git-remote=" git branch -r "
 
 # Display all branches
-alias git-all="git branch -a"
+alias git-all=" git branch -a "
 
 # Delete all local branches but master, develop and staging
 alias git-purge=' git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d '
@@ -207,6 +207,7 @@ alias git-delete-non-merged="git branch --merged && git branch -d branch-name"
 alias git-remote-branches=" git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' "
 
 alias git-change-to-push=" git diff --stat --patch origin master "
+
 alias git-config=" cat .git/config "
 alias git-end-sprint=" git branch | grep -v 'master' | xargs git branch -D "
 alias git-merge=" git difftool "
@@ -229,33 +230,36 @@ alias gx='gitx --all &'
 alias git-i=" git add -i "
 alias git-me=" git log --author=LeoLanese "
 alias git-remote=" git remote -v "
-alias git-clean=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch;
-		git config --global core.excludesfile ~/.gitignore;
-		echo .DS_Store >> ~/.gitignore "
+alias git-clean-DS=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch;
+																					git config --global core.excludesfile ~/.gitignore;
+																					echo .DS_Store >> ~/.gitignore "
 alias git-all-users='git log --format='%aN' | sort -u '
 alias git-tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
-
-#alias git-last='for k in 'git branch|sed s/^..//';do echo -e 'git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" "$k"'\\t"$k";done|sort'
 
 alias git-ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \; '
 alias git-undelete=' git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file" '
 alias git-idea=' git rm -r --cached .idea '
-alias n=' NODE_ENV=development grunt server '
-alias sprint-start=" git branch -D 'git branch | grep -E 'IVMA-..*'' "
-alias contributors=' git shortlog -sn '
+alias git-contributors=' git shortlog -sn '
 alias git-name=' git config user.name '
+
 # Revert All Local Changes
 alias git-reverse=' git checkout . '
+
 # Show changes
 alias git-show=' git diff --staged '
+
 # Modify The Most Recent Commit
 alias git-commits=' git commit --amend '
+
 # Interactively Add Selected Parts of Files
 alias git-parts=' git add -p '
+
 # Interactively Stash Selected Parts of Files
 alias git-stash=' git stash -p '
+
 # Stash with untracked
 alias git-tracks=' git stash -u '
+
 # Interactively Revert Selected Parts of Files
 alias git-revert=' git checkout -p '
 # Switch to Previous Branch
