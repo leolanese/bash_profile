@@ -158,6 +158,15 @@ alias l.=" ls -d .* --color=auto "
 alias hide_all=" defaults write com.apple.finder ShowAllFiles FALSE  && killall Dock "
 alias notification_center=" launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist killall NotificationCenter "
 
+# Converting Image File Formats:
+# 'sips -s format [image type] [file name] --out [output file]'
+alias convert=" sips -s format "
+
+# Converting several images format:
+# 'for i in [filename]; do sips -s format [image type] $i --out [destination]/$i.[extension];done'
+alias convert-all=" for i in *.jpeg; do sips -s format png $i --out Converted/$i.png;done "
+
+
 ## root commands
 #   ------------------------------------------------------------
 alias rootMode=" dsenableroot "
