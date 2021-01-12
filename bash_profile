@@ -349,7 +349,10 @@ alias git-purge=' git branch --merged | grep -v "\*" | grep -v "master" | grep -
 alias git-purge=" git branch -r | egrep -v -f /dev/fd/0  <(git branch -vv | grep origin) | xargs git branch -d "
 
 # Delete All Non-Merged Git Branches
-alias git-delete-non-merged="git branch --merged && git branch -d branch-name"
+alias git-del-non-merged="git branch --merged && git branch -d branch-name"
+
+# Delete All Your Local Git Branches Except Master
+alias git-del-but-master=" git branch | grep -v "master" | xargs git branch -D  "
 
 # Remote branches and last commit
 alias git-remote-branches=" git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' "
@@ -367,12 +370,12 @@ alias git-log4=" git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%C
 alias git-log5=" git whatchanged -3 -p "
 alias git-users=" git log --format='%aN' | sort -u "
 alias git-diff=" git log -p "
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
+alias gs=" git status "
+alias ga=" git add "
+alias gb=" git branch "
+alias gc=" git commit "
+alias gd=" git diff "
+alias go=" git checkout "
 
 # quick push
 alias git-qp=" git add . && git commit -m 'code improvement' && git push "
@@ -401,13 +404,13 @@ alias git-reverse=' git checkout . '
 alias git-show=" git diff --staged "
 
 # Modify The Most Recent Commit
-alias git-commits=' git commit --amend '
+alias git-commits=" git commit --amend "
 
 # Interactively Add Selected Parts of Files
-alias git-parts=' git add -p '
+alias git-parts=" git add -p "
 
 # Interactively Stash Selected Parts of Files
-alias git-stash=' git stash -p '
+alias git-stash=" git stash -p "
 
 # Stash out
 alias git-pop=' git stash pop '
@@ -422,19 +425,19 @@ alias git-revert=' git checkout -p '
 alias git-switch=' git checkout - '
 
 # Rename Branches Locally
-alias git-rename=' git branch -m old-name new-name '
+alias git-rename=" git branch -m old-name new-name "
 
 # Open All Files with Conflicts at Once
-alias git-open=' git diff --name-only --diff-filter=U | uniq  | xargs $EDITOR '
+alias git-open=" git diff --name-only --diff-filter=U | uniq  | xargs $EDITOR "
 
 # What changed in the last 2 weeks?
-alias git-whatchanged='  git whatchanged —-since="2 weeks ago" '
+alias git-wassap="  git whatchanged —-since="2 weeks ago" '
 
 # Optimize the repository locally
-alias git-gc=' git gc --prune=now --aggressive '
+alias git-gc=" git gc --prune=now --aggressive "
 
 # git manual & help
-alias git-help=' git help workflows '
+alias git-help=" git help workflows "
 
 ## ports
 #   ------------------------------------------------------------
@@ -451,26 +454,26 @@ alias network=" nettop -m route "
 ## aliases
 #   ------------------------------------------------------------
 # Ethernet Address
-alias get_macaddress=' networksetup -getmacaddress Wi-Fi '
+alias get_macaddress=" networksetup -getmacaddress Wi-Fi "
 # public IP
-alias ip='curl -s http://wtfismyip.com/text'
+alias ip=" curl -s http://wtfismyip.com/text "
 # public IP
-alias ip2='curl l2.io/ip'
+alias ip2=" curl l2.io/ip "
 # header
-alias header='curl -I g.cn'
-alias validate_json='curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R'
+alias header=" curl -I g.cn "
+alias validate_json=' curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R '
 # flushDNS:     Flush out the DNS Cache
-alias flushDNS='dscacheutil -flushcache'
+alias flushDNS=" dscacheutil -flushcache "
 # lsock:        Display open sockets
-alias lsock='sudo /usr/sbin/lsof -i -P'
+alias lsock=" sudo /usr/sbin/lsof -i -P "
 # lsockU:       Display only open UDP sockets
-alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'
+alias lsockU=" sudo /usr/sbin/lsof -nP | grep UDP "
 # lsockT:       Display only open TCP sockets
-alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'
+alias lsockT=" sudo /usr/sbin/lsof -nP | grep TCP "
 # ipInfo0:      Get info on connections for en0
-alias ipInfo0='ipconfig getpacket en0'
+alias ipInfo0=" ipconfig getpacket en0 "
  # ipInfo1:      Get info on connections for en1
-alias ipInfo1='ipconfig getpacket en1'
+alias ipInfo1=" ipconfig getpacket en1 "
  # openPorts:    All listening connections
 alias openPorts='sudo lsof -i | grep LISTEN'
 # showBlocked:  All ipfw rules inc/ blocked IPs
