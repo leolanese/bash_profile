@@ -248,11 +248,13 @@ alias url=" curl -X POST "
 alias url=" curl -d "
 
 # Get the HTTP Headers of a URL
-alias url=" curl -I --http2 https://www.ubuntu.com/ "
+alias url-header=" curl -I --http2 https://www.ubuntu.com/ "
 
 # Test if a Website Supports HTTP/2: curl -I --http2 -s https://linuxize.com/ | grep HTTP
-alias url=" curl -I --http2 -s https://linuxize.com/ | grep HTTP "
+alias url-http=" curl -I --http2 -s https://linuxize.com/ | grep HTTP "
 
+# curl POST JSON data: curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' http://URL_DESTINATION
+alias url-post=" curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' "
 
 ## instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
 #   ------------------------------------------------------------
