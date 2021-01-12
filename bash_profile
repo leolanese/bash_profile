@@ -124,6 +124,11 @@ alias mac-backup-on=" sudo tmutil enable "
 # MAC Time Machine on / off
 alias mac-backup-off=" sudo tmutil disable "
 
+# MAC run a Time Machine backup
+alias mac-backup-off=" tmutil startbackup "
+
+# MAC stop a Time Machine backup
+alias mac-backup-off=" tmutil stopbackup "
 
 alias hideFolder=" chflags hidden /path/to/folder/ "
 alias clearFontCache="
