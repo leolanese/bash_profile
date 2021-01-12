@@ -269,14 +269,14 @@ alias  ..=" cd .. "
 alias  ...=" cd ../.. "
 alias  ....=" cd ../../.."
 alias  h=" history "
-alias  dh="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
-alias  ddh="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-alias  used="defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'; killall Dock"
+alias  dh=" sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent' "
+alias  ddh=" sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent' "
+alias  used=" defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'; killall Dock "
 
 
 ## automatic tasks manages shortcuts
 #   ------------------------------------------------------------
-alias bower_dependencies="grunt bower-install-simple; bower update"
+alias bower_dependencies=" grunt bower-install-simple; bower update "
 
 
 ## GIT aliases
