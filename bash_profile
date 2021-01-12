@@ -1,4 +1,5 @@
-# BASIC CONFIGURATION
+##
+## BASIC CONFIGURATION
 #   ------------------------------------------------------------
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -23,11 +24,12 @@ npm config set prefix $dir
 # spotlight re-index
 spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
-
-# nvm
+##
+## nvm
 #   ------------------------------------------------------------
 # node version(s) active on this computer
-alias node_versions=' nvm ls '
+# install nvm: 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash'
+alias nvm_version=' nvm ls '
 
 
 # JAVA_HOME set
@@ -96,7 +98,7 @@ alias npm-pick=" npm install -g npm@3.2.1 "
 ##
 alias ngv='ng v | grep "Angular CLI:"'
 
-
+##
 ## MAC commands
 #   ------------------------------------------------------------
 alias showExt=" defaults write NSGlobalDomain AppleShowAllExtensions -bool true "
@@ -177,7 +179,7 @@ alias mtu=" networksetup -getMTU en1 "
 
 
 
-
+##
 ## root commands
 #   ------------------------------------------------------------
 alias rootMode=" dsenableroot "
@@ -187,11 +189,12 @@ alias shutdown=" sudo shutdown -h now "
 # restart
 alias restart=" osascript -e 'tell app "System Events" to restart' "
 
+##
 ## index commands
 #   ------------------------------------------------------------
 alias disable=" Indexingmdutil -i off -d /path/to/volume "
 
-
+##
 ## MAC diagnosis commands
 #   ------------------------------------------------------------
 alias macScan=" sudo sysdiagnose -f ~/Desktop/ "
@@ -203,15 +206,15 @@ alias macCore=" sysctl -n machdep.cpu.brand_string "
 # Wakeup sleeping servers (replace mac with your actual server mac address)
 alias wakeupnas01='/usr/bin/wakeonlan 00:11:32:11:15:FC'
 
-
-# Printer
+##
+## Printer
 #   ------------------------------------------------------------
 alias dontSleep=" caffeinate -u -t 3600 "
 alias goSleep=" sudo pmset sleep 5 "
 alias checkSleep=" sudo systemsetup -getcomputersleep "
 
-
-# Audio
+##
+## Audio
 #   ------------------------------------------------------------
 alias mute=" osascript -e 'set volume output muted true' "
 alias noMute=" osascript -e 'set volume output muted false' "
@@ -223,19 +226,25 @@ alias audio5=" osascript -e 'set volume 5' "
 alias audio6=" osascript -e 'set volume 6' "
 alias audio7=" osascript -e 'set volume 7' "
 
-# Printer
+
+##
+## Printer
 #   ------------------------------------------------------------
 alias wifyPassword=" security find-generic-password -D 'AirPort network password' -a 'SSID' -gw "
 alias wirelessScan=" airport -s "
 alias said=" /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}' "
 alias clearPrinterQueue=" cancel -a - "
 
-# DELETE
+
+##
+## DELETE
 #   ------------------------------------------------------------
 alias safeDel=" srm -r "
 alias del=" rm -R "
 
-# Disk Use Information
+
+##
+## Disk Use Information
 #   ------------------------------------------------------------
 # disk use
 alias d-use=" du -h * "
@@ -246,8 +255,8 @@ alias d-use-ts=" du -sh * "
 # displays disk usage information for each file and directory
 alias d-use-file=" du -ck * | sort -rn | head -11 "
 
-
-#   Change Prompt
+##
+##  Change Prompt
 #   ------------------------------------------------------------
 echo -n -e "\033]0;LeoLaneseltd\007"
 echo -e "Kernel Information: " ;uname -smr
@@ -256,6 +265,7 @@ echo -ne "${COLOR_GRAY}Uptime: "; uptime
 echo -ne "${COLOR_GRAY}Server time is: "; date
 
 
+##
 ## dev LESS (lessc: npm install -g less) preprocessors
 #   ------------------------------------------------------------
 alias allwms="find ~/Sites/wi.mobile/Source/WI.Web/less/ -name '*.less' -exec lessc {} \; > ~/Sites/wi.mobile/Source/WI.Web/Css/combined.css;"
@@ -271,7 +281,6 @@ alias wms="lessc ~/Sites/wi.mobile/Source/WI.Web/less/accordion.less > ~/Sites/w
 ## find all .less and combined them into 1 CSS.
 #   ------------------------------------------------------------
 alias allport=" find ~/Sites/ptf/less/ -name '*.less' -exec lessc {} \; > ~/Sites/ptf/css/combined.css; "
-
 
 ## dev curl
 ## cURL POST Request Command Line Syntax: curl [options] [URL...]
@@ -296,18 +305,22 @@ alias url-post=" curl -H "Content-Type: application/json" -X POST -d '{"user":"b
 alias port="lessc ~/Sites/ptf/less/grid.less > ~/Sites/ptf/css/grid.css;
             lessc ~/Sites/ptf/less/mindex.less > ~/Sites/ptf/css/mindex.css;"
 
+
+##
 ## dev rsyncs
 #   ------------------------------------------------------------
 alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/js/ /Volumes/wi.mobile/js;
             rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/css/fonts/ /Volumes/wi.mobile/css/fonts;
 "
 
-## all together
+
+##
+## JOIN tools
 #   ------------------------------------------------------------
 alias texttofile=" say -o urgentAssistance.aiff -v 'Kate' 'Your status has been updated to Urgent Assistance' "
 
-
-## shortcuts & directions
+##
+## Shortcuts & directions
 #   ------------------------------------------------------------
 alias  rm=" rm -rfv "
 alias  root=" cd ~/Documents/root "
@@ -328,12 +341,13 @@ alias  dh=" sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEve
 alias  ddh=" sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent' "
 alias  used=" defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'; killall Dock "
 
-
+##
 ## automatic tasks manages shortcuts
 #   ------------------------------------------------------------
 alias bower_dependencies=" grunt bower-install-simple; bower update "
 
 
+##
 ## GIT aliases
 #   ------------------------------------------------------------
 # List remote branches
@@ -439,18 +453,20 @@ alias git-gc=" git gc --prune=now --aggressive "
 # git manual & help
 alias git-help=" git help workflows "
 
+##
 ## ports
 #   ------------------------------------------------------------
 alias check_open_ports="lsof -Pi | grep LISTEN"
 alias check_port="lsof -i :8888"
 alias check_establish="lsof -i | grep -i estab"
 
-
-# Watch Network Traffic
+##
+## Watch Network Traffic
 #   ------------------------------------------------------------
 alias network=" nettop -m route "
 
 
+##
 ## aliases
 #   ------------------------------------------------------------
 # Ethernet Address
@@ -482,12 +498,14 @@ alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS co
 # alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
 alias make_svg=' open http://www.vectorization.org/es.html '
 
-
+##
 ## aliases validate JSON
 #   ------------------------------------------------------------
 alias JSONValidate=" open https://jsonformatter.curiousconcept.com/ "
 alias JSONTools=" open https://jsonformatter.org/ "
 
+
+##
 ## aliases Mock RestAPI (local and remote)
 #   ------------------------------------------------------------
 alias mockRestAPI1=" open https://jsonplaceholder.com/ "
@@ -496,6 +514,8 @@ alias mockRestAPI3=" open https://www.mocky.io/ "
 alias mockRestAPI4=" open https://app.fakejson.com/ "
 alias mockRestAPI4=" open http://www.omdbapi.com/ "
 
+
+##
 ## aliases pouchDB and Futon (PouchDB UI)
 #   ------------------------------------------------------------
 alias db_alive=' curl http://127.0.0.1:5984/ | python -m json.tool '
@@ -506,11 +526,12 @@ alias db_insert=' curl -H "Content-Type: application/json" --data @tt.json http:
 alias db_restart=' curl -X POST http://localhost:5984/_restart -H 111 "Content-Type: application/json" '
 
 
+##
 ## the "qp" alias ("que pasa")
 #   ------------------------------------------------------------
 alias qp="ps auxwww"
 
-
+##
 ## Python Server
 #   ------------------------------------------------------------
 # run a python server
@@ -518,12 +539,12 @@ alias server='python -m SimpleHTTPServer 8888'
 # dump to :simple http server to dump request headers
 alias dump=" curl -s -H 'X-Something: test' localhost:8888 > /dev/null "
 
-
-# mongoDB
+##
+## mongoDB
 #   ------------------------------------------------------------
 alias mon="mongod --dbpath /Users/{user}/met/data/db --rest"
 
-
+##
 ## fun
 #   ------------------------------------------------------------
 alias radio=" open http://kissfm.es/player/ "
@@ -533,8 +554,8 @@ alias playwave='for i in *.wav; do mplayer "$i"; done'
 alias playogg='for i in *.ogg; do mplayer "$i"; done'
 alias playmp3='for i in *.mp3; do mplayer "$i"; done'
 
-
-# IT dev essential shortcuts
+##
+## IT dev essential shortcuts
 #   ------------------------------------------------------------
 ## BS3 components
 alias bs3_1=" open http://getbootstrap.com/components/ "
@@ -543,27 +564,30 @@ alias bs3_3=" open http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
 alias bs3_4=" open http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/ "
 alias bs3_5=" open https://www.w3schools.com/bootstrap/ "
 alias bs3_6=" open https://www.tutorialspoint.com/bootstrap/index.htm "
-
-## BS4 components
 alias bs4_1=" open https://www.codeply.com/go "
 
+
+##
 ## BS3 grids
 alias grid1=" open https://mdbootstrap.com/layout/layout-grid/ "
 alias grid2=" open http://getbootstrap.com/examples/grid/ "
 alias grid3=" open https://www.tutorialspoint.com/bootstrap/bootstrap_grid_system.htm "
 alias grid4=" open http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp "
 
-
+##
 ## fonts/icons components
+#   ------------------------------------------------------------
 alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias icons2=" open https://design.google.com/icons/ "
 
-
+##
 ## AJS best practices
+#   ------------------------------------------------------------
 alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
 
-
+##
 ## handy shotcuts to bookmark
+#   ------------------------------------------------------------
 alias pass=" open chrome://settings/cookies "
 alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
 alias caniuse=" open http://kangax.github.io/compat-table/es6/ "
@@ -572,7 +596,7 @@ alias json=" open https://jsonformatter.curiousconcept.com/ "
 alias regexp=" open https://regex101.com/ "
 alias images=" http://placehold.it/150x350 "
 
-
+##
 ## personal projects
 #   ------------------------------------------------------------
 alias follow_me1=" open http://leolanese.com/"
