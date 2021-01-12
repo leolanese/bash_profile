@@ -166,6 +166,9 @@ alias convert=" sips -s format "
 # 'for i in [filename]; do sips -s format [image type] $i --out [destination]/$i.[extension];done'
 alias convert-all=" for i in *.jpeg; do sips -s format png $i --out Converted/$i.png;done "
 
+# Searching for Files: 'mdfind -name "README.md"'
+alias find=" mdfind -name "
+
 
 ## root commands
 #   ------------------------------------------------------------
