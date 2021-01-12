@@ -235,7 +235,23 @@ alias wms="lessc ~/Sites/wi.mobile/Source/WI.Web/less/accordion.less > ~/Sites/w
 ## dev port
 ## find all .less and combined them into 1 CSS.
 #   ------------------------------------------------------------
-alias allport="find ~/Sites/ptf/less/ -name '*.less' -exec lessc {} \; > ~/Sites/ptf/css/combined.css;"
+alias allport=" find ~/Sites/ptf/less/ -name '*.less' -exec lessc {} \; > ~/Sites/ptf/css/combined.css; "
+
+
+## dev curl
+## cURL POST Request Command Line Syntax: curl [options] [URL...]
+#   ------------------------------------------------------------
+# curl post request with no data: curl -X POST http://URL/example.php
+alias url=" curl -X POST "
+
+# curl post request with data: curl -d "data=example1&data2=example2" http://URL/example.cgi
+alias url=" curl -d "
+
+# Get the HTTP Headers of a URL
+alias url=" curl -I --http2 https://www.ubuntu.com/ "
+
+# Test if a Website Supports HTTP/2: curl -I --http2 -s https://linuxize.com/ | grep HTTP
+alias url=" curl -I --http2 -s https://linuxize.com/ | grep HTTP "
 
 
 ## instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
@@ -318,18 +334,19 @@ alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
-# quick push
-alias git-qp="git add . && git commit -m 'code improvement' && git push"
 
-alias gk='gitk --all&'
-alias gx='gitx --all &'
+# quick push
+alias git-qp=" git add . && git commit -m 'code improvement' && git push "
+
+alias gk=" gitk --all& "
+alias gx=" gitx --all & "
 alias git-i=" git add -i "
 alias git-me=" git log --author=LeoLanese "
 alias git-remote=" git remote -v "
 alias git-clean-DS=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch;
 																					git config --global core.excludesfile ~/.gitignore;
 																					echo .DS_Store >> ~/.gitignore "
-alias git-all-users='git log --format='%aN' | sort -u '
+alias git-all-users=' git log --format="%aN" | sort -u '
 alias git-tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
 
 alias git-ignore=' find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \; '
