@@ -7,6 +7,14 @@ export PATH="/usr/local/bin:$PATH"
 export LC_CTYPE="en_UK.UTF-8"
 export LC_ALL="en_UK.UTF-8"
 
+# Enable Auto completion
+npm completion >> ~/.bashrc
+
+# npm global configs
+npm config set save-prefix ~
+npm config set save-exact true
+npm config set engine-strict true
+npm config set ignore-scripts
 
 # Allow npm install -g without needing sudo
 # This is that a placeholder for us to fill in, like I'd set it to "$HOME/.npm"
@@ -28,6 +36,12 @@ alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Hom
 ##
 ## BASIC npm COMMANDS
 #   ------------------------------------------------------------
+# List packages in cache
+alias npm-ls=" npm cache ls "
+
+# Clean npm cache
+alias npm-clean=" npm cache clean -f "
+
 # Check for outdated packages in local
 alias npm-check=" npm outdated "
 
@@ -50,10 +64,29 @@ alias npm-lsg=" npm ls -g --depth=0 "
 alias npm-lsg=" npm ls --prod "
 
 # Remove un-used packages from node_modules folder
-alias npmNot=" npm prune "
+alias npm-prune=" npm prune "
+
+# Remove all devDependencies from node_modules
+alias npm-prune-prd=" npm prune --production "
+
+# Update all packages listed in package.json
+alias npm-update=" npm update "
+
+# Remove duplicate packages from node_modules
+alias npm-rm-duplicate=" npm dedupe "
+
+# Lockdown package versions for production
+alias npm-lockdown=" npm shrinkwrap "
+
+# Lockdown package versions for productiona ans also include devDependencies
+alias npm-lockdown=" npm shrinkwrap --dev "
+
+# Run npm in production (will not download devDependencies)
+alias npm-prod=" npm install --only=production "
+
+# Install a package from local cache
 
 
-alias npmAllDependencies=" npm shrinkwrap "
 alias npmV3=" npm install -g npm@3 "
 
 
