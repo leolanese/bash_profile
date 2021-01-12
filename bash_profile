@@ -849,11 +849,11 @@ alias analyseapp=' grunt analyseapp '
 ##
 ## REST API utilities
 # ------------------------------------------------------------
-# LOCAL JSON-Server as a Fake REST API in Frontend Development
+# Local rest JSON-Server as a Fake REST API in Frontend Development
 # 'npm install -D json-server'
 alias fakeServer=' json-server --watch db.json '
 
-# ONLINE JSON-Server as a Fake REST API in Frontend Development
+# Remote JSON-Server as a Fake REST API in Frontend Development
 # 'npm install -D json-server'
 #   ------------------------------------------------------------
 alias fakeJson=' open-a https://jsonplaceholder.typicode.com '
