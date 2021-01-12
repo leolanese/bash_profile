@@ -253,23 +253,22 @@ alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_
 
 ## all together
 #   ------------------------------------------------------------
-alias go="less sync"
-alias texttofile="say -o urgentAssistance.aiff -v 'Kate' 'Your status has been updated to Urgent Assistance'"
+alias texttofile=" say -o urgentAssistance.aiff -v 'Kate' 'Your status has been updated to Urgent Assistance' "
 
 
 ## shortcuts & directions
 #   ------------------------------------------------------------
-alias  rm='rm -rfv'
-alias  root="cd ~/Documents/root"
-alias  goto_myP="goto_web; cd myProject"
-alias  l="ls -la"
-alias  ls="ls -aFhlG"
-alias  ll="ls -l"
-alias  ls='ls -GFh'
-alias  search=grep
-alias  ..="cd .."
-alias  ...="cd ../.."
-alias  h="history"
+alias  rm=" rm -rfv "
+alias  root=" cd ~/Documents/root "
+alias  l=" ls -la"
+alias  ls=" ls -aFhlG"
+alias  ll=" ls -l "
+alias  ls=" ls -GFh "
+alias  search=" grep "
+alias  ..=" cd .. "
+alias  ...=" cd ../.. "
+alias  ....=" cd ../../.."
+alias  h=" history "
 alias  dh="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
 alias  ddh="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias  used="defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'; killall Dock"
