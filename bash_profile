@@ -569,6 +569,7 @@ alias bs4_1=" open https://www.codeply.com/go "
 
 ##
 ## BS3 grids
+#   ------------------------------------------------------------
 alias grid1=" open https://mdbootstrap.com/layout/layout-grid/ "
 alias grid2=" open http://getbootstrap.com/examples/grid/ "
 alias grid3=" open https://www.tutorialspoint.com/bootstrap/bootstrap_grid_system.htm "
@@ -803,23 +804,28 @@ alias psmem10='ps aux | sort -nr -k 4 | head -10'
 alias pscpu=' ps aux | sort -nr -k 3 '
 alias pscpu10=' ps aux | sort -nr -k 3 | head -10 '
 
-
-#   cpuHogs:  Find CPU hogs
+##
+##  cpuHogs:  Find CPU hogs
 #   -----------------------------------------------------
 alias cpu_hogs=' ps wwaxr -o pid,stat,%cpu,time,command | head -10 '
 
-# screensaverDesktop: Run a screensaver on the Desktop
+##
+## screensaverDesktop: Run a screensaver on the Desktop
 #   -----------------------------------------------------------------------------------
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 
-#   process on memory track
+
+##
+##  Process on memory track
 #   -----------------------------------------------------
 alias track=' ps aux | grep  grunt '
 # and finally
 # sudo kill -9
 # or killall -9 firefox
 
-# Grunt shortcuts
+
+##
+## Grunt shortcuts
 #   ------------------------------------------------------------
 alias cleanstart='  cleanstart -d -v '
 alias cleanend=' grunt cleanend '
@@ -840,13 +846,14 @@ alias debugrelease=' grunt debugrelease '
 alias analyseapp=' grunt analyseapp '
 
 
-# LOCAL JSON-Server as a Fake REST API in Frontend Development
-# npm install -D json-server
+##
+## REST API utilities
 # ------------------------------------------------------------
+# LOCAL JSON-Server as a Fake REST API in Frontend Development
+# 'npm install -D json-server'
 alias fakeServer=' json-server --watch db.json '
 
-
 # ONLINE JSON-Server as a Fake REST API in Frontend Development
-# npm install -D json-server
+# 'npm install -D json-server'
 #   ------------------------------------------------------------
 alias fakeJson=' open-a https://jsonplaceholder.typicode.com '
