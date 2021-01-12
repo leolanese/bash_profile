@@ -130,6 +130,7 @@ alias mac-backup-off=" tmutil startbackup "
 # MAC stop a Time Machine backup
 alias mac-backup-off=" tmutil stopbackup "
 
+
 alias hideFolder=" chflags hidden /path/to/folder/ "
 alias clearFontCache="
 																						atsutil databases -removeUser && \
@@ -155,7 +156,7 @@ alias disable=" Indexingmdutil -i off -d /path/to/volume "
 
 
 # Show hidden files
-alias l.='ls -d .* --color=auto'
+alias l.=" ls -d .* --color=auto "
 
 
 ## MAC diagnosis commands
