@@ -112,6 +112,9 @@ alias showAll=" diskutil list "
 # MAC verify permissions
 alias mac-verify=" diskutil verifyPermissions / "
 
+# MAC repair disk
+alias mac-disk=" diskutil repairDisk / "
+
 # MAC repair permissions
 alias mac-repair=" diskutil repairPermissions / "
 
