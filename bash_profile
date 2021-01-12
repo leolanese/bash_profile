@@ -197,12 +197,19 @@ alias clearPrinterQueue=" cancel -a - "
 
 # DELETE
 #   ------------------------------------------------------------
-alias secureDelete=" srm -r /path/to/file "
+alias safeDel=" srm -r "
 alias del=" rm -R "
 
-# Disk Use
+# Disk Use Information
 #   ------------------------------------------------------------
-alias list=" du -h * "
+# disk use
+alias d-use=" du -h * "
+
+# displays disk usage information directory
+alias d-use-ts=" du -sh * "
+
+# displays disk usage information for each file and directory
+alias d-use-file=" du -ck * | sort -rn | head -11 "
 
 
 #   Change Prompt
