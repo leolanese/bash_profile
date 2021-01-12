@@ -130,13 +130,18 @@ alias mac-backup-off=" tmutil startbackup "
 # MAC stop a Time Machine backup
 alias mac-backup-off=" tmutil stopbackup "
 
-
+# hide folder
 alias hideFolder=" chflags hidden /path/to/folder/ "
+
+# clear fonts and make more available space
 alias clearFontCache="
 																						atsutil databases -removeUser && \
 																						atsutil server -shutdown && \
 																						atsutil server -ping "
+
+# System Video Resolution: Resolution: 1440 x 900 (Widescreen eXtended Graphics Array Plus)
 alias macScreen=" system_profiler SPDisplaysDataType | grep Resolution "
+
 alias lock=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend "
 alias bell=" tput bel "
 alias show_all=" defaults write com.apple.finder AppleShowAllFiles TRUE && killall Dock "
