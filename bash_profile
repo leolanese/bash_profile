@@ -109,8 +109,21 @@ alias showAll=" diskutil list "
 # MAC verify permissions
 alias mac-verify=" diskutil verifyPermissions / "
 
+# MAC repair permissions
+alias mac-repair=" diskutil repairPermissions / "
+
+# MAC Verify and Repair Volume
+alias mac-verify-repair=" diskutil verifyVolume / "
+
 # MAC update
 alias mac-update=" softwareupdate -l "
+
+# MAC Time Machine on / off
+alias mac-backup-on=" sudo tmutil enable "
+
+# MAC Time Machine on / off
+alias mac-backup-off=" sudo tmutil disable "
+
 
 alias hideFolder=" chflags hidden /path/to/folder/ "
 alias clearFontCache="
