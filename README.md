@@ -10,6 +10,45 @@ mv ~/.bash_profile ~/.zprofile
 source ~/.bash_profile
 ```
 
+
+## What to have .zsh without Catalina+ OSX?
+
+### Instalation
+```js
+## install zsh
+sudo apt install zsh
+
+## Make default shell set and logout
+chsh -s $(which zsh)
+```
+
+### oh my zsh
+```js
+// isntall oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Themes
+In order to enable a theme, set ZSH_THEME to the name of the theme in your:
+`~/.zshrc` (open ~/.zshrc). Then edit the: `ZSH_THEME="robbyrussell"` based on any theme from: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes then: `Ctrl, T` for `new tab`.
+
+```js
+// example
+ZSH_THEME="apple"
+ZSH_THEME="aussiegeek"
+
+ZSH_THEME="apple"
+ZSH_THEME="apple"
+ZSH_THEME="apple"
+ZSH_THEME="apple"
+ZSH_THEME="apple"
+ZSH_THEME="apple"
+
+
+
+
+---
+
 ## What is the `.bash_profile`
 bash_profile is a configuration file for bash shell. When bash is invoked as an interactive login shell it first reads and executes commands from ~/. bash_profile.
 
