@@ -1,4 +1,4 @@
-# bash_profile
+# .bash_profile
 
 ## [UPDATE] Catalina+ OSX
 Apple has changed the default shell to `zsh`. Therefore you have to rename your configuration files: `.bashrc` is now `.zshrc` and `.bash_profile` is now `.zprofile`.
@@ -6,7 +6,7 @@ Apple has changed the default shell to `zsh`. Therefore you have to rename your 
 > If you for some reason (like me) don't want to rename/move the `~/.bash_profile` file you can do the next things:
 
 ```js
-cp ~/.bash_profile ~/.zprofile
+mv ~/.bash_profile ~/.zprofile
 source ~/.bash_profile
 ```
 
