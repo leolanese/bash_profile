@@ -33,6 +33,14 @@ open -e ~/.bash_profile
 touch ~/.bash_profile
 ```
 
+### PS1 options
+
+PS1 option 1
+![PS1 option 1](https://i.ibb.co/YTV5Qhf/Screenshot-2021-01-13-at-21-49-03.png)
+
+PS1 option 2
+![PS1 option 2](https://i.ibb.co/QrtjwPj/Screenshot-2021-01-13-at-21-50-32.png)
+
 ### paste the bash_profile
 
 ### reload profile
@@ -76,5 +84,3 @@ git config --global alias.ci "commit -v"
 ##### :radio_button: DEV.to: <a href="https://www.dev.to/leolanese" target="_blank">dev.to/leolanese</a>
 ##### :radio_button: Blog: <a href="https://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
 ##### :radio_button: Questions / Suggestion / Recommendation: developer@leolanese.com
-
-

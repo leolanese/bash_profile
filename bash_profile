@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ##
 ## BASIC CONFIGURATION
 #   ------------------------------------------------------------
@@ -639,7 +641,27 @@ parse_git_branch() {
 
 ## Modify Bash Prompt, Enable colors, improve ls
 #   ------------------------------------------------------------
-export PS1="-->\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$(parse_git_branch)\$ "
+## PS1 option 1
+## export PS1="-->\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$(parse_git_branch)\$ "
+
+## PS1 option 2
+# Color prompt for git
+reset=$(tput sgr0)
+boldgreen=$(tput setaf 2)$(tput bold)
+cyan=$(tput sgr0)$(tput setaf 6)
+boldred=$(tput setaf 1)$(tput bold)
+boldwhite=$(tput setaf 7)$(tput bold)
+boldyellow=$(tput setaf 3)$(tput bold)
+
+PARENCLR=$'\001\e[0;36m\002'
+BRANCHCLR=$'\001\e[1;33m\002'
+
+alias branchname="git branch 2>/dev/null | sed -ne 's/^* \(.*\)/ ${PARENCLR}(${BRANCHCLR}\1${PARENCLR}\)/p'"
+
+GIT_STATUS='$(branchname)'
+
+PROMPT_CHAR="\$"
+PS1="\[$boldgreen\]\u\[$cyan\]::\[$boldred\]\h \[$cyan\]{\[$boldwhite\].../\W\[$cyan\]}\[$reset\]$GIT_STATUS\[$reset\]$PROMPT_CHAR "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
