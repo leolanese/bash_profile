@@ -1,26 +1,29 @@
 # bash_profile
 
-## What is the bash_profile
+## [UPDATE] Catalina+ OSX
+Apple has changed the default shell to `zsh`. Therefore you have to rename your configuration files: `.bashrc` is now `.zshrc` and `.bash_profile` is now `.zprofile`.
+
+
+## What is the .bash_profile
 bash_profile is a configuration file for bash shell. When bash is invoked as an interactive login shell it first reads and executes commands from ~/. bash_profile.
 
-## Why common bash_profile
+
+## Why common .bash_profile
 The idea is to share best practices, suggestions, tricks and keep the same profile across multiple development platforms easily cloning from the repository.
 
-
+---
 # System Operation versions
 
 ## MAC version:
 A typical install of OSX won't create a .bash_profile for you.
 When you want to run functions from your command line, this is a must-have.
 
-## Setup
-```
-Startup Terminal
-Type: "cd ~/" to go to your home folder
-Type: "touch .bash_profile" to create your new file.
-Edit: .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
-Type: ". .bash_profile" to reload .bash_profile and update any functions you add (reload by the system)
-```
+## Setup Startup Terminal
+`Type`: "cd ~/" to go to your home folder
+`Type`: "touch .bash_profile" to create your new file.
+`Edit`: .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
+`Type`: ". .bash_profile" to reload .bash_profile and update any functions you add (reload by the system)
+
 ---
 ### Commands and alliases:
 
