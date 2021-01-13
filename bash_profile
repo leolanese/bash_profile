@@ -831,6 +831,12 @@ alias analyseapp=' grunt analyseapp '
 
 
 ##
+## Video FIX MAC
+# ------------------------------------------------------------
+#
+alias video-fix=" sudo killall VDCAssistant "
+
+##
 ## REST API utilities
 # ------------------------------------------------------------
 # Local rest JSON-Server as a Fake REST API in Frontend Development
