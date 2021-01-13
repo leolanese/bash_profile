@@ -21,8 +21,9 @@ Type: "touch .bash_profile" to create your new file.
 Edit: .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
 Type: ". .bash_profile" to reload .bash_profile and update any functions you add (reload by the system)
 ```
-
+---
 ### Commands and alliases:
+
 ### edit bash_profile
 ```
 open -e ~/.bash_profile
@@ -33,12 +34,12 @@ open -e ~/.bash_profile
 touch ~/.bash_profile
 ```
 
-### PS1 options
+### PS1 terminal bash options
 
-PS1 option 1
+* PS1 option 1<br>
 ![PS1 option 1](https://i.ibb.co/YTV5Qhf/Screenshot-2021-01-13-at-21-49-03.png)
 
-PS1 option 2
+* PS1 option 2<br>
 ![PS1 option 2](https://i.ibb.co/QrtjwPj/Screenshot-2021-01-13-at-21-50-32.png)
 
 ### paste the bash_profile
@@ -55,9 +56,9 @@ to reload: "reload_profile" (reload by using bash_profile)
 ```
 
 ---
-
 ## Windows version:
-> Note: Use double quotes instead of single one.
+
+> Note: `Use double quotes instead of single one`!!
 
 ```javascript
 git config --global alias.ci "commit -v"
