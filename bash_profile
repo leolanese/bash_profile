@@ -11,15 +11,13 @@ export LC_ALL="en_UK.UTF-8"
 # Enable Auto completion
 npm completion >> ~/.bashrc
 
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+
 # npm global configs
-npm config set save-prefix ~
 npm config set save-exact true
 npm config set engine-strict true
 npm config set ignore-scripts
-
-# Allow npm install -g without needing sudo
-# This is that a placeholder for us to fill in, like I'd set it to "$HOME/.npm"
-npm config set prefix $dir
 
 # spotlight re-index
 spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
@@ -233,7 +231,6 @@ alias audio7=" osascript -e 'set volume 7' "
 #   ------------------------------------------------------------
 alias wifyPassword=" security find-generic-password -D 'AirPort network password' -a 'SSID' -gw "
 alias wirelessScan=" airport -s "
-alias said=" /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}' "
 alias clearPrinterQueue=" cancel -a - "
 
 
@@ -297,9 +294,6 @@ alias url-header=" curl -I --http2 https://www.ubuntu.com/ "
 
 # Test if a Website Supports HTTP/2: curl -I --http2 -s https://linuxize.com/ | grep HTTP
 alias url-http=" curl -I --http2 -s https://linuxize.com/ | grep HTTP "
-
-# curl POST JSON data: curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' http://URL_DESTINATION
-alias url-post=" curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' "
 
 ## instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
 #   ------------------------------------------------------------
@@ -462,7 +456,7 @@ alias git-rename=" git branch -m old-name new-name "
 alias git-open=" git diff --name-only --diff-filter=U | uniq  | xargs $EDITOR "
 
 # What changed in the last 2 weeks?
-alias git-wassap="  git whatchanged —-since="2 weeks ago" '
+alias git-wassap='  git whatchanged —-since="2 weeks ago" '
 
 # Optimize the repository locally
 alias git-gc=" git gc --prune=now --aggressive "
@@ -614,11 +608,11 @@ alias ios3=" open /Developer/Platforms/iPhoneSimulator.platform/Developer/Applic
 alias safari=" open -a safari http://localhost:9000/ "
 alias chrome=" open -a '/Applications/Google Chrome.app' "
 alias lynx=" lynx 'http://www.bbc.co.uk' "
-alias run_casper="casperjs /Users/llanese/Sites/tests/go.js http://www.bostonglobe.com/"
+alias run_casper=" casperjs /Users/llanese/Sites/tests/go.js http://www.bostonglobe.com/"
 
 
 
-## profile
+## Profile
 #   ------------------------------------------------------------
 alias edit_profile=" open -e ~/.bash_profile "
 alias reload_profile=" source ~/.bash_profile "
@@ -666,20 +660,14 @@ alias smartsleep=' sudo pmset -a hibernatemode 2 '
 
 # SYSTEMS OPERATIONS & INFORMATION
 #   ---------------------------------------
-alias mountReadWrite='/sbin/mount -uw /'    # mountReadWrite:   For use when booted into single-user
+# mountReadWrite:   For use when booted into single-user
+alias mountReadWrite=" /sbin/mount -uw / "
 
 
 ## FIX and destroy .DS_Store files in the folder I am currently in
 #   ------------------------------------------------------------
-alias killDS='find . -name *.DS_Store -type f -delete'
+alias killDS=" find . -name *.DS_Store -type f -delete "
 
-
-## git configuration
-# specify a global exclusion list
-#   ------------------------------------------------------------
-git config --global core.excludesfile ~/.gitignore
-# adding .DS_Store to that list
-echo .DS_Store >> ~/.gitignore
 
 
 ## testing libs available status
@@ -736,9 +724,6 @@ alias where='
 		which java;
 		'
 
-## REMOVING all the Node dependencies
-#   ------------------------------------------------------------
-alias npm_dev=' npm ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print $1}' | xargs npm rm '
 
 
 # Start calculator with math support
@@ -841,7 +826,7 @@ alias video-fix=" sudo killall VDCAssistant "
 # ------------------------------------------------------------
 # Local rest JSON-Server as a Fake REST API in Frontend Development
 # 'npm install -D json-server'
-alias fakeServer=' json-server --watch db.json '
+alias fakeServer=' json-server --watch db.json
 
 # Remote JSON-Server as a Fake REST API in Frontend Development
 # 'npm install -D json-server'
