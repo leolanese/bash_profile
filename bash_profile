@@ -614,10 +614,12 @@ alias run_casper=" casperjs /Users/llanese/Sites/tests/go.js http://www.bostongl
 
 
 
-## Profile
+## .bash_profile and .zprolife (zsn)
 #   ------------------------------------------------------------
-alias edit_profile=" open -e ~/.bash_profile "
-alias reload_profile=" source ~/.bash_profile "
+alias edit_p=" open -e ~/.bash_profile "
+alias reload_p=" source ~/.bash_profile "
+alias edit_z=" open -e ~/.zprofile "
+alias reload_z=" source -e ~/.zprofile "
 
 
 ## web development, so I need to edit these non-owned files fairly often
