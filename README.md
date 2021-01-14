@@ -11,7 +11,7 @@ source ~/.bash_profile
 source ~/.zshrc
 ```
 
-## What to have `.zsh`
+## Getting the `.zsh`
 You can use it with or without Catalina+ OSX, and also in combination of the normal terminal.
 
 ### Instalation
