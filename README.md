@@ -1,65 +1,7 @@
 # .bash_profile
 
-## [UPDATE] Catalina+ OSX
-Apple has changed the default shell to `zsh`. Therefore you have to rename your configuration files: `.bashrc` is now `.zshrc` and `.bash_profile` is now `.zprofile`.
-
-> If you for some reason (like me) don't want to rename/move the `~/.bash_profile` file you can do the next things:
-
-```js
-cp ~/.bash_profile ~/.zprofile
-source ~/.bash_profile
-source ~/.zshrc
-```
-
-## Getting the `.zsh`
-You can use it with or without Catalina+ OSX, and also in combination of the normal terminal.
-
-### Instalation
-```js
-## install zsh
-sudo apt install zsh
-
-## Make default shell set and logout
-chsh -s $(which zsh)
-```
-
-### oh my zsh
-```js
-// install oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-### Themes
-In order to enable a theme, set ZSH_THEME to the name of the theme in your:
-`~/.zshrc` (open ~/.zshrc). Then edit the: `ZSH_THEME="robbyrussell"` based on any theme from: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes then: reload .zshrc:
-
-```js
-// reload zsh
-source ~/.zshrc
-```
-
-```js
-// example themes
-ZSH_THEME="bira"
-ZSH_THEME="dallas"
-ZSH_THEME="half-life"
-ZSH_THEME="aussiegeek"
-ZSH_THEME="avit"
-```
-
-### Pluggins
-
-Choose from the list: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
-add the `plugin` to your plugins array in `~/.zshrc` (SHIFT, cmd, .) view all files there, paste plugin into plugin folder. Standard plugins can be found in `$ZSH/plugins/`
-
-```js
-// example
-plugins=(vscode zsh_reload git)
-```
-
----
-
 ## What is the `.bash_profile`
+
 bash_profile is a configuration file for bash shell. When bash is invoked as an interactive login shell it first reads and executes commands from ~/. bash_profile.
 
 
@@ -130,6 +72,65 @@ git config --global alias.ci "commit -v"
  git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
  ```
 
+---
+## The `.zsh`
+
+Apple has changed the default shell to `zsh`. Therefore you have to rename your configuration files: `.bashrc` is now `.zshrc` and `.bash_profile` is now `.zprofile`.
+
+
+> If you for some reason (like me) don't want to rename/move the `~/.bash_profile` file you can do the next things:
+
+```js
+cp ~/.bash_profile ~/.zprofile
+source ~/.bash_profile
+source ~/.zshrc
+```
+
+## Getting the `.zsh`
+You can use it with or without Catalina+ OSX, and also in combination of the normal terminal.
+
+### Instalation
+```js
+## install zsh
+sudo apt install zsh
+
+## Make default shell set and logout
+chsh -s $(which zsh)
+```
+
+### oh my zsh
+```js
+// install oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Themes
+In order to enable a theme, set ZSH_THEME to the name of the theme in your:
+`~/.zshrc` (open ~/.zshrc). Then edit the: `ZSH_THEME="robbyrussell"` based on any theme from: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes then: reload .zshrc:
+
+```js
+// reload zsh
+source ~/.zshrc
+```
+
+```js
+// example themes
+ZSH_THEME="bira"
+ZSH_THEME="dallas"
+ZSH_THEME="half-life"
+ZSH_THEME="aussiegeek"
+ZSH_THEME="avit"
+```
+
+### Pluggins
+
+Choose from the list: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
+add the `plugin` to your plugins array in `~/.zshrc` (SHIFT, cmd, .) view all files there, paste plugin into plugin folder. Standard plugins can be found in `$ZSH/plugins/`
+
+```js
+// example
+plugins=(vscode zsh_reload git)
+```
 
 ---
 ### :100: <i>Thanks!</i>
