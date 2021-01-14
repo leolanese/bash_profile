@@ -13,8 +13,6 @@ export LC_ALL="en_UK.UTF-8"
 # Enable Auto completion
 npm completion >> ~/.bashrc
 
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
 
 # npm global configs
 npm config set save-exact true
@@ -359,22 +357,22 @@ alias bower_dependencies=" grunt bower-install-simple; bower update "
 ## GIT aliases
 #   ------------------------------------------------------------
 # List remote branches
-alias git-remote=" git branch -r "
+alias gr=" git branch -r "
 
 # Display all branches
-alias git-all=" git branch -a "
+alias ga=" git branch -a "
 
 # Delete all local branches but master, develop and staging
-alias git-purge=' git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d '
+alias gdp=' git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d '
 
 # Remove All Local Branches not on Remote
-alias git-purge=" git branch -r | egrep -v -f /dev/fd/0  <(git branch -vv | grep origin) | xargs git branch -d "
+alias gdp=" git branch -r | egrep -v -f /dev/fd/0  <(git branch -vv | grep origin) | xargs git branch -d "
 
 # Delete All Non-Merged Git Branches
-alias git-del-non-merged="git branch --merged && git branch -d branch-name"
+alias gdm="git branch --merged && git branch -d branch-name"
 
 # Delete All Your Local Git Branches Except Master
-alias git-del-but-master=" git branch | grep -v "master" | xargs git branch -D  "
+alias gdp2=" git branch | grep -v "master" | xargs git branch -D  "
 
 # Remote branches and last commit
 alias git-remote-branches=" git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' "
@@ -389,7 +387,7 @@ alias git-log1=" git log --graph --oneline --all --decorate --color "
 alias git-log2=" git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short "
 alias git-log3=" git log --pretty=oneline "
 alias git-log4=" git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit "
-alias git-log5=" git whatchanged -3 -p "
+alias git-wc=" git whatchanged -3 -p "
 alias git-users=" git log --format='%aN' | sort -u "
 alias git-diff=" git log -p "
 alias gs=" git status "

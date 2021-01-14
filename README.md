@@ -81,6 +81,8 @@ Apple has changed the default shell to `zsh`. Therefore you have to rename your 
 > If you for some reason (like me) don't want to rename/move the `~/.bash_profile` file you can do the next things:
 
 ```js
+// having a copy of `.bash_profile` and `.zprofile`
+edit_p
 cp ~/.bash_profile ~/.zprofile
 source ~/.bash_profile
 source ~/.zshrc
