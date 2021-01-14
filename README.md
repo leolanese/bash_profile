@@ -45,11 +45,11 @@ touch ~/.bash_profile
 ### paste the bash_profile
 
 ### reload profile
-```
+```js
 . ~/.bash_profile
 ```
 
-```
+```js
 // from now on we will use the bash_profile
 To edit: "edit_profile"
 to reload: "reload_profile" (reload by using bash_profile)
@@ -60,7 +60,7 @@ to reload: "reload_profile" (reload by using bash_profile)
 
 > Note: `Use double quotes instead of single one`!!
 
-```javascript
+```js
 git config --global alias.ci "commit -v"
 ```
 
