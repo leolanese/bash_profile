@@ -64,11 +64,11 @@ to reload: "reload_profile" (reload by using bash_profile)
 git config --global alias.ci "commit -v"
 ```
 
-```javascript
+```js
  git config --global alias.log "log --pretty=oneline"
 ```
 
-```javascript
+``js
  git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
  ```
 
