@@ -56,7 +56,7 @@ to reload: "reload_profile" (reload by using bash_profile)
 ```
 
 ---
-## Windows version:
+## Windows version
 
 > Note: `Use double quotes instead of single one`!!
 

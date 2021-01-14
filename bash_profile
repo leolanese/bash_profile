@@ -191,11 +191,6 @@ alias shutdown=" sudo shutdown -h now "
 alias restart=" osascript -e 'tell app "System Events" to restart' "
 
 ##
-## index commands
-#   ------------------------------------------------------------
-alias disable=" Indexingmdutil -i off -d /path/to/volume "
-
-##
 ## MAC diagnosis commands
 #   ------------------------------------------------------------
 alias macScan=" sudo sysdiagnose -f ~/Desktop/ "
@@ -619,7 +614,7 @@ alias run_casper=" casperjs /Users/llanese/Sites/tests/go.js http://www.bostongl
 alias edit_p=" open -e ~/.bash_profile "
 alias reload_p=" source ~/.bash_profile "
 alias edit_z=" open -e ~/.zprofile "
-alias reload_z=" source -e ~/.zprofile "
+alias reload_z=" source ~/.zprofile "
 
 
 ## web development, so I need to edit these non-owned files fairly often
