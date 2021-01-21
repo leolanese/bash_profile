@@ -64,34 +64,34 @@ alias n-lsd=" npm ls --depth=0 "
 alias n-lsg=" npm ls -g --depth=0 "
 
 # List installed packages: List production packages only
-alias npm-lsg=" npm ls --prod "
+alias n-lsg=" npm ls --prod "
 
 # Remove un-used packages from node_modules folder
-alias npm-prune=" npm prune "
+alias n-prune=" npm prune "
 
 # Remove all devDependencies from node_modules
-alias npm-prune-prd=" npm prune --production "
+alias n-prune-prd=" npm prune --production "
 
 # Update all packages listed in package.json
-alias npm-update=" npm update "
+alias n-update=" npm update "
 
 # Remove duplicate packages from node_modules
-alias npm-rm-duplicate=" npm dedupe "
+alias n-rm-duplicate=" npm dedupe "
 
 # Lockdown package versions for production
-alias npm-lockdown=" npm shrinkwrap "
+alias n-lockdown=" npm shrinkwrap "
 
 # Lockdown package versions for productiona ans also include devDependencies
-alias npm-lockdown=" npm shrinkwrap --dev "
+alias n-lockdown=" npm shrinkwrap --dev "
 
 # Run npm in production (will not download devDependencies)
-alias npm-prod=" npm install --only=production "
+alias n-prod=" npm install --only=production "
 
 # install dependency specific version
-alias npm-pick=" npm install -g npm@3.2.1 "
+alias n-pick=" npm install -g npm@3.2.1 "
 
 # list available scripts
-alias npm-run=" npm run "
+alias n-run=" npm run "
 
 
 ##
