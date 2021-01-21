@@ -47,44 +47,47 @@ alias n-ls=" npm cache ls "
 # verify: Garbage collecting any unneeded data
 alias n-clean=" npm cache clean -f && clean cache verify"
 
+# runs a set of checks to ensure that your npm installation
+alias n-doc=" npm doctor "
+
 # Check for outdated packages in local
 alias n-check=" npm outdated "
 
 # Check for outdated packages in Global
-alias n-check=" npm outdated -g "
+alias n-check-g=" npm outdated -g "
 
 # Check for outdated packages in Production only
-alias n-check=" npm outdated --prod "
+alias n-check-p=" npm outdated --prod "
 
 # List installed packages: Local with tree
 alias n-ls=" npm ls "
 
 # List installed packages: only parents
-alias n-lsd=" npm ls --depth=0 "
+alias n-ld0=" npm ls --depth=0 "
 
 # List installed packages: Global - only parent
-alias n-lsg=" npm ls -g --depth=0 "
+alias n-lgd0=" npm ls -g --depth=0 "
 
 # List installed packages: List production packages only
-alias n-lsg=" npm ls --prod "
+alias n-lp=" npm ls --prod "
 
 # Remove un-used packages from node_modules folder
 alias n-prune=" npm prune "
 
 # Remove all devDependencies from node_modules
-alias n-prune-prd=" npm prune --production "
+alias n-prune-p=" npm prune --production "
 
 # Update all packages listed in package.json
-alias n-update=" npm update "
+alias n-up=" npm update "
 
 # Remove duplicate packages from node_modules
-alias n-rm-duplicate=" npm dedupe "
+alias n-rm-dupli" npm dedupe "
 
 # Lockdown package versions for production
-alias n-lockdown=" npm shrinkwrap "
+alias n-lock=" npm shrinkwrap "
 
 # Lockdown package versions for productiona ans also include devDependencies
-alias n-lockdown=" npm shrinkwrap --dev "
+alias n-lock-dev=" npm shrinkwrap --dev "
 
 # Run npm in production (will not download devDependencies)
 alias n-prod=" npm install --only=production "
@@ -98,11 +101,11 @@ alias n-run=" npm run "
 # updating and checking for outdated stuff
 alias n-audit=" npm audit "
 
-# Security vulnerabilities found with suggested updates
-alias n-audit-fix=" npm audit fix "
-
 # turn off Security vulnerabilities found with suggested updates
 alias n-no-audit=" npm set audit false "
+
+# Security vulnerabilities found with suggested updates
+alias n-audit-fix=" npm audit fix "
 
 # list npm configuration files
 alias n-config-ls=" npm config list -l "
@@ -111,12 +114,18 @@ alias n-config-ls=" npm config list -l "
 alias n-config-edit=" npm config edit "
 
 # Opens the global config file in an editor
-alias n-config-edit=" npm config edit --global"
+alias n-config-edit-g=" npm config edit --global"
 
 ##
-## Angular Version
+## SAP utilities
+#   ------------------------------------------------------------
 ##
-alias ngv='ng v | grep "Angular CLI:"'
+# Angular version
+alias angular='ng v | grep "Angular CLI:"'
+
+# react version
+alias react=" npm view react-dom version "
+
 
 ##
 ## MAC commands
