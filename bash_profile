@@ -93,6 +93,10 @@ alias n-pick=" npm install -g npm@3.2.1 "
 # list available scripts
 alias n-run=" npm run "
 
+# updating and checking for outdated stuff
+alias n-audit=" npm audit "
+
+
 
 ##
 ## Angular Version
