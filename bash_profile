@@ -40,7 +40,7 @@ alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Hom
 ## BASIC npm COMMANDS
 #   ------------------------------------------------------------
 # List packages in cache
-alias npm-ls=" npm cache ls "
+alias n-ls=" npm cache ls "
 
 # Clean npm cache
 alias npm-clean=" npm cache clean -f && clean cache verify"
@@ -89,6 +89,9 @@ alias npm-prod=" npm install --only=production "
 
 # install dependency specific version
 alias npm-pick=" npm install -g npm@3.2.1 "
+
+# list available scripts
+alias npm-run=" npm run "
 
 
 ##
