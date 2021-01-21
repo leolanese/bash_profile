@@ -102,6 +102,15 @@ alias n-audit-fix=" npm audit fix "
 # turn off Security vulnerabilities found with suggested updates
 alias n-no-audit=" npm set audit false "
 
+# list npm configuration files
+alias n-config-ls=" npm config list -l "
+
+# Opens the config file in an editor
+alias n-config-edit=" npm config edit "
+
+# Opens the global config file in an editor
+alias n-config-edit=" npm config edit --global"
+
 ##
 ## Angular Version
 ##
