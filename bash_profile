@@ -126,6 +126,10 @@ alias angular='ng v | grep "Angular CLI:"'
 # react version
 alias react=" npm view react-dom version "
 
+# vue version
+alias vue=" npm list --depth=0 | grep vue "
+
+
 
 ##
 ## MAC commands
