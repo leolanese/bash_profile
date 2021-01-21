@@ -43,25 +43,25 @@ alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Hom
 alias n-ls=" npm cache ls "
 
 # Clean npm cache
-alias npm-clean=" npm cache clean -f && clean cache verify"
+alias n-clean=" npm cache clean -f && clean cache verify"
 
 # Check for outdated packages in local
-alias npm-check=" npm outdated "
+alias n-check=" npm outdated "
 
 # Check for outdated packages in Global
-alias npm-check=" npm outdated -g "
+alias n-check=" npm outdated -g "
 
 # Check for outdated packages in Production only
-alias npm-check=" npm outdated --prod "
+alias n-check=" npm outdated --prod "
 
 # List installed packages: Local with tree
-alias npm-ls=" npm ls "
+alias n-ls=" npm ls "
 
 # List installed packages: only parents
-alias npm-lsd=" npm ls --depth=0 "
+alias n-lsd=" npm ls --depth=0 "
 
 # List installed packages: Global - only parent
-alias npm-lsg=" npm ls -g --depth=0 "
+alias n-lsg=" npm ls -g --depth=0 "
 
 # List installed packages: List production packages only
 alias npm-lsg=" npm ls --prod "
