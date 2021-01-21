@@ -96,6 +96,8 @@ alias n-run=" npm run "
 # updating and checking for outdated stuff
 alias n-audit=" npm audit "
 
+# Security vulnerabilities found with suggested updates
+alias n-audit-fix=" npm audit fix "
 
 
 ##
