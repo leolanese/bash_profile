@@ -99,6 +99,8 @@ alias n-audit=" npm audit "
 # Security vulnerabilities found with suggested updates
 alias n-audit-fix=" npm audit fix "
 
+# turn off Security vulnerabilities found with suggested updates
+alias n-no-audit=" npm set audit false "
 
 ##
 ## Angular Version
