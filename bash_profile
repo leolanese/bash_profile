@@ -13,7 +13,6 @@ export LC_ALL="en_UK.UTF-8"
 # Enable Auto completion
 npm completion >> ~/.bashrc
 
-
 # npm global configs
 npm config set save-exact true
 npm config set engine-strict true
@@ -29,12 +28,10 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 # install nvm: 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash'
 alias nvm_version=' nvm ls '
 
-
 # JAVA_HOME set
 #   ------------------------------------------------------------
 # export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
 alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
-
 
 ##
 ## BASIC npm COMMANDS
@@ -175,9 +172,6 @@ alias hideFolder=" chflags hidden /path/to/folder/ "
 # clear fonts and make more available space
 alias clearFontCache="
 																						atsutil databases -removeUser && \
-																						atsutil server -shutdown && \
-																						atsutil server -ping "
-
 # System Video Resolution: Resolution: 1440 x 900 (Widescreen eXtended Graphics Array Plus)
 alias macScreen=" system_profiler SPDisplaysDataType | grep Resolution "
 
