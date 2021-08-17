@@ -1,9 +1,12 @@
-# .bash_profile
+# .bash_profile [UPDATED: Including `oh my zsh`] 
 
 ## What is the `.bash_profile`
 
-bash_profile is a configuration file for bash shell. When bash is invoked as an interactive login shell it first reads and executes commands from ~/. bash_profile.
+bash_profile is a configuration file for bash shell. When bash is invoked as an interactive login shell it first reads and executes commands from: 
 
+```js
+~/. bash_profile.
+```
 
 ## Why common `.bash_profile`
 The idea is to share best practices, suggestions, tricks and keep the same profile across multiple development platforms easily cloning from the repository.
@@ -12,25 +15,28 @@ The idea is to share best practices, suggestions, tricks and keep the same profi
 # System Operation Versions
 
 ## MAC version:
-A typical install of OSX won't create a .bash_profile for you.
+A typical install of OSX won't create a `.bash_profile` for you.
 When you want to run functions from your command line, this is a must-have.
 
 ## Setup Startup Terminal
+```html
 `Type`: "cd ~/" to go to your home folder
 `Type`: "touch .bash_profile" to create your new file.
 `Edit`: .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
 `Type`: ". .bash_profile" to reload .bash_profile and update any functions you add (reload by the system)
+```
 
 ---
 ### Commands and alliases:
 
 ### edit bash_profile
-```
+
+```js
 open -e ~/.bash_profile
 ```
 
 ### if you don't have this file, create it!
-```
+```js
 touch ~/.bash_profile
 ```
 
@@ -62,15 +68,11 @@ to reload: "reload_profile" (reload by using bash_profile)
 
 ```js
 git config --global alias.ci "commit -v"
-```
 
-```js
- git config --global alias.log "log --pretty=oneline"
-```
+git config --global alias.log "log --pretty=oneline"
 
-``js
- git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
- ```
+git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
 
 ---
 ## The `.zsh`
