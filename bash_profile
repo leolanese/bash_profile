@@ -618,11 +618,11 @@ alias regexp=" open https://regex101.com/ "
 alias images=" http://placehold.it/150x350 "
 
 ##
-## personal projects
+## Your Personal projects
 #   ------------------------------------------------------------
-alias follow_me1=" open http://leolanese.com/"
-alias follow_me2=" open https://twitter.com/leolaneseltd "
-alias follow_me3=" open https://dev.to/leolanese "
+alias leo1=" open http://leolanese.com/"
+alias leo2=" open https://twitter.com/leolaneseltd "
+alias leo3=" open https://dev.to/leolanese "
 
 
 ## testing
@@ -637,12 +637,10 @@ alias run_casper=" casperjs /Users/llanese/Sites/tests/go.js http://www.bostongl
 
 
 
-## .bash_profile and .zprolife (zsn)
+## CLI .bash_profile && .zprolife (zsn)
 #   ------------------------------------------------------------
-alias edit_p=" open -e ~/.bash_profile "
-alias reload_p=" source ~/.bash_profile "
-alias edit_z=" open -e ~/.zprofile "
-alias reload_z=" source ~/.zprofile "
+alias edit=" open -e ~/.bash_profile && open -e ~/.zprofile "
+alias reload=" source ~/.bash_profile && source ~/.zprofile "
 
 
 ## web development, so I need to edit these non-owned files fairly often
