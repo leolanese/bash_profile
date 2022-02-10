@@ -386,6 +386,13 @@ alias bower_dependencies=" grunt bower-install-simple; bower update "
 # List remote branches
 alias gr=" git branch -r "
 
+# rebase master & subnmodules udpate
+alias gsu='git submodule update'
+alias rebase-master='git fetch origin master:master && git rebase master && gsu'
+
+# revert last commit
+alias undo-last-commit='git reset --soft HEAD^'
+
 # Display all branches
 alias ga=" git branch -a "
 
