@@ -383,6 +383,9 @@ alias bower_dependencies=" grunt bower-install-simple; bower update "
 ##
 ## GIT aliases
 #   ------------------------------------------------------------
+# remove folder committed and tracked by Git
+alias cleanToBeCommited=" git rm -r --cached . "
+
 # List remote branches
 alias gr=" git branch -r "
 
