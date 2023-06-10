@@ -26,12 +26,12 @@ spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 #   ------------------------------------------------------------
 # node version(s) active on this computer
 # install nvm: 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash'
-alias nvm_version=' nvm ls '
+alias nvm_version=" nvm ls "
 
 # JAVA_HOME set
 #   ------------------------------------------------------------
-# export JAVA_HOME="$(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin)"
-alias java_jre='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
+# export JAVA_HOME=" $(/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin) "
+alias java_jre=" /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java "
 
 ##
 ## BASIC npm COMMANDS
@@ -118,7 +118,7 @@ alias n-config-edit-g=" npm config edit --global"
 #   ------------------------------------------------------------
 ##
 # Angular version
-alias angular='ng v | grep "Angular CLI:"'
+alias angular=' ng v | grep "Angular CLI:" '
 
 # react version
 alias react=" npm view react-dom version "
@@ -223,13 +223,14 @@ alias restart=" osascript -e 'tell app "System Events" to restart' "
 ## MAC diagnosis commands
 #   ------------------------------------------------------------
 alias macScan=" sudo sysdiagnose -f ~/Desktop/ "
+
 # List All Network Hardware on a Mac via Command Line
 alias macInfo=" networksetup -listallhardwareports "
 alias showOSX=" sw_vers "
 alias macCore=" sysctl -n machdep.cpu.brand_string "
 
 # Wakeup sleeping servers (replace mac with your actual server mac address)
-alias wakeupnas01='/usr/bin/wakeonlan 00:11:32:11:15:FC'
+alias wakeupnas01=" /usr/bin/wakeonlan 00:11:32:11:15:FC "
 
 ##
 ## Printer
@@ -515,15 +516,12 @@ alias check_establish=" lsof -i | grep -i estab "
 #   ------------------------------------------------------------
 alias network=" nettop -m route "
 
-
-
 ##
 ## Swipe Navigation
 #   ------------------------------------------------------------
 # Disable Google Chrome’s Two-Finger Swipe Navigation
 alias swipeOff=" defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE "
 alias swipeOn=" defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool TRUE "
-
 
 ##
 ## aliases
@@ -539,7 +537,7 @@ alias ip2=" curl l2.io/ip "
 
 # header
 alias header=" curl -I g.cn "
-alias validate_json=' curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R '
+alias validate_json=' curl -s "https://jsonplaceholder.typicode.com/posts/1" | python -m json.tool | less -R '
 
 # flushDNS:     Flush out the DNS Cache
 alias flushDNS=" dscacheutil -flushcache "
@@ -566,14 +564,14 @@ alias ipInfo2=" ipconfig getifaddr en0 "
 alias ipExtInfo=" curl ipecho.net/plain; echo "
 
 # openPorts:    All listening connections
-alias openPorts='sudo lsof -i | grep LISTEN'
+alias openPorts=" sudo lsof -i | grep LISTEN "
 
 # showBlocked:  All ipfw rules inc/ blocked IPs
-alias showBlocked='sudo ipfw list'
-alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
+alias showBlocked=" sudo ipfw list "
 
-# alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
-alias make_svg=' open http://www.vectorization.org/es.html '
+# show-up effects in the console
+alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
+alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
 
 
 ##
@@ -590,30 +588,32 @@ alias db_restart=' curl -X POST http://localhost:5984/_restart -H 111 "Content-T
 ##
 ## the "qp" alias ("que pasa")
 #   ------------------------------------------------------------
-alias qp="ps auxwww"
+alias qp=" ps auxwww "
 
 ##
 ## Python Server
 #   ------------------------------------------------------------
 # run a python server
-alias server='python -m SimpleHTTPServer 8888'
+alias server=" python -m SimpleHTTPServer 8888 "
+
 # dump to :simple http server to dump request headers
 alias dump=" curl -s -H 'X-Something: test' localhost:8888 > /dev/null "
 
 ##
 ## mongoDB
 #   ------------------------------------------------------------
-alias mon="mongod --dbpath /Users/{user}/met/data/db --rest"
+alias mon=" mongod --dbpath /Users/{user}/met/data/db --rest "
 
 ##
 ## fun
 #   ------------------------------------------------------------
 alias radio=" open http://kissfm.es/player/ "
 alias radio2="  open http://drs1.radio.net/ "
+
 # play all music files from the current directory
-alias playwave='for i in *.wav; do mplayer "$i"; done'
-alias playogg='for i in *.ogg; do mplayer "$i"; done'
-alias playmp3='for i in *.mp3; do mplayer "$i"; done'
+alias playwave=' for i in *.wav; do mplayer "$i"; done '
+alias playogg=' for i in *.ogg; do mplayer "$i"; done '
+alias playmp3=' for i in *.mp3; do mplayer "$i"; done '
 
 ##
 ## IT dev essential shortcuts
@@ -643,20 +643,12 @@ alias icons=" open http://fortawesome.github.io/Font-Awesome/cheatsheet/ "
 alias icons2=" open https://design.google.com/icons/ "
 
 ##
-## AJS best practices
-#   ------------------------------------------------------------
-alias papajuan=" open https://github.com/johnpapa/angular-styleguide "
-
-##
 ## handy shotcuts to bookmark
 #   ------------------------------------------------------------
-alias pass=" open chrome://settings/cookies "
-alias traceur=" open http://google.github.io/traceur-compiler/demo/repl.html# "
 alias caniuse=" open http://kangax.github.io/compat-table/es6/ "
-alias es6features=" open https://github.com/lukehoban/es6features "
 alias json=" open https://jsonformatter.curiousconcept.com/ "
 alias regexp=" open https://regex101.com/ "
-alias images=" http://placehold.it/150x350 "
+alias images=" open http://placehold.it/150x350 "
 
 ##
 ## Your Personal projects
@@ -720,7 +712,7 @@ boldyellow=$(tput setaf 3)$(tput bold)
 PARENCLR=$'\001\e[0;36m\002'
 BRANCHCLR=$'\001\e[1;33m\002'
 
-alias branchname="git branch 2>/dev/null | sed -ne 's/^* \(.*\)/ ${PARENCLR}(${BRANCHCLR}\1${PARENCLR}\)/p'"
+alias branchname=" git branch 2>/dev/null | sed -ne 's/^* \(.*\)/ ${PARENCLR}(${BRANCHCLR}\1${PARENCLR}\)/p' "
 
 GIT_STATUS='$(branchname)'
 
@@ -737,11 +729,11 @@ alias logoff=" /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Reso
 
 ## FIX sleep problem on MAC laptops (handle with care)
 #   ------------------------------------------------------------
-alias when_sleep=' sudo pmset -a '
-alias hibernate=' sudo pmset -a hibernatemode 25 '
-alias sleep=' sudo pmset -a hibernatemode 0 '
-alias safesleep=' sudo pmset -a hibernatemode 3 '
-alias smartsleep=' sudo pmset -a hibernatemode 2 '
+alias when_sleep=" sudo pmset -a "
+alias hibernate=" sudo pmset -a hibernatemode 25 "
+alias sleep=" sudo pmset -a hibernatemode 0 "
+alias safesleep=" sudo pmset -a hibernatemode 3 "
+alias smartsleep=" sudo pmset -a hibernatemode 2 "
 
 
 # SYSTEMS OPERATIONS & INFORMATION
@@ -758,7 +750,7 @@ alias killDS=" find . -name *.DS_Store -type f -delete "
 
 ## testing libs available status
 #   ------------------------------------------------------------
-alias testme='
+alias testme="
 		uname -a;
 		java -version;
         	apachectl -v;
@@ -776,7 +768,7 @@ alias testme='
 		protractor --version;
 		sw_vers;
 		webpack -v;
-	'
+	"
 
 ## get the VB (virtual box)
 #   ------------------------------------------------------------
@@ -789,12 +781,12 @@ alias vb='curl -O -L "http://download.virtualbox.org/virtualbox/4.3.18/VirtualBo
 
 ## finder
 #   ------------------------------------------------------------
-alias f='open -a Finder ./'
+alias f=" open -a Finder ./"
 
 
 ## where is my stuff
 #   ------------------------------------------------------------
-alias where='
+alias where="
 		which git;
         	which express;
 		which yo;
@@ -804,16 +796,17 @@ alias where='
 		which php;
 		which npm;
 		which node;
+                which nvm;
 		which bower;
 		which pouchdb;
 		which couchdb;
 		which java;
-		'
+            "
 
 
 
 # Start calculator with math support
-alias bc='bc -l'
+alias bc=" bc -l "
 
 
 #   extract:  Extract most know archives with one command
@@ -846,34 +839,35 @@ alias reindex=" sudo mdutil -E /Volumes/Macintosh\ HD/"
 
 #   memHogsTop, memHogsPs:  Find memory hogs
 #   -----------------------------------------------------
-alias memHogsTop=' top -l 1 -o rsize | head -20 '
-alias memHogsPs=' ps wwaxm -o pid,stat,vsize,rss,time,command | head -10 '
+alias memHogsTop=" top -l 1 -o rsize | head -20 "
+alias memHogsPs=" ps wwaxm -o pid,stat,vsize,rss,time,command | head -10 "
 
 
 ## get top process eating memory
-alias psmem='ps aux | sort -nr -k 4'
-alias psmem10='ps aux | sort -nr -k 4 | head -10'
+alias psmem=" ps aux | sort -nr -k 4 "
+alias psmem10=" ps aux | sort -nr -k 4 | head -10 "
 
 
 ## get top process eating cpu ##
-alias pscpu=' ps aux | sort -nr -k 3 '
-alias pscpu10=' ps aux | sort -nr -k 3 | head -10 '
+alias pscpu=" ps aux | sort -nr -k 3 "
+alias pscpu10=" ps aux | sort -nr -k 3 | head -10 "
 
 ##
 ##  cpuHogs:  Find CPU hogs
 #   -----------------------------------------------------
-alias cpu_hogs=' ps wwaxr -o pid,stat,%cpu,time,command | head -10 '
+alias cpu_hogs=" ps wwaxr -o pid,stat,%cpu,time,command | head -10 "
 
 ##
 ## screensaverDesktop: Run a screensaver on the Desktop
 #   -----------------------------------------------------------------------------------
-alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
+alias screensaverDesktop=" /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background "
 
 
 ##
 ##  Process on memory track
 #   -----------------------------------------------------
 alias track=' ps aux | grep  grunt '
+
 # and finally
 # sudo kill -9
 # or killall -9 firefox
@@ -912,12 +906,12 @@ alias video-fix=" sudo killall VDCAssistant "
 # ------------------------------------------------------------
 # Local rest JSON-Server as a Fake REST API in Frontend Development
 # 'npm install -D json-server'
-alias fakeServer=' json-server --watch db.json
+alias fakeServer=" json-server --watch db.json "
 
 # Remote JSON-Server as a Fake REST API in Frontend Development
 # 'npm install -D json-server'
 #   ------------------------------------------------------------
-alias fakeJson=' open-a https://jsonplaceholder.typicode.com '
+alias fakeJson=" open-a https://jsonplaceholder.typicode.com "
 
 
 ##
@@ -935,3 +929,5 @@ alias mockRestAPI4=" open http://www.omdbapi.com/ "
 #   ------------------------------------------------------------
 alias JSONValidate=" open https://jsonformatter.curiousconcept.com/ "
 alias JSONTools=" open https://jsonformatter.org/ "
+
+
