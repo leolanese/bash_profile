@@ -199,11 +199,15 @@ alias convert-all=" for i in *.jpeg; do sips -s format png $i --out Converted/$i
 # Searching for Files: 'mdfind -name "README.md"'
 alias find=" mdfind -name "
 
-
 # Get Current Transmission Unit (MTU) size
 alias mtu=" networksetup -getMTU en1 "
 
+# View File System Usage on mac
+alias mtu=" sudo fs_usage "
 
+# prevent mac from sleeping
+alias coffe=" caffeinate "
+alias coffe600=" caffeinate -u -t 600 "
 
 ##
 ## root commands
@@ -502,9 +506,9 @@ alias g-help=" git help workflows "
 ##
 ## ports
 #   ------------------------------------------------------------
-alias check_open_ports="lsof -Pi | grep LISTEN"
-alias check_port="lsof -i :8888"
-alias check_establish="lsof -i | grep -i estab"
+alias check_open_ports=" lsof -Pi | grep LISTEN "
+alias check_port=" lsof -i :8888 "
+alias check_establish=" lsof -i | grep -i estab "
 
 ##
 ## Watch Network Traffic
@@ -512,35 +516,62 @@ alias check_establish="lsof -i | grep -i estab"
 alias network=" nettop -m route "
 
 
+
+##
+## Swipe Navigation
+#   ------------------------------------------------------------
+# Disable Google Chrome’s Two-Finger Swipe Navigation
+alias swipeOff=" defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE "
+alias swipeOn=" defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool TRUE "
+
+
 ##
 ## aliases
 #   ------------------------------------------------------------
 # Ethernet Address
 alias get_macaddress=" networksetup -getmacaddress Wi-Fi "
+
 # public IP
 alias ip=" curl -s http://wtfismyip.com/text "
+
 # public IP
 alias ip2=" curl l2.io/ip "
+
 # header
 alias header=" curl -I g.cn "
 alias validate_json=' curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R '
+
 # flushDNS:     Flush out the DNS Cache
 alias flushDNS=" dscacheutil -flushcache "
+
 # lsock:        Display open sockets
 alias lsock=" sudo /usr/sbin/lsof -i -P "
+
 # lsockU:       Display only open UDP sockets
 alias lsockU=" sudo /usr/sbin/lsof -nP | grep UDP "
+
 # lsockT:       Display only open TCP sockets
 alias lsockT=" sudo /usr/sbin/lsof -nP | grep TCP "
+
 # ipInfo0:      Get info on connections for en0
 alias ipInfo0=" ipconfig getpacket en0 "
- # ipInfo1:      Get info on connections for en1
+
+# ipInfo1:      Get info on connections for en1
 alias ipInfo1=" ipconfig getpacket en1 "
- # openPorts:    All listening connections
+
+# get mac Network IP Address
+alias ipInfo2=" ipconfig getifaddr en0 "
+
+# Get Your mac External IP Address
+alias ipExtInfo=" curl ipecho.net/plain; echo "
+
+# openPorts:    All listening connections
 alias openPorts='sudo lsof -i | grep LISTEN'
+
 # showBlocked:  All ipfw rules inc/ blocked IPs
 alias showBlocked='sudo ipfw list'
 alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
+
 # alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
 alias make_svg=' open http://www.vectorization.org/es.html '
 
