@@ -12,13 +12,19 @@ bash_profile is a configuration file for bash shell. When bash is invoked as an 
 The idea is to share best practices, suggestions, tricks and keep the same profile across multiple development platforms easily cloning from the repository.
 
 ---
-# System Operation Versions
+## Executing commands as script on the NodeJS Playground
 
-## MAC version:
+> If you like some of these command, you may find the NodeJS Playground scrips pool useful as well: [
+NodeJS-playground](https://github.com/leolanese/NodeJS-playground/tree/main/scripts)
+
+---
+## System Operation Versions
+
+### MAC version:
 A typical install of OSX won't create a `.bash_profile` for you.
 When you want to run functions from your command line, this is a must-have.
 
-## Setup Startup Terminal
+#### Setup Startup Terminal
 ```html
 `Type`: "cd ~/" to go to your home folder
 `Type`: "touch .bash_profile" to create your new file.
@@ -135,6 +141,7 @@ add the `plugin` to your plugins array in `~/.zshrc` (SHIFT, cmd, .) view all fi
 // example
 plugins=(vscode zsh_reload git)
 ```
+
 
 ---
 ### :100: <i>Thanks!</i>
