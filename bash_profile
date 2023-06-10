@@ -338,7 +338,7 @@ alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_
 ##
 ## JOIN tools
 #   ------------------------------------------------------------
-alias texttofile=" say -o urgentAssistance.aiff -v 'Kate' 'Your status has been updated to Urgent Assistance' "
+alias texttofile=" say 'Your status has been updated to Urgent Assistance' "
 
 ##
 ## Shortcuts & directions. Improving the terminal for fast typers
