@@ -5,6 +5,7 @@
 bash_profile is a configuration file for bash shell. When bash is invoked as an interactive login shell it first reads and executes commands from: 
 
 ```js
+// view
 ~/. bash_profile.
 ```
 
@@ -57,6 +58,7 @@ touch ~/.bash_profile
 ### paste the bash_profile
 
 ### reload profile
+
 ```js
 . ~/.bash_profile
 ```
@@ -84,6 +86,11 @@ git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(
 ## The `.zsh`
 
 Apple has changed the default shell to `zsh`. Therefore you have to rename your configuration files: `.bashrc` is now `.zshrc` and `.bash_profile` is now `.zprofile`.
+
+```js
+// edit zsh
+nano ~/.zshrc
+```
 
 
 > If you for some reason (like me) don't want to rename/move the `~/.bash_profile` file you can do the next things:
