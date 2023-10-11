@@ -266,6 +266,7 @@ alias clearPrinterQueue=" cancel -a - "
 #   ------------------------------------------------------------
 alias safeDel=" srm -r "
 alias del=" rm -R "
+alias delDist="  rm -Rfv dist || true "
 
 
 ##
@@ -281,13 +282,27 @@ alias d-use-ts=" du -sh * "
 alias d-use-file=" du -ck * | sort -rn | head -11 "
 
 ##
-##  Change Prompt
-#   ------------------------------------------------------------
+## Change Terminal Title
+# ------------------------------------------------------------
 echo -n -e "\033]0;LeoLaneseltd\007"
-echo -e "Kernel Information: " ;uname -smr
-echo -e "${COLOR_BROWN}"; bash --version
-echo -ne "${COLOR_GRAY}Uptime: "; uptime
-echo -ne "${COLOR_GRAY}Server time is: "; date
+
+## Color definitions
+COLOR_BROWN='\033[0;33m'      # Brown color
+COLOR_GRAY='\033[0;37m'       # Gray color
+COLOR_RESET='\033[0m'         # Reset color to default
+
+## Display Kernel Information
+echo -e "${COLOR_GRAY}Kernel Information: ${COLOR_RESET}" ; uname -smr
+
+## Display Bash Version
+echo -e "${COLOR_BROWN}Bash Version:${COLOR_RESET}"; bash --version
+
+## Display Uptime
+echo -ne "${COLOR_GRAY}Uptime: ${COLOR_RESET}"; uptime
+
+## Display Server Time
+echo -ne "${COLOR_GRAY}Server time is: ${COLOR_RESET}"; date
+
 
 
 ##
@@ -344,7 +359,6 @@ alias texttofile=" say 'Your status has been updated to Urgent Assistance' "
 ##
 ## Shortcuts & directions. Improving the terminal for fast typers
 #   ------------------------------------------------------------
-alias  rm=" rm -rfv "
 alias  root=" cd ~/Documents/root "
 alias  l=" ls -la"
 alias  ls=" ls -aFhlG"
