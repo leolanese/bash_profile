@@ -431,27 +431,69 @@ alias gdm="git branch --merged && git branch -d branch-name"
 alias gdp2=" git branch | grep -v "master" | xargs git branch -D  "
 
 # Remote branches and last commit
-alias g-remote-branches=" git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' "
+# Define color codes for readability
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+RESET='\033[0m'
 
-alias g-change-to-push=" git diff --stat --patch origin master "
+# Alias to list remote branches with their last commit details
+alias git-remote-branches="git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(HEAD) ${YELLOW}%(refname:short)${RESET} - ${RED}%(objectname:short)${RESET} - %(contents:subject) - %(authorname) (${GREEN}%(committerdate:relative)${RESET})'"
 
-alias g-config=" cat .git/config "
-alias g-end-sprint=" git branch | grep -v 'master' | xargs git branch -D "
-alias g-merge=" git difftool "
-alias g-branch=" git branch -a "
-alias g-log1=" git log --graph --oneline --all --decorate --color "
-alias g-log2=" git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short "
-alias g-log3=" git log --pretty=oneline "
-alias g-log4=" git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit "
-alias g-wc=" git whatchanged -3 -p "
-alias g-users=" git log --format='%aN' | sort -u "
-alias g-diff=" git log -p "
-alias g-s=" git status "
-alias g-a=" git add "
-alias g-b=" git branch "
-alias g-c=" git commit "
-alias g-d=" git diff "
-alias g-o=" git checkout "
+# Displays differences between local and remote master, showing statistics and patches
+alias g-change-to-push="git diff --stat --patch origin master"
+
+# Displays the configuration details of the current git repository
+alias g-config="cat .git/config"
+
+# Deletes all branches except master
+alias g-end-sprint="git branch | grep -v 'master' | xargs git branch -D"
+
+# Opens a difftool for visualizing changes between commits
+alias g-merge="git difftool"
+
+# Lists all branches, including remote branches
+alias g-branch="git branch -a"
+
+# Displays a graphical log with one line per commit, decorated and colored
+alias g-log1="git log --graph --oneline --all --decorate --color"
+
+# Displays a graphical log with a custom format, including hash, date, message, and author
+alias g-log2="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+
+# Displays a simple one-line log for each commit
+alias g-log3="git log --pretty=oneline"
+
+# Displays a graphical log with a color-coded custom format
+alias g-log4="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# Shows the last three changes with patches
+alias g-wc="git whatchanged -3 -p"
+
+# Lists unique authors of commits in the repository
+alias g-users="git log --format='%aN' | sort -u"
+
+# Displays the log with patch details for each commit
+alias g-diff="git log -p"
+
+# Shows the status of changes in the repository
+alias g-s="git status"
+
+# Adds changes to the staging area
+alias g-a="git add"
+
+# Lists branches in the repository
+alias g-b="git branch"
+
+# Commits the staged changes
+alias g-c="git commit"
+
+# Displays differences between working directory and the last commit
+alias g-d="git diff"
+
+# Switches to a different branch or commit
+alias g-o="git checkout"
+
 
 # git clean removes all untracked files and git checkout clears all unstayed changes.
 alias g-cl=" git clean -df "
@@ -465,8 +507,10 @@ alias g-i=" git add -i "
 alias g-me=" git log --author=LeoLanese "
 alias g-remote=" git remote -v "
 alias g-clean-DS=" find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch;
-																					git config --global core.excludesfile ~/.gitignore;
-																					echo .DS_Store >> ~/.gitignore "
+																					
+git config --global core.excludesfile ~/.gitignore;
+																					
+echo .DS_Store >> ~/.gitignore "
 alias g-all-users=' git log --format="%aN" | sort -u '
 alias g-tasks=' grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null '
 
