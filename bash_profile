@@ -303,15 +303,13 @@ echo -ne "${COLOR_GRAY}Uptime: ${COLOR_RESET}"; uptime
 ## Display Server Time
 echo -ne "${COLOR_GRAY}Server time is: ${COLOR_RESET}"; date
 
-
-
 ##
-## dev LESS (lessc: npm install -g less) preprocessors
+## [LEGACY] dev LESS (lessc: npm install -g less) preprocessors
 #   ------------------------------------------------------------
 alias allwms="find ~/Sites/wi.mobile/Source/WI.Web/less/ -name '*.less' -exec lessc {} \; > ~/Sites/wi.mobile/Source/WI.Web/Css/combined.css;"
 
 
-## instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
+## [LEGACY] instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
 #   ------------------------------------------------------------
 alias wms="lessc ~/Sites/wi.mobile/Source/WI.Web/less/accordion.less > ~/Sites/wi.mobile/Source/WI.Web/Css/accordion.css;
            lessc ~/Sites/wi.mobile/Source/WI.Web/less/emailcapture.less > ~/Sites/wi.mobile/Source/WI.Web/Css/emailcapture.css;
@@ -337,24 +335,23 @@ alias url-header=" curl -I --http2 https://www.ubuntu.com/ "
 # Test if a Website Supports HTTP/2: curl -I --http2 -s https://linuxize.com/ | grep HTTP
 alias url-http=" curl -I --http2 -s https://linuxize.com/ | grep HTTP "
 
-## instead doing this I can use Grunt: Compile LESS directly and copy into deployment CSS folder directory.
+## [LEGACY] Compile LESS directly and copy into deployment CSS folder directory.
 #   ------------------------------------------------------------
 alias port="lessc ~/Sites/ptf/less/grid.less > ~/Sites/ptf/css/grid.css;
             lessc ~/Sites/ptf/less/mindex.less > ~/Sites/ptf/css/mindex.css;"
 
-
 ##
-## dev rsyncs
+## [LEGACY] rsyncs
 #   ------------------------------------------------------------
 alias sync="rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/js/ /Volumes/wi.mobile/js;
             rsync -avp --stats --prune-empty-dirs --exclude='*~' --exclude='.DS_Store' /Users/llanese/Sites/wi.mobile/Source/WI.Web/css/fonts/ /Volumes/wi.mobile/css/fonts;
 "
 
-
 ##
-## JOIN tools
+## Speaker and osascript tools
 #   ------------------------------------------------------------
 alias texttofile=" say 'Your status has been updated to Urgent Assistance' "
+alias batterycheck="osascript -e 'if (system info \"power supply\" is \"AC Power\") and (do shell script \"pmset -g batt\" | grep -Eo \"\\d+%;\" | cut -d% -f1) > 95 then say \"Please unplug the charger\" end if'"
 
 ##
 ## Shortcuts & directions. Improving the terminal for fast typers
@@ -389,7 +386,6 @@ alias show_options=' shopt '
 alias make1mb=' mkfile 1m ./1MB.dat '         # make1mb:      Creates a file of 1mb size (all zeros)
 alias make5mb=' mkfile 5m ./5MB.dat '         # make5mb:      Creates a file of 5mb size (all zeros)
 alias make10mb=' mkfile 10m ./10MB.dat '      # make10mb:     Creates a file of 10mb size (all zeros)
-
 
 
 
@@ -627,9 +623,15 @@ alias openPorts=" sudo lsof -i | grep LISTEN "
 # showBlocked:  All ipfw rules inc/ blocked IPs
 alias showBlocked=" sudo ipfw list "
 
-# show-up effects in the console
+# show-up effects in the console (OSX no external dependency required)
 alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
 alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
+alias blink=" echo -e '\e[5mBlinking Text\e[0m' "
+alias fireworks="while true; do printf \"\e[$((RANDOM%LINES+1));$((RANDOM%COLUMNS+1))f*\e[0;0H\"; sleep 0.1; done"
+alias clock="while true; do clear; date +\"%T\"; sleep 1; done"
+alias spinner='while true; do for i in / - \\ \|; do echo -n "$i"; echo -ne "\b"; sleep 0.2; done; done'
+alias stars="while true; do printf \"\e[$((RANDOM%LINES+1));$((RANDOM%COLUMNS+1))f*\e[0;0H\"; sleep 0.1; done"
+alias countup="count=0; while true; do clear; echo \$count; ((count++)); sleep 1; done"
 
 
 ##
