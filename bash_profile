@@ -623,7 +623,7 @@ alias openPorts=" sudo lsof -i | grep LISTEN "
 # showBlocked:  All ipfw rules inc/ blocked IPs
 alias showBlocked=" sudo ipfw list "
 
-# show-up effects in the console (OSX no external dependency required)
+# handy effects in the console (no external dependency required)
 alias crazy=" LC_ALL=C tr -c '[:digit:]' ' ' < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR='1;32' grep --color '[^ ]' "
 alias matrix=" yes 'c=(" " "  " "   " 0 1); printf "${c[RANDOM%5]}"' | bash "
 alias blink=" echo -e '\e[5mBlinking Text\e[0m' "
@@ -632,6 +632,9 @@ alias clock="while true; do clear; date +\"%T\"; sleep 1; done"
 alias spinner='while true; do for i in / - \\ \|; do echo -n "$i"; echo -ne "\b"; sleep 0.2; done; done'
 alias stars="while true; do printf \"\e[$((RANDOM%LINES+1));$((RANDOM%COLUMNS+1))f*\e[0;0H\"; sleep 0.1; done"
 alias countup="count=0; while true; do clear; echo \$count; ((count++)); sleep 1; done"
+alias progress="echo -n 'Progress: [>'; for i in {1..50}; do echo -n '='; sleep 0.1; done; echo '<]'"
+alias typing="sentence='Hello, World!'; for ((i=0; i<${#sentence}; i++)); do echo -n \"${sentence:$i:1}\"; sleep 0.1; done; echo"
+
 
 
 ##
