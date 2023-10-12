@@ -1,97 +1,60 @@
-# .bash_profile [UPDATED: Including `oh my zsh`] 
+# .bash_profile 
+
+> UPDATED: Including `zsh` & `oh my zsh`
 
 ## What is the `.bash_profile`
 
 bash_profile is a configuration file for bash shell. When bash is invoked as an interactive login shell it first reads and executes commands from: 
 
+### Shortcut
+
 ```js
-// view
-~/. bash_profile.
+open -e ~/.bash_profile
+nano ~/.bash_profile
+source ~/.bash_profile
+
+open -e ~/.zshrc
+nano ~/.zshrc
+source ~/.zshrc
 ```
 
 ## Why common `.bash_profile`
 The idea is to share best practices, suggestions, tricks and keep the same profile across multiple development platforms easily cloning from the repository.
 
----
-## Executing commands as script on the NodeJS Playground
+## zsh and .bash
 
-> If you like some of these command, you may find the NodeJS Playground scrips pool useful as well: [
-NodeJS-playground](https://github.com/leolanese/NodeJS-playground/tree/main/scripts)
+> Both `bash` and `zsh` (OSX default) are popular Unix shells, but they have different configuration files and some distinct features. When we talk about `.bash_profile` and `.zshrc`, we are referring to the "startup files" (or configuration files) used by these shells.
 
----
-## System Operation Versions
+### Startup Files:
 
-### MAC version:
-A typical install of OSX won't create a `.bash_profile` for you.
-When you want to run functions from your command line, this is a must-have.
-
-#### Setup Startup Terminal
-```html
-`Type`: "cd ~/" to go to your home folder
-`Type`: "touch .bash_profile" to create your new file.
-`Edit`: .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
-`Type`: ". .bash_profile" to reload .bash_profile and update any functions you add (reload by the system)
-```
-
----
-### Commands and alliases:
-
-### edit bash_profile
+#### bash
 
 ```js
-open -e ~/.bash_profile
+~/.bash_profile: Read and executed only by login shells.
+~/.bashrc: Read and executed by non-login shells (like when you open a new terminal tab).
+In many setups, ~/.bash_profile sources (or includes) ~/.bashrc to ensure commands and settings are consistent across login and non-login shells.
 ```
 
-### if you don't have this file, create it!
+#### zsh
 ```js
-touch ~/.bash_profile
+~/.zshrc: This is the primary configuration file for interactive use of zsh. It's analogous to ~/.bashrc in bash.
+~/.zprofile: Read before .zshrc during a login, similar to .bash_profile in bash.
 ```
 
-### PS1 terminal bash options
-
-* PS1 option 1<br>
-![PS1 option 1](https://i.ibb.co/YTV5Qhf/Screenshot-2021-01-13-at-21-49-03.png)
-
-* PS1 option 2<br>
-![PS1 option 2](https://i.ibb.co/QrtjwPj/Screenshot-2021-01-13-at-21-50-32.png)
-
-### paste the bash_profile
-
-### reload profile
+### Determinate what I'm currently using
 
 ```js
-. ~/.bash_profile
+echo $SHELL
 ```
-
-```js
-// from now on we will use the bash_profile
-To edit: "edit_profile"
-to reload: "reload_profile" (reload by using bash_profile)
-```
-
 ---
-## Windows version
 
-> Note: `Use double quotes instead of single one`!!
-
-```js
-git config --global alias.ci "commit -v"
-
-git config --global alias.log "log --pretty=oneline"
-
-git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-```
-
----
 ## The `.zsh`
 
 Apple has changed the default shell to `zsh`. Therefore you have to rename your configuration files: `.bashrc` is now `.zshrc` and `.bash_profile` is now `.zprofile`.
 
 ```js
-// edit zsh
 nano ~/.zshrc
 ```
-
 
 > If you for some reason (like me) don't want to rename/move the `~/.bash_profile` file you can do the next things:
 
@@ -108,10 +71,15 @@ You can use it with or without Catalina+ OSX, and also in combination of the nor
 
 ### Instalation
 ```js
-## install zsh
+// install zsh
 sudo apt install zsh
 
-## Make default shell set and logout
+// Make default shell set and logout
+chsh -s $(which zsh)
+```
+
+```js
+// If you want to make zsh our default shell
 chsh -s $(which zsh)
 ```
 
@@ -122,8 +90,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 ### Themes
-In order to enable a theme, set ZSH_THEME to the name of the theme in your:
-`~/.zshrc` (open ~/.zshrc). Then edit the: `ZSH_THEME="robbyrussell"` based on any theme from: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes then: reload .zshrc:
+// In order to enable a theme, set ZSH_THEME to the name of the theme in your: `~/.zshrc` (open ~/.zshrc). Then edit the: `ZSH_THEME="robbyrussell"` based on any theme from: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes then: reload .zshrc:
 
 ```js
 // reload zsh
@@ -149,8 +116,81 @@ add the `plugin` to your plugins array in `~/.zshrc` (SHIFT, cmd, .) view all fi
 plugins=(vscode zsh_reload git)
 ```
 
+---
+
+## Executing commands as script on the NodeJS Playground
+
+> If you like some of these command, you may find the NodeJS Playground scrips pool useful as well: [
+NodeJS-playground](https://github.com/leolanese/NodeJS-playground/tree/main/scripts)
 
 ---
+## System Operation Versions
+
+### MAC version:
+A typical install of OSX won't create a `.bash_profile` for you. When you want to run functions from your command line, this is a must-have.
+
+#### Setup Startup Terminal with .bash
+```js
+// go to your home folder
+cd ~/
+
+// create your new file if you don't have it
+touch .bash_profile
+
+// open with textEditor or nano
+open -e ./bash_profile
+nano ./bash_profile
+```
+
+#### Alternative modificaton 
+
+> If we need to inject just a line we could use `>>`
+
+```js
+echo "alias python='python2.7'" >> ~/.zshrc
+```
+
+---
+
+## Commands and alliases:
+
+### edit bash_profile
+
+```js
+open -e ~/.bash_profile
+```
+
+### if you don't have this file, create it!
+```js
+touch ~/.bash_profile
+```
+
+### PS1 terminal bash options
+
+* PS1 option 1<br>
+![PS1 option 1](https://i.ibb.co/YTV5Qhf/Screenshot-2021-01-13-at-21-49-03.png)
+
+* PS1 option 2<br>
+![PS1 option 2](https://i.ibb.co/QrtjwPj/Screenshot-2021-01-13-at-21-50-32.png)
+
+
+---
+
+## Windows version
+
+> Note: `Use double quotes instead of single one`!!
+
+```js
+git config --global alias.ci "commit -v"
+
+git config --global alias.log "log --pretty=oneline"
+
+git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
+
+---
+
 ### :100: <i>Thanks!</i>
 #### Now, don't be an stranger. Let's stay in touch!
 
