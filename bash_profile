@@ -39,10 +39,8 @@ alias java_jre=" /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 # List packages in cache
 alias n-ls=" npm cache ls "
 
-# Clean npm cache
-# clean: Delete all data out of the cache folder
-# verify: Garbage collecting any unneeded data
-alias n-clean=" npm cache clean -f && clean cache verify"
+# forcefully clear the npm and Yarn package manager caches
+alias n-clean=" npm cache clean -f && yarn cache clean "
 
 # runs a set of checks to ensure that your npm installation
 alias n-doc=" npm doctor "
