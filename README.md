@@ -188,8 +188,6 @@ git config --global alias.log "log --pretty=oneline"
 git config --global alias.log1 "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
-<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://star-history.com/embed?secret=#louis-e/arnis&leolanese/bash_profile&Date" frameBorder="0"></iframe>
-
 ---
 
 ### :100: <i>Thanks!</i>
